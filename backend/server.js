@@ -6,6 +6,8 @@ const cors = require('cors');
 const app =express();
 
 //import routes
+//nisura
+const postRoutesNisura = require('./routes/postsNisura');
 
 
 
@@ -15,8 +17,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //route middleware
-
-//anodya poojani
+//nisura
+app.use(postRoutesNisura);
 
 
 const PORT = 8000;

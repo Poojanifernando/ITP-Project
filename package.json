@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Poojanifernando/ITP-Project/issues"
   },
-  "homepage": "https://github.com/Poojanifernando/ITP-Project#readme"
+  "homepage": "https://github.com/Poojanifernando/ITP-Project#readme",
+  "dependencies": {
+    "concurrently": "^6.2.1"
+  }
 }

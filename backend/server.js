@@ -20,7 +20,7 @@ app.use(cors());
 
 
 const PORT = 8000;
-const DB_URL ='mongodb+srv://AnodyaFernando:Poojani@@1234@project.shu8e.mongodb.net/BusOwner?retryWrites=true&w=majority';
+const DB_URL ='mongodb+srv://admin:admin@project.shu8e.mongodb.net/travellingExpress?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL,{
     useNewUrlParser: true,
@@ -37,5 +37,5 @@ mongoose.connect(DB_URL,{
 
 
 app.listen(PORT,()=>{
-    console.log('App is running on ${PORT}');
+    console.log(`App is running on ${PORT}`);
 });

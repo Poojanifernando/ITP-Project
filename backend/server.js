@@ -7,6 +7,7 @@ const app =express();
 
 //import routes
 //nisura
+//dineth
 const postRoutesNisura = require('./routes/postsNisura');
 
 

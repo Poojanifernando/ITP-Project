@@ -9,9 +9,11 @@ const app =express();
 //nisura
 //dineth
 const postRoutesNisura = require('./routes/postsNisura');
-
-
 //Ramona Vanhoff
+const driverRoutes = require ('./routes/postsRamona'); //postRoutes->driverRoutes
+
+
+
 
 //app middleware
 app.use(bodyParser.json());
@@ -20,6 +22,8 @@ app.use(cors());
 //route middleware
 //nisura
 app.use(postRoutesNisura);
+
+app.use(driverRoutes);
 
 
 const PORT = 8000;

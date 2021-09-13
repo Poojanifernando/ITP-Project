@@ -13,7 +13,7 @@ const postRoutesNisura = require('./routes/postsNisura');
 const driverRoutes = require ('./routes/postsRamona'); //postRoutes->driverRoutes
 
 //Disni
-
+const ticketRoutes= require('./routes/postsDisni');
 
 //app middleware
 app.use(bodyParser.json());
@@ -24,6 +24,8 @@ app.use(cors());
 app.use(postRoutesNisura);
 
 app.use(driverRoutes);
+//Disni
+app.use(ticketRoutes);
 
 
 const PORT = 8000;

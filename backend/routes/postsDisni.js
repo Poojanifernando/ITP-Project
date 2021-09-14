@@ -96,7 +96,7 @@ router.put('/post/updateDisni/:id',(req,res)=>{
 
 //delete posts
 
-router.delete('/post/deleteDisni/:id',(req,res)=>{
+router.delete('/post/deleteDisni/:id',(req,res)=>{//posts
     Tickets.findByIdAndRemove(req.params.id).exec((err,deletedTicket) => {
 
         if(err) return res.status(400).json({

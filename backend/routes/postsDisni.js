@@ -24,7 +24,7 @@ router.post('/postDisni/save',(req,res)=>{
 
 //getpost
 router.get('/postsDisni',(req,res)=>{
-    Posts.find().exec((err,posts)=>{
+    Tickets.find().exec((err,posts)=>{
         if(err){
             return res.status(400).json({
             error:err    
@@ -58,7 +58,7 @@ router.get("/postDisni/:id",(req,res)=>{
 router.get("/ticket/:id",(req,res)=>{
     let ticketId = req.params.id;
 
-    Posts.findById(ticketId,(err,post)=>{
+    Tickets.findById(ticketId,(err,post)=>{
         if(err){
             return res.status(400).json({success:false,err});
         }

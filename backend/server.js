@@ -7,8 +7,8 @@ const app =express();
 
 //import routes
 //nisura
-
 const postRoutesNisura = require('./routes/postsNisura');
+
 //Ramona Vanhoff
 const driverRoutes = require ('./routes/postsRamona'); //postRoutes->driverRoutes
 
@@ -18,6 +18,9 @@ const ticketRoutes= require('./routes/postsDisni');
 //dineth
 const cardSchema = require('./routes/postsDineth');
 const chargeRoutes = require('./routes/recharge');
+
+//azmie
+const postRoutes = require ('./routes/locations');
 
 //app middleware
 app.use(bodyParser.json());
@@ -34,6 +37,9 @@ app.use(ticketRoutes);
 //dineth
 app.use(cardSchema);
 app.use(chargeRoutes);
+
+//azmie
+app.use(postRoutes);
 
 
 const PORT = 8000;

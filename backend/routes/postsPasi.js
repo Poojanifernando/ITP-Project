@@ -1,5 +1,5 @@
 const express = require('express');
-const posts = require('../models/postsPasi');
+const PostsPasi = require('../models/postsPasi');
 
 const router = express.Router();
 
@@ -7,9 +7,9 @@ const router = express.Router();
 
 router.post('/postPasi/save',(req,res)=>{
 
-    let newPost = new posts(req.body);
+    let newPostsPasi = new PostsPasi(req.body);
 
-    newPost.save((err)=>{
+    newPostsPasi.save((err)=>{
         if(err){
             return res.status(400).json({
                 error:err
@@ -23,7 +23,7 @@ router.post('/postPasi/save',(req,res)=>{
 
 //getpost
 router.get('/postsPasi',(req,res)=>{
-    posts.find().exec((err,post)=>{
+    PostsPasi.find().exec((err,post)=>{
         if(err){
             return res.status(400).json({
             error:err    
@@ -41,7 +41,7 @@ router.get('/postsPasi',(req,res)=>{
 router.get("/postPasi/:id",(req,res) =>{
     let postId = req.params.id;
 
-    posts.findById(postId,(err,post) =>{
+    PostsPasi.findById(postId,(err,post) =>{
       if(err){
           return res.status(400).jason({success:false,err});
         
@@ -59,7 +59,7 @@ router.get("/postPasi/:id",(req,res) =>{
 //update posts
 
 router.put('/post/updatePasi/:id',(req,res)=>{
-    posts.findByIdAndUpdate(
+    PostsPasi.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
@@ -80,7 +80,7 @@ router.put('/post/updatePasi/:id',(req,res)=>{
 //delete posts
 
 router.delete('/post/deletePasi/:id',(req,res)=>{
-    posts.findByIdAndRemove(req.params.id).exec((err,deletedPost) => {
+    PostsPasi.findByIdAndRemove(req.params.id).exec((err,deletedPost) => {
 
         if(err) return res.status(400).json({
             message:"Delete unsuccesful",err

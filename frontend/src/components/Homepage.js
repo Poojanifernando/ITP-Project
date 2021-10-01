@@ -42,6 +42,9 @@ export default class homepage extends Component {
    
    <button className = "btn btn-success"><a href = "/homeDisni" style = {{textDecoration:'none',color:'white'}}>TICKET BOOKING</a></button>
 
+    <br/><br/>
+   <button className = "btn btn-success"><a href = "/secard" style = {{textDecoration:'none',color:'white'}}>Season Card</a></button>
+
           </div>
 
 

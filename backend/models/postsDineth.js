@@ -27,6 +27,14 @@ const cardSchema = new mongoose.Schema({
     },
     busType:{
         type:String,
+        
+    },
+    distance:{
+        type:Number,
+        required:true
+    },
+    price:{
+        type:Number,
         required:true
     }
     

@@ -4,7 +4,7 @@ const Crds = require('../models/postsDineth');
 const router = express.Router();
 
 
-//save posts
+//save card
 router.post('/postDineth/save',(req,res)=>{
 
     let newCrds = new Crds(req.body);
@@ -22,9 +22,9 @@ router.post('/postDineth/save',(req,res)=>{
 });
 
 
-//getpost
+//get card
 router.get('/postsDineth',(req,res)=>{
-    Crds.find().exec((err,posts)=>{
+    Crds.find().exec((err,postsDineth)=>{
         if(err){
             return res.status(400).json({
                 error:err    
@@ -32,35 +32,35 @@ router.get('/postsDineth',(req,res)=>{
         }
         return res.status(200).json({
             success:true,
-            existingCards:posts
+            existingCards:postsDineth
         });
     });
 });
 
-//get a specific post
+//get a specific card
 
 router.get("/postDineth/:id",(req,res)=>{
     let cardId = req.params.id;
-    Crds.findById(cardId,(err,post)=>{
+    Crds.findById(cardId,(err,postDineth)=>{
         if(err){
             return res.status(400).json({success:false,err});
         }
         return res.status(200).json({
             success:true,
-            post
+            postDineth
         });
     });
 });
 
 
-//update posts
+//update card
 router.put('/post/updateDineth/:id',(req,res)=>{
     Crds.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
         },
-        (err,post)=>{
+        (err,postDineth)=>{
             if(err){
                 return res.status(400).json({error:err});
             }
@@ -71,7 +71,7 @@ router.put('/post/updateDineth/:id',(req,res)=>{
     );
 });
 
-//delete posts
+//delete card
 
 router.delete('/post/deleteDineth/:id',(req,res)=>{
     Crds.findByIdAndRemove(req.params.id).exec((err,deletedCard) => {

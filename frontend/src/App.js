@@ -1,26 +1,46 @@
-import React, { Component } from 'react'
-import {BrowserRouter,Route} from  'react-router-dom';
+import React, { Component } from  'react';
+import {BrowserRouter,Route} from "react-router-dom"
 
-import CreateLocation from './components/CreateLocation';
-import EditLocation from './components/EditLocation';
-import Home from './components/Home';
-import NavBar from './components/NavBar';
-import LocationDetails from './components/LocationDetails';
+import homeanodya from './components/homeanodya';
+import Homepage from './components/Homepage';
+import editanodya from './components/editanodya';
+//import adminlogin from './Components/adminlogin';
+import Rentalcost from './components/Rentalcost';
+//import UserLogin from './components/UserLogin';
+import rentalhome from './components/rentalhome';
+import editrentalcost from './components/editrentalcost';
+import rentalcostdetails from './components/rentalcostdetails';
+//import adminsignup from './Components/adminsignup';
+//import Usersignup from './Components/Usersignup';
+import createpostsanodya from './components/createpostsanodya';
 
-export default class App extends Component {
-  render() {
+
+
+
+
+export default class App extends Component{
+  render(){
     return (
-    <BrowserRouter>
-      <div>
-        
-        <NavBar/>
-         <Route path="/homepage" exact component={Home}></Route>
-         <Route path="/add" component={CreateLocation}></Route>
-         <Route path="/edit/:id" component={EditLocation}></Route>
-         <Route path="/locations/:id" component={LocationDetails}></Route>
-        
-      </div>
+      <BrowserRouter>
+       
+        <navbar/>
+          <Route path = "/" exact component = {Homepage}></Route>
+          <Route path = "/homeanodya"  component = {homeanodya}></Route>
+          <Route path = "/createpostsanodya" component = {createpostsanodya}></Route>
+          <Route path = "/editanodya/:id" component = {editanodya}></Route>
+          <Route path = "/cost" component = {Rentalcost}></Route>
+          
+          <Route path = "/rentalhome" component = {rentalhome}></Route>
+          <Route path = "/editrentalcost/:id" component = {editrentalcost}></Route>
+          <Route path = "/rentalcostdetails/:id" component = {rentalcostdetails}></Route>
+         
+
+         
+         
+
+              
       </BrowserRouter>
+
     )
   }
 }

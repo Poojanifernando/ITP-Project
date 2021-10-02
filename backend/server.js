@@ -22,6 +22,12 @@ const chargeRoutes = require('./routes/recharge');
 
 //azmie
 const postRoutes = require ('./routes/locations');
+//anodya
+
+const postAnodyaRoutes = require ('./routes/postAnodya');
+const postRental = require ('./routes/rentalcost');
+const postAdminsignup = require ('./routes/adminsignup');
+
 
 //app middleware
 app.use(bodyParser.json());
@@ -41,6 +47,13 @@ app.use(chargeRoutes);
 
 //azmie
 app.use(postRoutes);
+
+//anodya 
+app.use(postAdminsignup);
+app.use(postAnodyaRoutes);
+app.use(postRental);
+
+
 
 
 const PORT = 8000;

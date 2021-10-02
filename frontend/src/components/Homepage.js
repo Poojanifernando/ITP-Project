@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import './Nav.css';
+import './Home.css';
 
-export default class NavBar extends Component {
+export default class homepage extends Component {
     render() {
         return (
            <div>
+            
         <nav className="navbar navbar-light navbar-expand-md bg-dark navigation-clean-search">
         <div className="container"><a className="navbar-brand" href="#" style={{fontsize: '19px',color:'rgb(255,255,255)'}}>Travelling Express</a><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse" id="navcol-1">
@@ -15,7 +16,7 @@ export default class NavBar extends Component {
                     <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Scheduled Trips</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Special Services</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Company Bus Details </a></li>
-                    <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Rental Bus Details </a></li>
+                    <li className="nav-item"><a className="nav-link" href="/cost" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Rental Bus Details </a></li>
                     <li className="nav-item"><a className="nav-link" href="/homepage" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Manage Locations</a></li>
                 </ul>
                 
@@ -23,7 +24,22 @@ export default class NavBar extends Component {
             </div>
         </div>
     </nav>
+   <center> <h1> WELCOME Rental Manager..</h1></center>
+   
+    <button className = "btn btn-success"><a href = "/adminlogin" style = {{textDecoration:'none',color:'white'}}>admin login</a></button>
+<br/>
+
+<br/><br/><br/>
+
+ 
+    <button className = "btn btn-success"><a href = "/createpostsanodya"style = {{textDecoration:'none',color:'white'}}>Rental bus owner registration</a></button>
+    <br/><br/><br/>
+   
+        <button className = "btn btn-success"><a href = "/userlogin" style = {{textDecoration:'none',color:'white'}}>user login</a></button>
+  
           </div>
+
+          
           
         )
     }

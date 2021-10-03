@@ -35,7 +35,12 @@ const postSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    busType:{
+   
+    distance:{
+        type:Number,
+        required:true
+    },
+    price:{
         type:String,
         required:true
     }

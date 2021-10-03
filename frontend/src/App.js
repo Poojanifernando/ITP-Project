@@ -34,6 +34,10 @@ import TicketSlip from './components/TicketSlip';
 import TicketPayment from './components/TicketPayment';
 //import FooterTicket from './components/FooterTicket';
 
+
+
+
+
 //Dineth
 import CardDetails from './components/CardDetails';
 import CreateCard from './components/CreateCard';
@@ -41,6 +45,15 @@ import EditCard from './components/EditCard';
 import HomeDineth from './components/HomeDineth';
 import ReCharge from './components/ReCharge';
 import SeasonCard from './components/SeasonCard';
+
+
+//Nisura
+import CreatePostNisura from './components/CreatePostNisura';
+import EditPostNisura from './components/EditPostNisura';
+import HomeNisura from './components/HomeNisura';
+//import NavBar from './components/NavBar';
+import PostDetailsNisura from './components/PostDetailsNisura';
+import TripPaymentNisura from './components/TripPaymentNisura';
 
 
 
@@ -92,7 +105,13 @@ export default class App extends Component{
         <Route path ="/charge" component={ReCharge}></Route>
 
         
+       
 
+        <Route path="/add"  component={HomeNisura}></Route>
+        <Route path="/niss"  component={CreatePostNisura}></Route>
+        <Route path="/edit/:id" component={EditPostNisura}></Route>
+        <Route path="/Nisura/:id" component={PostDetailsNisura}></Route>
+        <Route path="/tripcharge" component={TripPaymentNisura}></Route>
          
          
 

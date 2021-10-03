@@ -1,5 +1,5 @@
 const express = require('express');
-const posts = require('../models/postsPasindu');
+const PostsPasindu = require('../models/postsPasindu');
 
 const router = express.Router();
 
@@ -7,9 +7,9 @@ const router = express.Router();
 
 router.post('/postPasindu/save',(req,res)=>{
 
-    let newPost = new posts(req.body);
+    let newPostsPasindu = new PostsPasindu(req.body);
 
-    newPost.save((err)=>{
+    newPostsPasindu.save((err)=>{
         if(err){
             return res.status(400).json({
                 error:err
@@ -23,7 +23,7 @@ router.post('/postPasindu/save',(req,res)=>{
 
 //getpost
 router.get('/postsPasindu',(req,res)=>{
-    posts.find().exec((err,post)=>{
+    PostsPasindu.find().exec((err,post)=>{
         if(err){
             return res.status(400).json({
             error:err    
@@ -41,7 +41,7 @@ router.get('/postsPasindu',(req,res)=>{
 router.get("/postPasindu/:id",(req,res) =>{
     let postId = req.params.id;
 
-    posts.findById(postId,(err,post) =>{
+    PostsPasindu.findById(postId,(err,post) =>{
       if(err){
           return res.status(400).jason({success:false,err});
         
@@ -59,7 +59,7 @@ router.get("/postPasindu/:id",(req,res) =>{
 //update posts
 
 router.put('/post/updatePasindu/:id',(req,res)=>{
-    posts.findByIdAndUpdate(
+    PostsPasindu.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
@@ -80,7 +80,7 @@ router.put('/post/updatePasindu/:id',(req,res)=>{
 //delete posts
 
 router.delete('/post/deletePasindu/:id',(req,res)=>{
-    posts.findByIdAndRemove(req.params.id).exec((err,deletedPost) => {
+    PostsPasindu.findByIdAndRemove(req.params.id).exec((err,deletedPost) => {
 
         if(err) return res.status(400).json({
             message:"Delete unsuccesful",err

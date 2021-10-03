@@ -41,6 +41,7 @@ export default class App extends Component{
           <Route path = "/editrentalcost/:id" component = {editrentalcost}></Route>
           <Route path = "/rentalcostdetails/:id" component = {rentalcostdetails}></Route>
 
+
         <Route path="/HomeRamona" component={HomeRamona}></Route>
         <Route path="/addRamona" component={Create}></Route>
         <Route path="/editRamona/:id" component={Edit}></Route>

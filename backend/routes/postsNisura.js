@@ -5,7 +5,7 @@ const router = express.Router();
 
 //save posts
 
-router.post('/post/save',(req,res) =>{
+router.post('/postNisura/save',(req,res) =>{
     let newPost = new Posts(req.body);
     
     newPost.save((err) =>{
@@ -22,7 +22,7 @@ router.post('/post/save',(req,res) =>{
 
 //get posts
 
-router.get('/posts',(req,res)=>{
+router.get('/postsNisura',(req,res)=>{
     Posts.find().exec((err,posts)=>{
     if(err){
         return res.status(400).json({
@@ -38,7 +38,7 @@ router.get('/posts',(req,res)=>{
 
 //get a specific post
 
-router.get("/post/:id",(req,res)=>{
+router.get("/postNisura/:id",(req,res)=>{
 
     let postId = req.params.id;
 
@@ -54,7 +54,7 @@ router.get("/post/:id",(req,res)=>{
 });
 
 //update posts
-router.put('/post/update/:id',(req,res)=>{
+router.put('/postNisura/update/:id',(req,res)=>{
     Posts.findByIdAndUpdate(
         req.params.id,{
             $set:req.body
@@ -71,7 +71,7 @@ router.put('/post/update/:id',(req,res)=>{
 });
 
 //delete posts
-router.delete('/post/delete/:id',(req,res)=>{
+router.delete('/postNisura/delete/:id',(req,res)=>{
     Posts.findByIdAndRemove(req.params.id).exec((err,deletePost)=> {
         if(err) return res.status(400).json({
             message:"Delete Unsuccessfull",err

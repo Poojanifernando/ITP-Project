@@ -34,6 +34,15 @@ import TicketSlip from './components/TicketSlip';
 import TicketPayment from './components/TicketPayment';
 //import FooterTicket from './components/FooterTicket';
 
+//Nisura
+import CreatePostNisura from './components/CreatePostNisura';
+import EditPostNisura from './components/EditPostNisura';
+import HomeNisura from './components/HomeNisura';
+//import NavBar from './components/NavBar';
+import PostDetailsNisura from './components/PostDetailsNisura';
+import TripPaymentNisura from './components/TripPaymentNisura';
+
+
 
 
 
@@ -75,7 +84,13 @@ export default class App extends Component{
         <Route path="/ticketpayment/:id" component={TicketPayment}></Route>
 
         
+       
 
+        <Route path="/add"  component={HomeNisura}></Route>
+        <Route path="/niss"  component={CreatePostNisura}></Route>
+        <Route path="/edit/:id" component={EditPostNisura}></Route>
+        <Route path="/Nisura/:id" component={PostDetailsNisura}></Route>
+        <Route path="/tripcharge" component={TripPaymentNisura}></Route>
          
          
 

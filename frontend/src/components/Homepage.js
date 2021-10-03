@@ -4,7 +4,7 @@ import './Home.css';
 export default class homepage extends Component {
     render() {
         return (
-           <div>
+           <div >
             
         <nav className="navbar navbar-light navbar-expand-md bg-dark navigation-clean-search">
         <div className="container"><a className="navbar-brand" href="#" style={{fontsize: '19px',color:'rgb(255,255,255)'}}>Travelling Express</a><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
@@ -37,7 +37,15 @@ export default class homepage extends Component {
    
         <button className = "btn btn-success"><a href = "/userlogin" style = {{textDecoration:'none',color:'white'}}>user login</a></button>
   
+
+        <br/><br/><br/>
+   
+   <button className = "btn btn-success"><a href = "/homeDisni" style = {{textDecoration:'none',color:'white'}}>TICKET BOOKING</a></button>
+
           </div>
+
+
+
 
           
           

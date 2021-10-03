@@ -10,10 +10,10 @@ const ticketSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    ticket_no:{
+   /* ticket_no:{
         type:Intl,
         required:true
-    },
+    },*/
     Ticket_date:{
         type:String,
         required:true

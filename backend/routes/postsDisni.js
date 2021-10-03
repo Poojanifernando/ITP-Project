@@ -1,5 +1,5 @@
 const express = require('express');
-
+const { request } = require('express');
 const Tickets = require('../models/postsDisni');
 
 const router = express.Router();
@@ -24,7 +24,7 @@ router.post('/postDisni/save',(req,res)=>{
 
 //getpost
 router.get('/postsDisni',(req,res)=>{
-    Tickets.find().exec((err,posts)=>{
+    Tickets.find().exec((err,postsDisni)=>{
         if(err){
             return res.status(400).json({
             error:err    
@@ -32,7 +32,7 @@ router.get('/postsDisni',(req,res)=>{
         }
         return res.status(200).json({
             success:true,
-            existingPosts:posts
+            existingPosts:postsDisni
         });
     });
 });
@@ -42,13 +42,13 @@ router.get('/postsDisni',(req,res)=>{
 router.get("/postDisni/:id",(req,res)=>{
     let ticketId = req.params.id;
 
-    Tickets.findById(ticketId,(err,post)=>{
+    Tickets.findById(ticketId,(err,postDisni)=>{
         if(err){
             return res.status(400).json({success:false,err});
         }
         return res.status(200).json({
             success:true,
-            post
+            postDisni
         });
     });
 });
@@ -58,13 +58,13 @@ router.get("/postDisni/:id",(req,res)=>{
 router.get("/ticket/:id",(req,res)=>{
     let ticketId = req.params.id;
 
-    Tickets.findById(ticketId,(err,post)=>{
+    Tickets.findById(ticketId,(err,postDisni)=>{
         if(err){
             return res.status(400).json({success:false,err});
         }
         return res.status(200).json({
             success:true,
-            post
+            postDisni
         });
     });
 });
@@ -81,7 +81,7 @@ router.put('/post/updateDisni/:id',(req,res)=>{
         {
             $set:req.body
         },
-        (err,post)=>{
+        (err,postDisni)=>{
             if(err){
                 return res.status(400).jason({error:err});
             }

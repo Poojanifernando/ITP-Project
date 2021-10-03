@@ -1,0 +1,84 @@
+.background2{
+
+    color: black;
+    padding: 40px;
+    font-family: Arial;
+    background-image: url("imagesTicket/bus14.jpg");
+    background-repeat: repeat;
+    margin-Top: 40px;
+    margin-Right:400px;
+    margin-left: 250px;
+    margin-bottom: 100px;
+    height: 700%;
+    width: 70%;
+    border: 1px solid black;
+    outline: 5px dotted black;
+    
+    
+}
+
+
+a:hover {
+  color: rgb(22, 25, 228);
+}
+
+
+
+
+body{
+  /*background-color:#080523;*/
+  background-image: linear-gradient(rgb(42, 42, 44), rgb(59, 59, 59));
+  
+}
+.background1{
+  background-image: url("imagesTicket/bus15.jpg");
+  background-repeat: repeat-x;
+  height: 800px;
+  
+
+}
+
+
+
+
+.navbar-brand{
+    font-size: 25px;   
+}
+
+#space{
+    float: left;
+  padding: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width:260px; /* Four links of equal widths */
+  text-align: center;
+  
+  display: block;
+  
+  
+}
+.navbar-brand{
+    padding: 20px;
+    display: block;
+    width:700px;
+}
+
+
+.navbar-nav a:hover {
+    background-color: #8888;
+  }
+.navbar-brand a:hover{
+    background-color: #8888;
+  }
+  
+  .c3{
+    background-image: url("imagesTicket/bus17.jpg");
+    background-repeat: repeat;
+  
+  }
+
+
+
+
+

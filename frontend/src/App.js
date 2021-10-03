@@ -24,6 +24,17 @@ import tripDrivers from './components/tripDrivers';
 import response from './components/response';
 import assignTrips from './components/assignTrips';
 
+//Disni
+import Ticket from './components/Ticket';
+import CreateTicket from './components/CreateTicket';
+import EditTicket from './components/EditTicket';
+import NavBarTicket from './components/NavBarTicket';
+import TicketDetails from './components/TicketDetails';
+import TicketSlip from './components/TicketSlip';
+import TicketPayment from './components/TicketPayment';
+//import FooterTicket from './components/FooterTicket';
+
+
 
 
 export default class App extends Component{
@@ -31,7 +42,7 @@ export default class App extends Component{
     return (
       <BrowserRouter>
        
-        <navbar/>
+       <navbar>
           <Route path = "/" exact component = {Homepage}></Route>
           <Route path = "/homeanodya"  component = {homeanodya}></Route>
           <Route path = "/createpostsanodya" component = {createpostsanodya}></Route>
@@ -49,13 +60,27 @@ export default class App extends Component{
         <Route path="/tripDrivers" component={tripDrivers}></Route>
         <Route path="/response/:id" component={response}></Route>
         <Route path="/assignTrips/:id" component={assignTrips}></Route>
+        
+        </navbar>
          
+
+        
+        
+        <Route path="/homeDisni" exact component={Ticket}></Route>
+        <Route path="/addDisni" component={CreateTicket}></Route>
+        <Route path="/editDisni/:id" component={EditTicket}></Route>
+        <Route path="/postDisni/:id" component={TicketDetails}></Route>
+        <Route path="/ticket/:id" component={TicketSlip}></Route>
+        <Route path="/ticketpayment/:id" component={TicketPayment}></Route>
+
+        
 
          
          
 
               
       </BrowserRouter>
+      
 
     )
   }

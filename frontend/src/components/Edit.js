@@ -305,12 +305,24 @@ import axios from 'axios';
   
                     <div className="form-group">
                         <label for="inputAddress2" className="form-label" style={{color:'white'}}>Type of the Driver</label>
-                        <input type="text" className="form-control" name="type" value={this.state.type} onChange={this.handleChange} required/>
+                        <input type="text" list="Dtype1" className="form-control" name="type" value={this.state.type} onChange={this.handleChange} required/>
+                        <datalist id="Dtype1">
+                                <option value="Daily Routine"></option>
+                                <option value="Special Services"></option>
+            </datalist>
                     </div>
   
                     <div className="form-group">
                         <label for="inputAddress2" className="form-label" style={{color:'white'}}>Working Hours</label>
-                        <input type="text" className="form-control" name="workingHours" value={this.state.workingHours} onChange={this.handleChange} required/>
+                        <input type="text" list="WorkingH1" className="form-control" name="workingHours" value={this.state.workingHours} onChange={this.handleChange} required/>
+                        <datalist id="WorkingH1">
+                                <option value="Weekdays 08:00a.m. - 06:00p.m."></option>
+                                <option value="Weekends 08:00a.m. - 06:00p.m."></option>
+                                <option value="Weekdays Special Journeys"></option>
+                                <option value="Weekends Special Journeys"></option>
+                                <option value="Fulltime"></option>
+                                <option value="Weekends only"></option>
+            </datalist>
                     </div>
 
                     <div className="form-group">
@@ -320,7 +332,13 @@ import axios from 'axios';
                    
                     <div className="form-group">
                         <label for="inputAddress2" className="form-label" style={{color:'white'}}>Availability</label>
-                        <input type="text" className="form-control" name="availability" value={this.state.availability} onChange={this.handleChange} />
+                        <input type="text" list="aval1" className="form-control" name="availability" value={this.state.availability} onChange={this.handleChange} />
+                        <datalist id="aval1">
+                                <option value="Not Confirmed"></option>
+                                <option value="Available"></option>
+                                <option value="Not Available"></option>
+                              
+            </datalist>
                     </div>
                     
                 </form>

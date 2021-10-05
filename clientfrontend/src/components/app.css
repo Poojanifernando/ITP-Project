@@ -1,0 +1,50 @@
+.details {
+    background-color: #282c34;
+    color: white;
+    padding: 40px;
+    font-family: Arial;
+  
+  }
+
+  h4{
+    text-align: center;
+  }
+
+  .home{
+    background-color: #282c34;
+    color: white;
+    padding: 40px;
+  }
+
+  h6{
+    color: white;
+  }
+
+  .assign{
+    background-color: #ced4da;
+    padding: 40px;
+  }
+
+  .edit{
+    background-color: #6c757d;
+    padding: 40px;
+  }
+  .insert{
+    background-color: #dee2e6;
+    padding: 40px;
+  }
+  
+  input::placeholder{
+    color:black;
+  }
+
+  input.error{
+    border: 1px solid red;
+  }
+
+  .errorMessage{
+    color:red;
+    display: relative;
+  }
+
+  

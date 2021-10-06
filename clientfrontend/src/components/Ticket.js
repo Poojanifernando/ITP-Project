@@ -80,6 +80,7 @@ handleSearchArea=(e)=>{
 
   render() {
     return (
+  
       <div>
       <div className="background1" >
         
@@ -173,6 +174,7 @@ handleSearchArea=(e)=>{
     </div>
       
 </div>
+
     
       
     )

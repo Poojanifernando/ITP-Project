@@ -103,19 +103,6 @@ export default class edit extends Component {
             <div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
               <div style={{backgroundColor: "#080523"}}>
 
 <center>
@@ -236,7 +223,16 @@ export default class edit extends Component {
             </center>
             
         </div>
+
+
+
+        
             </div>
+
+
+
+
+
            
         )
     }

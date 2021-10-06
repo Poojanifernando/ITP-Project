@@ -101,11 +101,11 @@ export default class createpostsanodya extends Component {
                 <h1 className="h3 mb-3 font-weight-normal"><center   style={{color: " #EBEBEB",  fontweight : "500px"}} >Bus-Rental Registration Form</center></h1>
                 <div>
        
-                <img src="/bus2.jpg" class="mx-auto" alt="" width="1350px" height="420px"/>
+                <img src="/bus2.jpg" class="mx-auto" alt="" width="1490px" height="420px"/>
              
              <center>
   
-            <table border = "4" width = "750px" height = "500px" style={{backgroundColor: "#EBE6DC",  margin: "20px"}}>
+            <table border = "4" width = "850px" height = "500px" style={{backgroundColor: "#EBE6DC",  margin: "20px"}}>
       <tr>
         <th>
             <h5><center>You should fill this form in order to register your details.</center></h5>

@@ -62,12 +62,7 @@ filterData(rentalcost,searchKey){
 
       <div style={{backgroundColor: "#080523"}}>
 <div>
-      <div>
-    
-
-  
-
-</div>
+   
 
       
 
@@ -146,6 +141,8 @@ filterData(rentalcost,searchKey){
         </tbody>
 
      </table>
+
+     <button className="btn btn-success" ><a href = "/cost" style = {{textDecoration:'none',color:'white',marginTop:'15px'}} >Back to Calculation</a></button>
     
     
 

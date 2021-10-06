@@ -98,7 +98,7 @@ filterData(postAnodya,searchKey){
         <table>
           <tr><th>
            
-                <img src="/bus1.png" class="mx-auto" alt="" width="1340px" height="400px"/></th>
+                <img src="/bus1.png" class="mx-auto" alt="" width="1500px" height="400px"/></th>
                 
 
                 </tr>
@@ -131,11 +131,7 @@ filterData(postAnodya,searchKey){
             <tr key ={index}>
               <th scope = "row">{index+1}</th>
               <td>
-                    
-                    
-        
-                   
-                        
+               
               {postAnodya.OwnerName} 
               </td>
               <td>{postAnodya.Age}</td>
@@ -147,13 +143,10 @@ filterData(postAnodya,searchKey){
               <td>{postAnodya.Email}</td>
               <td>
 
-<br/>
+
               <a className="btn btn-warning" href={`/editanodya/${postAnodya._id}`}>
                   <i className = "fas fa-edit"></i>&nbsp;Edit
                   </a>
-                  
-             <br/>
-             
                   &nbsp;
                   <a className="btn btn-danger" href="/homeanodya" onClick={()=> this.onDelete(postAnodya._id)}>
                   <i className = "far fa-trash-alt"></i>&nbsp;Delete
@@ -170,26 +163,16 @@ filterData(postAnodya,searchKey){
      </center>
      <br/>
      <div>
-       <Row>
-         <Col>
-     <button className = "btn btn-success"><a href = "/createpostsanodya" style = {{textDecoration:'none',color:'white'}}>Back to Registration</a></button>
 
-</Col>
-<Col>
-</Col>
-<Col>
-</Col>
-<Col>
-</Col>
-
-<Col>
- 
-     </Col>
-     </Row>
-     </div>
      </div>  
 
-     </div>   
+</div>
+
+    
+     <button className = "btn btn-success"><a href = "/createpostsanodya" style = {{textDecoration:'none',color:'white'}}>Back to Registration</a></button>
+    
+     </div>
+       
      
     )
 }

@@ -10,7 +10,17 @@ export default class SeasonCard extends Component {
                     <div className="container" style={{marginLeft:"28%"}}>
                         <button type="button" class="btn btn-primary" style={{marginTop:'80px'}} title="Request For Season Card"><a href="/addCard" style={{textDecoration:'none', color:'white'}}>Request For Season Card</a></button>&nbsp;&nbsp;
                         <button type="button" class="btn btn-primary" style={{marginTop:'80px'}} title="Season Card Profile"><a href="/list" style={{textDecoration:'none', color:'white'}}>Season Card Profile</a></button>&nbsp;&nbsp;
-                        <button type="button" class="btn btn-primary" style={{marginTop:'80px'}} title="Re-charge Season Card"><a href="/charge" style={{textDecoration:'none', color:'white'}}>Re-charge Season Card</a></button>&nbsp;&nbsp;
+                  
+            
+                        <div className="w3-dropdown-hover">
+                        <button type="button" class="btn btn-primary" style={{marginTop:'80px'}} title="Re-charge Season Card">Re-charge the Card</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                            <a href="/charge" class="w3-bar-item btn-primary" style={{textDecoration:'none', color:"white"}}>First time?</a>
+                            <a href="/chargelist" class="w3-bar-item btn-primary" style={{textDecoration:'none', color:"white"}}>Did before?</a>
+                            
+                        </div>
+                        </div>
+
                     </div>
                </div>
 

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './editcrd.css';
 
-export default class ReCharge extends Component {
+export default class EditCharge extends Component {
 
     constructor(props){
         super(props);
@@ -12,26 +13,11 @@ export default class ReCharge extends Component {
             expire:"",
             amount:"",
             newamount:""
-            
         }
     } 
     
     handleInputChange=(e)=>{
         const {name,value}=e.target;
-
-        let nam = e.target.name;
-        let val = e.target.value;
-
-        if(nam==="amount"){
-            if(!Number(val)){
-                alert("Cannot contain letters");
-            }
-        }
-
-        this.setState({
-            ...this.state,
-            [name]:value
-        })
 
         this.setState({
             ...this.state,
@@ -41,6 +27,7 @@ export default class ReCharge extends Component {
 
     onSubmit=(e)=>{
         e.preventDefault();
+        const id = this.props.match.params.id;
 
         const {cardno, holdername, creditcard, expire, amount, newamount} = this.state;
         const data ={
@@ -52,10 +39,12 @@ export default class ReCharge extends Component {
             newamount:newamount
             
         }
+
         console.log(data)
 
-        axios.post("/postCharge/save", data).then((res)=>{
+        axios.put(`/post/updateCharge/${id}`, data).then((res)=>{
             if(res.data.success){
+                alert("Card updated successfully")
                 this.setState(
                     {
                         cardno:"",
@@ -64,16 +53,33 @@ export default class ReCharge extends Component {
                         expire:"",
                         amount:"",
                         newamount:""
-                        
                     }
                 )
             }
         })
     }
 
+    componentDidMount(){
+        const id = this.props.match.params.id;
+
+        axios.get(`http://localhost:8000/postCharge/${id}`).then((res)=>{
+            if(res.data.success){
+                this.setState({
+
+                    cardno:res.data.postCharge.cardno,
+                    holdername:res.data.postCharge.holdername,
+                    creditcard:res.data.postCharge.creditcard,
+                    expire:res.data.postCharge.expire,
+                    amount:res.data.postCharge.amount
+                });
+
+                console.log(this.state.postDineth);
+            }
+        });
+    }
+
     render() {
         return (
-
             <div style={{height:'420px', width:'100%', backgroundColor:"#080523", marginTop:'-20px'}}>
                     <br/><br/>
                     <h2 style={{color:'#49A8F1', textAlign:'center'}}>Re-Charge Season Card</h2><br/>
@@ -141,7 +147,7 @@ export default class ReCharge extends Component {
                             name="holdername"
                             placeholder="Enter name"
                             value={this.state.holdername}
-                            onChange={this.handleInputChange}/>
+                            />
                         </div>
 
                         <div className="form-group" style={{marginBottom:'10px'}}>
@@ -165,24 +171,24 @@ export default class ReCharge extends Component {
                         </div>
 
                         <div className="form-group" style={{marginBottom:'10px'}}>
-                            <label style={{marginBottom:'5px',color:"white"}}>Re-Charge Amount Rs.</label>
+                            <label style={{marginBottom:'5px',color:"white"}}>Re-charge amount Rs.</label>
+                            <input type="text"
+                            className="form-control"
+                            name="newamount"
+                            placeholder="Rs."
+                            value={this.state.newamount}
+                            onChange={this.handleInputChange}/>
+                        </div>
+                        </form>
+
+                        <form className="container" style={{marginLeft:"500px", width:"150px", marginTop:"-95px"}}>
+                        <div className="form-group" style={{marginBottom:'10px'}}>
+                            <label style={{marginBottom:'5px',color:"white"}}>Existing Amount Rs.</label>
                             <input type="text"
                             className="form-control"
                             name="amount"
                             placeholder="Rs."
                             value={this.state.amount}
-                            onChange={this.handleInputChange}/>
-                        </div>
-                        </form>
-
-                        <form className="container" style={{marginLeft:"500px", width:"150px", marginTop:"-95px"}}> 
-                        <div className="form-group" style={{marginBottom:'10px'}}>
-                            <label style={{marginBottom:'5px',color:"white"}}>Existing Amount Rs.</label>
-                            <input type="text"
-                            className="form-control"
-                            name="newamount"
-                            placeholder=""
-                            value="00"
                             />
                         </div></form>
 
@@ -199,4 +205,3 @@ export default class ReCharge extends Component {
         )
     }
 }
-

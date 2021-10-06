@@ -4,7 +4,7 @@ const Recharge = require('../models/recharge');
 const router = express.Router();
 
 //save posts
-router.post('/post/charge',(req,res)=>{
+router.post('/postCharge/save',(req,res)=>{
 
     let newPost = new Recharge(req.body);
 
@@ -21,8 +21,8 @@ router.post('/post/charge',(req,res)=>{
 });
 
 //getpost
-router.get('/posts/charge',(req,res)=>{
-    Recharge.find().exec((err,recharge)=>{
+router.get('/postsCharge',(req,res)=>{
+    Recharge.find().exec((err,postsCharge)=>{
         if(err){
             return res.status(400).json({
                 error:err    
@@ -30,34 +30,34 @@ router.get('/posts/charge',(req,res)=>{
         }
         return res.status(200).json({
             success:true,
-            existingPosts:recharge
+            existingCharge:postsCharge
         });
     });
 });
 
 //get a specific post
-router.get("/post/charge/:id",(req,res)=>{
+router.get("/postCharge/:id",(req,res)=>{
     let chargeId = req.params.id;
-    Recharge.findById(chargeId,(err,post)=>{
+    Recharge.findById(chargeId,(err,postCharge)=>{
         if(err){
             return res.status(400).json({success:false,err});
         }
         return res.status(200).json({
             success:true,
-            post
+            postCharge
         });
     });
 });
 
 
 //update posts
-router.put('/post/update/charge/:id',(req,res)=>{
+router.put('/post/updateCharge/:id',(req,res)=>{
     Recharge.findByIdAndUpdate(
         req.params.id,
         {
             $set:req.body
         },
-        (err,post)=>{
+        (err,postCharge)=>{
             if(err){
                 return res.status(400).json({error:err});
             }
@@ -70,14 +70,14 @@ router.put('/post/update/charge/:id',(req,res)=>{
 
 //delete posts
 
-router.delete('/post/delete/charge/:id',(req,res)=>{
-    Recharge.findByIdAndRemove(req.params.id).exec((err,deletedPost) => {
+router.delete('/post/deleteCharge/:id',(req,res)=>{
+    Recharge.findByIdAndRemove(req.params.id).exec((err,deletedCharge) => {
 
         if(err) return res.status(400).json({
             message:"Delete unsuccesful",err
         });
         return res.json({
-            message:"Delete Succesfull",deletedPost
+            message:"Delete Succesfull",deletedCharge
         });
     });
 });

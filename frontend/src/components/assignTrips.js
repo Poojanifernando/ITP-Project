@@ -144,7 +144,13 @@ import axios from 'axios';
                    
                     <div className="form-group">
                         <label for="inputAddress2" className="form-label" style={{color:'white'}}>Availability</label>
-                        <input type="text" className="form-control" name="availability" value={this.state.availability} onChange={this.handleChange} />
+                        <input type="text" list="avalU" className="form-control" name="availability" value={this.state.availability} onChange={this.handleChange} />
+                        <datalist id="avalU">
+                                <option value="Not Confirmed"></option>
+                                <option value="Available"></option>
+                                <option value="Not Available"></option>
+                              
+                    </datalist>
                     </div>
                     
                 </form>

@@ -44,6 +44,17 @@ import Home from './components/Home';
 import NavBar from './components/NavBar';
 import LocationDetails from './components/LocationDetails';
 
+//pasindu
+import CreatePostPasindu from './components/CreatePostPasindu';
+import EditPostPasindu from './components/EditPostPasindu';
+import PostDetailsPasindu from './components/PostDetailsPasindu';
+import HomePasindu from './components/HomePasindu';
+
+import CreatePostPasi from './components/CreatePostPasi';
+import EditPostPasi from './components/EditPostPasi';
+import HomePasi from './components/HomePasi';
+import PostDetailsPasi from './components/PostDetailsPasi';
+
 
 export default class App extends Component{
   render(){
@@ -94,6 +105,18 @@ export default class App extends Component{
          <Route path="/addazmie" component={CreateLocation}></Route>
          <Route path="/editazmie/:id" component={EditLocation}></Route>
          <Route path="/locations/:id" component={LocationDetails}></Route>
+
+
+
+         <Route path="/HomePasindu" component={HomePasindu}></Route>
+           <Route path="/addPasindu" component={CreatePostPasindu}></Route>
+           <Route path="/editPasindu/:id" component={EditPostPasindu}></Route>
+           <Route path="/postPasindu/:id" component={PostDetailsPasindu}></Route>
+
+           <Route path="/HomePasi" exact component={HomePasi}></Route>
+           <Route path="/addPasi" component={CreatePostPasi}></Route>
+           <Route path="/editPasi/:id" component={EditPostPasi}></Route>
+           <Route path="/postPasi/:id" component={PostDetailsPasi}></Route>
         
 
               

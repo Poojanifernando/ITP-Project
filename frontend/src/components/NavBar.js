@@ -16,7 +16,8 @@ export default class NavBar extends Component {
                     <li className="nav-item"><a className="nav-link" href="/HomeRamona" style={{fontsize:'15px',color:'rgb(255,255,255)'}}> Assign Drivers</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Trip sheduling</a></li>
                     <li className="nav-item"><a className="nav-link" href="/niss" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Special Services</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Company Bus Details </a></li>
+                    <li className="nav-item"><a className="nav-link" href="/HomePasindu" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Scheduled Bus Details </a></li>
+                    <li className="nav-item"><a className="nav-link" href="/HomePasi" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Company Bus Details </a></li>
                     <li className="nav-item"><a className="nav-link" href="/cost" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Rental Calculation </a></li>
                     <li className="nav-item"><a className="nav-link" href="/managelocation" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Manage Locations</a></li>
                 </ul>

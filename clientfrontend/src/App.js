@@ -45,6 +45,9 @@ import EditCard from './components/EditCard';
 import HomeDineth from './components/HomeDineth';
 import ReCharge from './components/ReCharge';
 import SeasonCard from './components/SeasonCard';
+import UserHome from './components/UserHome';
+import ChargeHome from './components/ChargeHome';
+import EditCharge from './components/EditCharge';
 
 
 //Nisura
@@ -63,6 +66,7 @@ import NavBar from './components/NavBar';
 import LocationDetails from './components/LocationDetails';
 
 
+
 export default class App extends Component{
   render(){
     return (
@@ -70,7 +74,7 @@ export default class App extends Component{
        
 
           <Route path="" component={NavBar}></Route>
-          <Route path = "/" exact component = {Homepage}></Route>
+          <Route path = "/dashboard" component = {Homepage}></Route>
           <Route path = "/homeanodya"  component = {homeanodya}></Route>
           <Route path = "/createpostsanodya" component = {createpostsanodya}></Route>
           <Route path = "/editanodya/:id" component = {editanodya}></Route>
@@ -109,6 +113,9 @@ export default class App extends Component{
         <Route path ="/editCard/:id" component={EditCard}></Route>
         <Route path ="/card/:id" component={CardDetails}></Route>
         <Route path ="/charge" component={ReCharge}></Route>
+        <Route path = "/" exact component = {UserHome}></Route>
+        <Route path = "/chargelist" component={ChargeHome}></Route>
+        <Route path = "/editCharge/:id" component = {EditCharge}></Route>
 
         
        

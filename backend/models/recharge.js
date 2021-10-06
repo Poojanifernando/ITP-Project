@@ -18,9 +18,19 @@ const chargeSchema = new mongoose.Schema({
         required:true
     },
     amount:{
-        type:String,
+        type:Number,
         required:true
+    },
+    newamount:{
+        type:Number,
+        required:false
+    },
+    totamount:{
+        type:Number,
+        required:false
     }
+
+    
     
 });
 

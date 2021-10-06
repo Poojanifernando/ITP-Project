@@ -6,10 +6,10 @@ export default class NavBar extends Component {
         return (
            <div>
         <nav className="navbar navbar-light navbar-expand-md bg-dark navigation-clean-search">
-        <div className="container"><a className="navbar-brand" href="#" style={{fontsize: '19px',color:'rgb(255,255,255)'}}>Travelling Express</a><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
+        <div className="container"><a className="navbar-brand" href="/" style={{fontsize: '19px',color:'rgb(255,255,255)'}}>Travelling Express</a><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse" id="navcol-1">
             <ul className="navbar-nav">
-                    <li className="nav-item"><a className="nav-link "href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Dashboard</a></li>
+                    <li className="nav-item"><a className="nav-link "href="/dashboard" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Dashboard</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Profile</a></li>
                     <li className="nav-item"><a className="nav-link" href="/HomeRamona" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Drivers</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Scheduled Trips</a></li>

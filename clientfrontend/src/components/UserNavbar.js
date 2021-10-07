@@ -4,10 +4,11 @@ import './Nav.css';
 export default class UserNavbar extends Component {
     render() {
         return (
-            <div style={{backgroundColor:"#080523"}}>
+            <div style={{backgroundColor:"white"}}>
             <div>
                 <table><tr><th>
-            <img src="/Logo.jpeg" class="mx-auto" alt="" width="180px" height="150px"/></th>
+            <img src="/Logo.jpeg" class="mx-auto" alt="" width="150px" height="120px"/></th>
+            <h1 style={{marginLeft:"358px", marginTop:"30px" ,fontFamily:"Arial Black",fontWeight:"bolder"}}>Traveling Express</h1>
  
               
                 </tr></table> 
@@ -29,6 +30,10 @@ export default class UserNavbar extends Component {
                     <li className="nav-item"><a className="nav-link" href="/createpostsanodya" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Rental Bus Details </a></li>
                     <li className="nav-item"><a className="nav-link" href="/addazmie" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Tracking</a></li>
                     <li className="nav-item"><a className="nav-link" href="/secard" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Season Card</a></li>
+                    <li>
+                        <input type="text" style={{height:"26px",width:"150px", marginTop:"8px", marginLeft:"100px"}} placeholder="Search.." name="search"/>
+                        <button style={{marginLeft:"10px", width:"20px", height:"20px", backgroundColor:"white"}} type="submit"><i class="fa fa-search"></i></button>         
+                    </li>
                     
                     <li></li>
                    

@@ -169,7 +169,7 @@ onSubmit = (e) =>{
                    
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Miles(km): (calculate your miles from <a href='https://distancecalculator.globefeed.com/Sri_Lanka_Distance_Calculator.asp'>here</a>, copy and paste for a one decimal point )</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Miles(km): (calculate your miles from <a href='https://distancecalculator.globefeed.com/Sri_Lanka_Distance_Calculator.asp'>here</a>, copy and paste for a one decimal point )</label>
                             <input type="text"
                             className="form-control"
                             name="Ticket_miles"
@@ -179,7 +179,7 @@ onSubmit = (e) =>{
                         </div>
                         
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Starting Point:</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Starting Point:</label>
                             <input type="text"
                             list="from"
                             className="form-control"
@@ -198,7 +198,7 @@ onSubmit = (e) =>{
                         </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Destination:</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Destination:</label>
                             <input type="text"
                             list="To"
                             className="form-control"
@@ -215,7 +215,7 @@ onSubmit = (e) =>{
                         </div>
 
                      <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Price(Rs.):</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Price(Rs.):</label>
                             <input type="text"
                             className="form-control"
                             name="Ticket_price"
@@ -226,7 +226,7 @@ onSubmit = (e) =>{
                         </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Customer name:</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Customer name:</label>
                             <input type="text"
                             className="form-control"
                             name="Cus_name"
@@ -236,7 +236,7 @@ onSubmit = (e) =>{
                         </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>NIC:</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>NIC:</label>
                             <input type="text"
                             className="form-control"
                             name="Cus_NIC"
@@ -250,7 +250,7 @@ onSubmit = (e) =>{
                     
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Date:</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Date:</label>
                             <input type="date"
                             className="form-control"
                             name="Ticket_date"
@@ -260,7 +260,7 @@ onSubmit = (e) =>{
                         </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Time:</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Time:</label>
                             <input type="time"
                             className="form-control"
                             name="Ticket_time"
@@ -273,7 +273,7 @@ onSubmit = (e) =>{
                         
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Rout:</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Rout:</label>
                             <input type="text"
                             className="form-control"
                             name="Ticket_rout"
@@ -301,7 +301,7 @@ onSubmit = (e) =>{
                       
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'25px'}}>Seat no:(01-45)</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Seat no :(01-45)</label>
                             <input type="text"
                             className="form-control"
                             name="Ticket_seat_no"

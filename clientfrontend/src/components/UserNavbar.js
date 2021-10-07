@@ -28,7 +28,7 @@ export default class UserNavbar extends Component {
                     <li className="nav-item"><a className="nav-link" href="/niss" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Special Services</a></li>
                     <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Company Bus Details </a></li>
                     <li className="nav-item"><a className="nav-link" href="/createpostsanodya" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Rental Bus Details </a></li>
-                    <li className="nav-item"><a className="nav-link" href="/addazmie" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Tracking</a></li>
+                    <li className="nav-item"><a className="nav-link" href="/managelocation" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Tracking</a></li>
                     <li className="nav-item"><a className="nav-link" href="/secard" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Season Card</a></li>
                     <li>
                         <input type="text" style={{height:"26px",width:"150px", marginTop:"8px", marginLeft:"100px"}} placeholder="Search.." name="search"/>

@@ -57,7 +57,7 @@ import EditLocation from './components/EditLocation';
 import Home from './components/Home';
 import UserNavbar from './components/UserNavbar';
 import LocationDetails from './components/LocationDetails';
-
+import livelocation from './components/livelocation';
 
 
 export default class App extends Component{
@@ -116,11 +116,12 @@ export default class App extends Component{
         <Route path="/Nisura/:id" component={PostDetailsNisura}></Route>
         <Route path="/tripcharge" component={TripPaymentNisura}></Route>
          
+        <Route path="/managelocation" exact component={livelocation}></Route>
         <Route path="/managelocation" exact component={Home}></Route>
          <Route path="/addazmie" component={CreateLocation}></Route>
          <Route path="/editazmie/:id" component={EditLocation}></Route>
          <Route path="/locations/:id" component={LocationDetails}></Route>
-        
+         
 
               
       </BrowserRouter>

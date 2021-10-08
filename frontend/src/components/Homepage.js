@@ -19,7 +19,7 @@ export default class homepage extends Component {
                 <div className="col-sm-4">
                     <p className="text-center"><strong><h3><i>Assign Drivers</i></h3></strong></p>
                     <a href="/HomeRamona" data-toggle="collapse">
-                        <img src="adriver.jpg" className="img-circle person" alt="" width="200" height="200"/>
+                        <img src="ramona.jpeg" className="img-circle person" alt="" width="200" height="200"/>
                     </a>
                   <br/><br/><br/>
                 </div>
@@ -53,6 +53,13 @@ export default class homepage extends Component {
                         <img src="emp123.jpg" className="img-circle person" alt="Random Name" width="200" height="200"/>
                     </a>
                   <br/><br/><br/>
+                </div>
+                <div className="col-sm-4">
+                    <p className="text-center"><strong><h3><i>Driver Confirmation</i></h3></strong></p><br/>
+                    <a href="/tripDrivers" data-toggle="collapse">
+                        <img src="adriver.jpg" className="img-circle person" alt="" width="200" height="200"/>
+                    </a>
+                  <br/><br/>
                 </div>
                 
                 </div></div>

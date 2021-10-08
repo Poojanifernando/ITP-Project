@@ -65,8 +65,8 @@ handleSearchArea = (e) =>{
                     <br/>
                     <h2 style={{color:'white', textAlign:'center'}}>Driver Details of Travel Express Bus Management System</h2>
                       <br/> <br/>
-                      <img src="/driver.jpg" class="mx-auto" alt="" width="100%" height="300"/>
-        
+                      <img src="/driver.jpg" style={{height:'500px', width:'100%'}}/>
+  
 
           
           <p><b><h2>List of Registered Drivers</h2></b></p>
@@ -81,7 +81,7 @@ handleSearchArea = (e) =>{
               </input>
             </div>
           </div>
-        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/>
        <table className="table">
          
         <thead style={{color:'silver'}}>

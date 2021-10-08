@@ -109,7 +109,7 @@ handleSearchArea=(e)=>{
           <div className="col-lg-3 my-2 mb-2" style={{marginTop:'100px' }}>
               
             <input
-            className="form-control" style={{marginTop:'1160px',padding:'17px 50px'}}
+            className="form-control" style={{marginTop:'1115px',padding:'17px 50px'}}
             type="search"
             placeholder="Enter your Name"
             name="searchQuery"

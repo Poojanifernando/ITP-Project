@@ -13,7 +13,8 @@ import axios from 'axios';
         Plate_number:"",
         Route:"",
         Route2:"",
-        Date_Time:""
+        Date:"",
+        Time:""
       }
   }
 
@@ -26,7 +27,7 @@ import axios from 'axios';
       e.preventDefault();
 
       const id = this.props.match.params.id;
-      const {Trip_id,Driver_name,Drivers_phone_no,Plate_number,Route,Route2,Date_Time} = this.state;
+      const {Trip_id,Driver_name,Drivers_phone_no,Plate_number,Route,Route2,Date,Time} = this.state;
 
       const data={
           Trip_id:Trip_id,
@@ -35,7 +36,8 @@ import axios from 'axios';
           Plate_number:Plate_number,
           Route:Route,
           Route2:Route2,
-          Date_Time:Date_Time
+          Date:Date,
+          Time:Time
       }
 
       console.log(data)
@@ -51,7 +53,8 @@ import axios from 'axios';
                     Plate_number:"",
                     Route:"",
                     Route2:"",
-                    Date_Time:""
+                    Date:"",
+                    Time:""
                   }
               )
           }
@@ -74,7 +77,8 @@ import axios from 'axios';
             Plate_number:res.data.post.Plate_number,
             Route:res.data.post.Route,
             Route2:res.data.post.Route2,
-            Date_Time:res.data.post.Date_Time
+            Date:res.data.post.Date,
+            Time:res.data.post.Time
 
           });
 
@@ -146,9 +150,16 @@ import axios from 'axios';
          </div>
          <br></br>
          <div class="form-group row">
-     <label class="control-label col-sm-2" for="Date and Time">Date and Time :</label>
+     <label class="control-label col-sm-2" for="Date">Date  :</label>
         <div class="col-sm-10">
-        <input type="text" class="form-control"  placeholder="02-02-2021 / 2.00 p.m" name="Date_Time" value={this.state.Date_Time} onChange={this.handleChange} required/>
+        <input type="date" class="form-control"  placeholder="2.00 p.m" name="Date" value={this.state.Date} onChange={this.handleChange} required/>
+         </div>
+         </div>
+         <br></br>
+         <div class="form-group row">
+     <label class="control-label col-sm-2" for="Time">Time :</label>
+        <div class="col-sm-10">
+        <input type="time" class="form-control"  placeholder="2.00 p.m" name="Time" value={this.state.Time} onChange={this.handleChange} required/>
          </div>
          </div>
          <br></br>

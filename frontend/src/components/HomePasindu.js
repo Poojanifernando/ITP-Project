@@ -54,7 +54,8 @@ export default class HomePasindu extends Component{
     post.Plate_number.toLowerCase().includes(searchKey)||
     post.Route.toLowerCase().includes(searchKey)||
     post.Route2.toLowerCase().includes(searchKey)||
-    post.Date_Time.toLowerCase().includes(searchKey)
+    post.Date.toLowerCase().includes(searchKey)||
+    post.Time.toLowerCase().includes(searchKey)
     )
 
     this.setState({posts:result})
@@ -110,7 +111,8 @@ handleSearchArea=(e) =>{
               <th scope ="col">Bus plate number </th>
               <th scope ="col">Starting Point </th>
               <th scope ="col">End Point </th>
-              <th scope ="col">Date-Time </th>
+              <th scope ="col">Date</th>
+              <th scope ="col">Time </th>
               <th scope ="col">Action</th>
 
         </tr>
@@ -130,7 +132,8 @@ handleSearchArea=(e) =>{
             <td>{posts.Plate_number}</td>
             <td>{posts.Route}</td>
             <td>{posts.Route2}</td>
-            <td>{posts.Date_Time}</td>
+            <td>{posts.Date}</td>
+            <td>{posts.Time}</td>
             <td>
               
               <a className = "btn btn-warning" href={`/editPasindu/${posts._id}`}>

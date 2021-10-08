@@ -78,7 +78,7 @@ export default class HomeNisura extends Component {
             </input>
           </div>
         </div>
-        <h4 style={{color:"red"}}> <p>#Click on your name to check your Booking Details and Payment Details</p></h4>
+        <h4 style={{color:"red"}}> <p>Click on your name to check your Booking Details and Payment Details</p></h4>
         <table className="table table-hover" style={{marginTop:'40px'}}>
           <thead>
             <tr>

@@ -42,14 +42,14 @@ export default class EditPostNisura extends Component {
             date:date,
             distance:distance,
             price:price,
-            price:distance*30
+            price:distance*60
         }
 
         console.log(data)
     
         axios.put(`/postNisura/update/${id}`,data).then((res) =>{
            if(res.data.success){
-               alert("Post Updated Successfully")
+               alert("Booking Updated Successfully")
                this.setState(
                    {
                     fname:"",
@@ -161,13 +161,12 @@ export default class EditPostNisura extends Component {
                     </div>
                     
                 
-
-                    <div className="form-group" style={{marginBottom:'15px'}}>
+                    <div className="form-group" action="/action_page.php" style={{marginBottom:'15px'}}>
                         <label style={{marginBottom:'5px'}}>Trip Date</label>
-                        <input type="text"
+                        <input type="date"
                         className="form-control"
                         name="date"
-                        placeholder="Trip Date"
+                      
                         value={this.state.date}
                         onChange={this.handleInputChange}/>
                         
@@ -223,7 +222,6 @@ export default class EditPostNisura extends Component {
                         <option value="Polonnaruwa"></option>
                         <option value="Kurunagale"></option>
                         </datalist>
-                    
                         
                     </div>
                     <div className="form-group" style={{marginBottom:'15px'}}>

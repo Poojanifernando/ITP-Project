@@ -87,12 +87,12 @@ export default class TripPaymentNisura extends Component {
                             onChange={this.handleInputChange}/>
                         </div>
  
-                        <div className="form-group" style={{marginBottom:'10px'}}>
+                        <div className="form-group" action="/action_page.php" style={{marginBottom:'10px'}}>
                             <label style={{marginBottom:'5px',color:"white"}}>Expiry Date</label>
-                            <input type="text"
+                            <input type="date"
                             className="form-control"
                             name="expire"
-                            placeholder="MM/YY"
+                           
                             value={this.state.expire}
                             onChange={this.handleInputChange}/>
                         </div>

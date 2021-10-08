@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import './azmie.css'
 
 export default class Home extends Component{
   constructor(props){
@@ -41,12 +42,8 @@ onDelete = (id) =>{
 filterData(locations,searchkey){
   
   const result = locations.filter((location) =>
-  location.BusNo.toLowerCase().includes(searchkey)||
-  location.StartingLocation.toLowerCase().includes(searchkey)||
-  location.FirstDestination.toLowerCase().includes(searchkey)||
-  location.SecondDestination.toLowerCase().includes(searchkey)||
-  location.ThirdDestination.toLowerCase().includes(searchkey)||
   location.EndDestination.toLowerCase().includes(searchkey)
+ 
   )
   this.setState({locations:result})
 }
@@ -65,21 +62,24 @@ handleSearchArea = (e) =>{
 
   render(){
     return (
+      
       <div className="container">
+        <br/> <br/> <br/> <br/>
         <div className="row">
-          <div className="col-lg-9 mt-2 mb-2">
-            <h2>All Bus No and Locations</h2>
+          <div className="col-lg-4 mt-2 mb-2">
+            <h2>Enter your Destination :</h2>
           </div>
           <div className="col-lg-3 mt-2 mb-2">
             <input
             className="form-control"
             type="search"
-            placeholder="Search"
+            placeholder="From"
             name="SearchQuery"
             onChange={this.handleSearchArea}>
 
             </input>
           </div>
+        
       </div>
             
         <table className="table table-dark">
@@ -92,7 +92,7 @@ handleSearchArea = (e) =>{
               <th scope="col">Second Destination</th>
               <th scope="col">Third Destination</th>
               <th scope="col">End Destination</th>
-              <th scope="col">Action</th>
+           
             </tr>
           </thead>
           <tbody>
@@ -109,15 +109,7 @@ handleSearchArea = (e) =>{
                 <td>{locations.SecondDestination}</td>
                 <td>{locations.ThirdDestination}</td>
                 <td>{locations.EndDestination}</td>
-                <td>
-                  <a className="btn btn-warning btn-xs" href={`/editazmie/${locations._id}`}>
-                    <i className="fas fa-edit"></i>&nbsp;Edit
-                  </a> 
-                  &nbsp;
-                  <a className="btn btn-danger btn-xs" href="#"onClick={() =>this.onDelete(locations._id)}>
-                    <i className="far fa-solid fa-trash-alt"></i>&nbsp;Delete
-                  </a>
-                </td>  
+           
 
               </tr>
 
@@ -125,8 +117,6 @@ handleSearchArea = (e) =>{
           </tbody>
        </table>
        
-        <button className="btn btn-success btn-xs"><a href="/addazmie" style={{textDecoration:'none',color:'white'}}>Add New Location</a></button>
-
       </div>
     )
   }

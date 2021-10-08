@@ -90,10 +90,15 @@ handleSearchArea=(e)=>{
           
            <b> <h4 style={{fontSize:'60px', marginTop:'700px',marginLeft:'500px',marginRight:'100px', color:'White',textShadow: '1px 2px 5px black'}}> TICKET BOOKINGS</h4></b>
            <br></br> <p style={{color:'White',fontSize:'20px'}}>* refresh the page to see your updates and newly created tickets</p>
-                                                         
+                <br></br>  
+                <button className="btn btn-success" style={{marginLeft:'520px', marginRight:'-1000px',padding:'17px 200px',marginTop:'90px', backgroundColor:'#99aab5'}}><a href="/timetable" style={{textDecoration:'none',color:'white',fontSize:'20px'}}> <i class="fas fa-bus-alt"></i>&nbsp;Time Table</a></button>
+                <p style={{color:'White',fontSize:'20px',marginLeft:'520px'}}>* check the timetable before booking your ticket</p>
+          <br></br><br></br>
+
           <button className="btn btn-success" style={{marginLeft:'100px', marginRight:'100px',padding:'17px 90px',marginTop:'90px', backgroundColor:'#3944bc'}}><a href="/addDisni" style={{textDecoration:'none',color:'white',fontSize:'20px'}}> <i class="far fa-plus-square"></i>&nbsp;Create New Ticket</a></button>
           <br></br><br></br>
-          <p style={{marginLeft:'100px',color:'white',textShadow: '1px 2px 5px black'}} >  *Click on your name to check your ticket details</p>
+          
+
           
             
           </div>
@@ -101,7 +106,7 @@ handleSearchArea=(e)=>{
           <div className="col-lg-3 my-2 mb-2" style={{marginTop:'100px' }}>
               
             <input
-            className="form-control" style={{marginTop:'950px',padding:'17px 50px'}}
+            className="form-control" style={{marginTop:'1160px',padding:'17px 50px'}}
             type="search"
             placeholder="Enter your Name"
             name="searchQuery"
@@ -109,7 +114,7 @@ handleSearchArea=(e)=>{
               </input>
           
               <br></br>
-              <p style={{color:'white',textShadow: '1px 2px 5px black'}}>  *you can search your ticket here</p>
+              <p style={{color:'white',textShadow: '1px 2px 5px black',fontSize:'20px'}}>  *you can search your ticket here</p>
               
           </div>
     
@@ -118,7 +123,9 @@ handleSearchArea=(e)=>{
 
               
     <div style={{marginTop:'50px',marginLeft:'50px',marginRight:'50px'}}>
-        
+    <p style={{marginLeft:'50px',color:'white',textShadow: '1px 2px 5px black',fontSize:'20px'}} >  *Click on your name to check your ticket details</p>
+          
+
         <table className="table table-hover" style={{marginTop:'50px',marginLeft:'50px',marginRight:'50px'}}>
           <thead>
             <tr style={{fontSize:'20px',color:'white'  }}>

@@ -162,12 +162,12 @@ export default class EditPostNisura extends Component {
                     
                 
 
-                    <div className="form-group" style={{marginBottom:'15px'}}>
+                    <div className="form-group" action="/action_page.php" style={{marginBottom:'15px'}}>
                         <label style={{marginBottom:'5px'}}>Trip Date</label>
-                        <input type="text"
+                        <input type="date"
                         className="form-control"
                         name="date"
-                        placeholder="Trip Date"
+                      
                         value={this.state.date}
                         onChange={this.handleInputChange}/>
                         

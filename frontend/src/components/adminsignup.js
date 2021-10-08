@@ -62,23 +62,24 @@ export default class adminsignup extends Component {
 
     render() {
         return (
-         
-            <div style={{backgroundColor: "#191970"}}>
+            <div style={{ 
+                backgroundImage: 'url("/admin.jpg")' ,height:"1000px", paddingTop:"10px"}}>
           
 
-            <table>
-         
-            <tr><th>   <img src="/admin.jpg" class="mx-auto" alt="" width="730px" height="1000px"/></th>
-            <th>
         
-           
-                  <center><p style={{color: " #EBEBEB"}}><i><h3>WELCOME TO EMPLOYEE DEPARTMENT</h3></i></p></center>
-            
-                <table border = "3" width = "700px" height = "800px" style={{backgroundColor: "#EBE6DC",  margin: "60px"}}>
+         
+    
+         
+        
+           <br/><br/>
+                  <center><p style={{color: " #EBEBEB"}}><i><h2><b>WELCOME TO EMPLOYEE DEPARTMENT.......</b></h2></i></p></center>
+                  <h3><center style={{color: " #EBEBEB"}}><b>Admin Signup</b></center></h3>
+            <center>
+                <table border = "3" width = "900px" height = "800px" style={{backgroundColor: "#EBE6DC",  margin: "60px"}}>
                 <tr><th>
                 
                 <div className="login-reg-panel, container" style={{marginLeft:"10%"}}>
-                    <h2><center>Admin Signup</center></h2>
+                  
                
                 <form>
                 <div className="col-md-7 mb-3">
@@ -125,13 +126,15 @@ export default class adminsignup extends Component {
                     <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
                     <label className="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
+                <br/>
                 <button type="submit" className="btn btn-primary" onClick={this.onSubmit}>Submit</button>
                 </form>
-              
+              <br/>
                 </div>
                 </th></tr></table>
-          
-</th></tr></table>
+                </center>
+
+
 
              </div> 
         

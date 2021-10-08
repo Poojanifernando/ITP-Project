@@ -97,18 +97,24 @@ export default class createpostsanodya extends Component {
 
               <div style={{backgroundColor: "#080523"}}>
             
-            
-                <h1 className="h3 mb-3 font-weight-normal"><center   style={{color: " #EBEBEB",  fontweight : "500px"}} >Bus-Rental Registration Form</center></h1>
+            <br/>
+                <h1 className=""><center   style={{color: " #EBEBEB",  fontweight : "600px"}} >Bus-Rental Registration Form</center></h1>
                 <div>
-       
-                <img src="/bus2.jpg" class="mx-auto" alt="" width="1490px" height="420px"/>
+             <br/>
+                <img src="/bus2.jpg" class="mx-auto" alt="" width="1490px" height="520px"/>
              
              <center>
   
-            <table border = "4" width = "850px" height = "500px" style={{backgroundColor: "#EBE6DC",  margin: "20px"}}>
-      <tr>
-        <th>
-            <h5><center>You should fill this form in order to register your details.</center></h5>
+            <table border = "4" width = "950px" height = "500px" style={{backgroundColor: "#EBE6DC",  margin: "20px"}}>
+             <tr>
+             <th>
+                 <center>
+                 <p><h4><i>What is Bus Rental Registration?</i></h4></p>
+                 <p>You can provide your own buses to our company for the rental purposes.So that we will pay you and you can earn lot of money </p>
+                 <p>with joinning with us.We will provide your income monthly according to the usage your buses.</p>
+                 </center>
+            <h5><center><b>You should fill out this form and register your details if you want to joining with us.</b></center></h5>
+            <div className="col-md-8 mt-4 mx-auto">
                 <h5 className="h3 mb-3 font-weight-normal"  font-weight="300">Bus-Owner Details</h5>
                 <form className="needs-validation" noValidate>
 
@@ -192,29 +198,89 @@ export default class createpostsanodya extends Component {
                         onChange={this.handleInputChange}/>
                     </div>
 
-               
+               <br/>
                     
 <div>
-                    <Row>
-                        <Col>
+
                              <button className="btn btn-success" type="submit" style={{marginTop:'15px'}} onClick={this.onSubmit}>
                              <i className="far fa-check-square"></i>
-                            &nbsp;save
+                            &nbsp;Save
                             </button> 
- 
-                         </Col>
-                         <Col>
-                         </Col>
-                         <Col>
+                            &nbsp;      &nbsp;  
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;  
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;  
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;  
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
+                      
+                      
+                           
+
+
+                     
+                      
                             <button className = "btn btn-success"><a href = "/homeanodya" style = {{textDecoration:'none',color:'white',marginTop:'15px'}}>
                              <i className="far fa-check-square"></i>
-                             Next
+                             View Details
                              </a></button>
-                         </Col>
+                             &nbsp;
+                            &nbsp;
+                            &nbsp;
+                            &nbsp;
 
-                    </Row>
+
+      <br/><br/>
                     </div>
                 </form>
+                </div>
                 </th>
                     </tr>
                     </table>

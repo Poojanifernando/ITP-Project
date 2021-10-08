@@ -111,7 +111,7 @@ filterData(postAnodya,searchKey){
      <p className = "t2"><center  style={{color: " #EBEBEB" }}>Your registered details are appearing here. Pleasce check them. </center></p>
 <br/>
 <center>
-     <table border = "4" width = "1200px" height = "500px" style={{backgroundColor: "#EBE6DC"}}> 
+     <table border = "4" width = "1400px" height = "500px" style={{backgroundColor: "#EBE6DC"}}> 
        <thead>
          <tr>
            <th scope = "col">id</th>
@@ -165,11 +165,13 @@ filterData(postAnodya,searchKey){
      <div>
 
      </div>  
-
+     <center>
+     <button className = "btn btn-success"><a href = "/createpostsanodya" style = {{textDecoration:'none',color:'white'}}>Back to Registration</a></button>
+      </center>
 </div>
 
     
-     <button className = "btn btn-success"><a href = "/createpostsanodya" style = {{textDecoration:'none',color:'white'}}>Back to Registration</a></button>
+    
     
      </div>
        

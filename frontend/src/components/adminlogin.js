@@ -11,19 +11,17 @@ export default class adminlogin extends Component {
     render() {
         return (
             
-            <div style={{backgroundColor: "#191970"}}>
+            <div style={{ 
+                backgroundImage: 'url("/admin.jpg")' ,height:"800px", paddingTop:"10px"}}>
             <div>
                 <div>
-                    <table>
-                        <tr>
-                            <th>
-                            <img src="/admin.jpg" class="mx-auto" alt="" width="780px" height="820px"/>
-                            </th>
-                            <th>
-                            <table border = "3" width = "590px" height = "500px" style={{backgroundColor: "#EBE6DC",  margin: "80px"}}>
+            
+                      <center>
+                            <table border = "3" width = "690px" height = "500px" style={{backgroundColor: "#EBE6DC",  margin: "110px"}}>
                                 <tr><th>
                 <div className="login-reg-panel, container" style={{marginLeft:"27%"}}>
                     <h2 className = "t2">Admin login</h2>
+                  
                 <form>
                 <div className="col-md-7 mb-3">
                     <label for="exampleInputEmail1" className="form-label" >Username :</label>
@@ -53,10 +51,8 @@ export default class adminlogin extends Component {
 
 </th></tr>
 </table>
-          
-            </th>
-            </tr>
-            </table>
+          </center>
+         
             </div>
             </div>
             </div>

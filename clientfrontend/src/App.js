@@ -15,8 +15,8 @@ import createpostsanodya from './components/createpostsanodya';
 //import HomeRamona from './components/HomeRamona';
 //import Details from './components/Details';
 //import assign from './components/assign';
-import tripDrivers from './components/tripDrivers';
-import response from './components/response';
+//import tripDrivers from './components/tripDrivers';
+//import response from './components/response';
 //import assignTrips from './components/assignTrips';
 
 //Disni
@@ -73,16 +73,6 @@ export default class App extends Component{
           <Route path = "/createpostsanodya" component = {createpostsanodya}></Route>
           <Route path = "/editanodya/:id" component = {editanodya}></Route>
          
-
-
-        
-        <Route path="/tripDrivers" component={tripDrivers}></Route>
-        <Route path="/response/:id" component={response}></Route>
-        
-        
-       
-         
-
         
         
         <Route path="/homeDisni" exact component={Ticket}></Route>

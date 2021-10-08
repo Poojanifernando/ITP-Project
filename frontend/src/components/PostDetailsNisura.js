@@ -87,7 +87,7 @@ export default class PostDetailsNisura extends Component {
                         </tr>
                     
                     </table>
-                    <button type="button" className="btn btn-danger" style={{marginTop:'15px', height:'40px'}} title="PAY-NOW"><a href="/tripcharge" style={{textDecoration:'none' , color:'white'}}>PAY-NOW</a></button>
+                    <button type="button" className="btn btn-danger" style={{marginTop:'15px', height:'40px'}} title="Assign"><a href="/assign" style={{textDecoration:'none' , color:'white'}}>Assign a Driver</a></button>
                 </div>
             </div>
             

@@ -6,7 +6,7 @@ export default class homepage extends Component {
         return (
            <div >
 
-            <center> <h1> <b>WELCOME TO Travelling EXPRESS</b> </h1></center>
+            <center> <h1> <b>WELCOME TO TRAVELLING EXPRESS</b> </h1></center>
 
 <br/><br/><br/><br/>
             <center>
@@ -17,8 +17,8 @@ export default class homepage extends Component {
                 <br/>
                 <div className="row">
                 <div className="col-sm-4">
-                    <p className="text-center"><strong><h3><i>Assing Drivers</i></h3></strong></p>
-                    <a href="#demo" data-toggle="collapse">
+                    <p className="text-center"><strong><h3><i>Assign Drivers</i></h3></strong></p>
+                    <a href="/HomeRamona" data-toggle="collapse">
                         <img src="adriver.jpg" className="img-circle person" alt="" width="200" height="200"/>
                     </a>
                   <br/><br/><br/>

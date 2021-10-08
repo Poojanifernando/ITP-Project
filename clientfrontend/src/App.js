@@ -10,14 +10,14 @@ import editanodya from './components/editanodya';
 import createpostsanodya from './components/createpostsanodya';
 
 //Ramona
-import Create from './components/Create';
-import Edit from './components/Edit';
-import HomeRamona from './components/HomeRamona';
-import Details from './components/Details';
-import assign from './components/assign';
+//import Create from './components/Create';
+//import Edit from './components/Edit';
+//import HomeRamona from './components/HomeRamona';
+//import Details from './components/Details';
+//import assign from './components/assign';
 import tripDrivers from './components/tripDrivers';
 import response from './components/response';
-import assignTrips from './components/assignTrips';
+//import assignTrips from './components/assignTrips';
 
 //Disni
 import Ticket from './components/Ticket';
@@ -75,14 +75,10 @@ export default class App extends Component{
          
 
 
-        <Route path="/HomeRamona" component={HomeRamona}></Route>
-        <Route path="/addRamona" component={Create}></Route>
-        <Route path="/editRamona/:id" component={Edit}></Route>
-        <Route path="/postRamona/:id" component={Details}></Route>
-        <Route path="/assign" component={assign}></Route>
+        
         <Route path="/tripDrivers" component={tripDrivers}></Route>
         <Route path="/response/:id" component={response}></Route>
-        <Route path="/assignTrips/:id" component={assignTrips}></Route>
+        
         
        
          

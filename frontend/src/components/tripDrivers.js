@@ -57,7 +57,7 @@ componentDidMount(){
                     <br/>
                     <h2 style={{color:'white', textAlign:'center'}}>Details of the Trips assigned to Drivers</h2>
                       <br/> <br/>
-                      <img src="/driver2.jpg" class="mx-auto" alt="" width="100%" height="300"/>
+                      <img src="/driver2.jpg" style={{height:'500px', width:'100%'}}/>
 
                       <div className="col-lg-9 mt-2 mb-2">
               <input
@@ -69,7 +69,7 @@ componentDidMount(){
               </input>
             </div>
           </div>
-        <br/><br/><br/><br/><br/><br/>  <br/><br/><br/><br/><br/><br/>  <br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/>  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>  <br/><br/><br/><br/><br/><br/>
 
         <table className="table">
          

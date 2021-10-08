@@ -97,7 +97,7 @@ handleSearchArea = (e) =>{
         <table className="table table-hover, container" style={{marginTop:'-300px',marginLeft:"220px", width:"650px",alignContent:"center"}}>
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">No</th>
               <th scope="col">Full Name</th>
               <th scope="col">Address</th>
               <th scope="col" style={{paddingLeft:"45px"}}>Actions</th>

@@ -27,6 +27,11 @@ export default class ReCharge extends Component {
                 alert("Cannot contain letters");
             }
         }
+        if(nam==="creditcard"){
+            if(val.length > 19){
+                alert("Invalid length");
+            }
+        }
 
         this.setState({
             ...this.state,
@@ -156,7 +161,7 @@ export default class ReCharge extends Component {
 
                         <div className="form-group" style={{marginBottom:'10px'}}>
                             <label style={{marginBottom:'5px',color:"white"}}>Expiry Date</label>
-                            <input type="text"
+                            <input type="date"
                             className="form-control"
                             name="expire"
                             placeholder="dd/mm/yyyy"
@@ -175,7 +180,7 @@ export default class ReCharge extends Component {
                         </div>
                         </form>
 
-                        <form className="container" style={{marginLeft:"500px", width:"150px", marginTop:"-95px"}}> 
+                        <form className="container" style={{marginLeft:"500px", width:"150px", marginTop:"-75px"}}> 
                         <div className="form-group" style={{marginBottom:'10px'}}>
                             <label style={{marginBottom:'5px',color:"white"}}>Existing Amount Rs.</label>
                             <input type="text"
@@ -186,48 +191,48 @@ export default class ReCharge extends Component {
                             />
                         </div></form>
 
-                        <form style={{marginTop:"0px", marginLeft:"10px"}}>
+                        <form style={{marginTop:"10px", marginLeft:"10px"}}>
                         <button className="btn btn-success" type="submit" style={{marginTop:'15px', width:"428px"}} onClick={this.onSubmit}>
                             <i className="far fa-check-square"></i>
                             &nbsp;Re-Charge
                         </button>
                     </form><br/>
-                    <button type="button" class="btn btn-primary" style={{marginLeft:'700px', width:"100px"}} title="Request For Season Card"><a href="/chargelist" style={{textDecoration:'none', color:'white'}}>List</a></button>
+                    <button type="button" class="btn btn-primary" style={{marginLeft:'700px', width:"100px"}} title="Request For Season Card"><a href="/chargelist" style={{textDecoration:'none', color:'white'}}>View</a></button>
                     <br/><br/>
                 </div>
             </div>
             
-            <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"00px",height:"170px"}}>
+            <footer className="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"00px",height:"170px"}}>
 
           <div>
 
-              <div class="row" style={{marginLeft:"525px",height:"100px"}}>
+              <div className="row" style={{marginLeft:"525px",height:"100px"}}>
 
-              <div class="col-md-12 py-5">
-                  <div class="mb-5 flex-center">
+              <div className="col-md-12 py-5">
+                  <div className="mb-5 flex-center">
 
-                  <a class="fb-ic" style={{paddingLeft:"10px"}}>
-                      <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="fb-ic" style={{paddingLeft:"10px"}}>
+                      <i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   
-                  <a class="tw-ic"  style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="tw-ic"  style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   
-                  <a class="gplus-ic" style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="gplus-ic" style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   
-                  <a class="li-ic" style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="li-ic" style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
               
-                  <a class="ins-ic" style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="ins-ic" style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   
-                  <a class="pin-ic" style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                  <a className="pin-ic" style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-pinterest fa-lg white-text fa-2x"> </i>
                   </a>
                   </div>
               </div>
@@ -236,7 +241,7 @@ export default class ReCharge extends Component {
 
           </div>
 
-          <div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
+          <div className="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
               <a href="https://google.com/"> Travelling Express</a>
           </div>
 

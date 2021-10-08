@@ -29,12 +29,12 @@ export default class CardDetails extends Component {
         const {fname,address,nic,contactN,startPoint,endPoint,distance, price} = this.state.postDineth;
 
         return (
-            <div style={{backgroundColor:"white", height:"680px", marginTop:"-50px"}}><br/><br/><br/>
+            <div style={{backgroundColor:"white", height:"800px", marginTop:"-50px"}}><br/><br/><br/>
             <div className="card" style={{marginLeft:"435px", marginTop:"30px"}}>
                 <img src="/images/bus12.jpg" style={{width:"100%", height:"200px"}}/>
-                <div style={{marginTop:'20px'}}>
-                    <h4 style={{textAlign:"center"}}>{fname}</h4>
-                    <hr/>
+                <div style={{marginTop:'', backgroundColor:"#080523"}}><br/>
+                    <h4 style={{textAlign:"center", backgroundColor:"#080523"}}>{fname}</h4><br/>
+                    <hr/><br/><br/>
                     <table style={{border:'0'}}>
                         <tr>
                         <th style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-5">Address</th>
@@ -72,40 +72,42 @@ export default class CardDetails extends Component {
                         </tr>
                     
                     </table>
+                    <br/><br/>
                 </div>
             </div>
+            <br/><br/>
 
-            <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"00px",height:"170px"}}>
+            <footer className="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"00px",height:"170px"}}>
 
           <div>
 
-              <div class="row" style={{marginLeft:"525px",height:"100px"}}>
+              <div className="row" style={{marginLeft:"525px",height:"100px"}}>
 
-              <div class="col-md-12 py-5">
-                  <div class="mb-5 flex-center">
+              <div className="col-md-12 py-5">
+                  <div className="mb-5 flex-center">
 
-                  <a class="fb-ic" style={{paddingLeft:"10px"}}>
-                      <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="fb-ic" style={{paddingLeft:"10px"}}>
+                      <i className="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   
-                  <a class="tw-ic"  style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="tw-ic"  style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   
-                  <a class="gplus-ic" style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="gplus-ic" style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   
-                  <a class="li-ic" style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="li-ic" style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
               
-                  <a class="ins-ic" style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                  <a className="ins-ic" style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
                   </a>
                   
-                  <a class="pin-ic" style={{paddingLeft:"20px"}}>
-                      <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                  <a className="pin-ic" style={{paddingLeft:"20px"}}>
+                      <i className="fab fa-pinterest fa-lg white-text fa-2x"> </i>
                   </a>
                   </div>
               </div>

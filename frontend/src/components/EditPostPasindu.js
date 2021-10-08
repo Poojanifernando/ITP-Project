@@ -89,16 +89,16 @@ import axios from 'axios';
 
       return (
 
-        <div className='container'> 
-        <div>
-        <hr/>
-            <br></br>
-            <h2><center>Edit Scheduled Trip Details </center></h2>
-          
-    
-        </div>
+        <div className=''><div style={{backgroundColor:"#ECECEC"}}>
+      <div>
+      <br></br> 
+    <h2><center>Edit Schedule Trip Details</center></h2> <br></br> 
+  
+      </div></div><center></center>
+      <br></br> <br></br>
 
-         <div class="container">
+            <div className='container'> 
+            <div className='container'> 
 
         <form class="form-horizontal" >
     <div class="form-group row">
@@ -161,6 +161,7 @@ import axios from 'axios';
             <br></br><br></br>
  </form>
 </div>
+</div>
 
 
 <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"40px",height:"170px"}}>
@@ -202,8 +203,8 @@ import axios from 'axios';
 
 </div>
 
-<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> Travelling Express</a>
+<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
+    <a href=""> Travelling Express</a>
 </div>
 
 </footer>

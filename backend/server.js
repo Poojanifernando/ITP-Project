@@ -66,7 +66,7 @@ app.use(postRoutesPasi);
 
 
 
-const PORT = 8080;
+const PORT = 8000;
 const DB_URL ='mongodb+srv://admin:admin@project.shu8e.mongodb.net/travellingExpress?retryWrites=true&w=majority';
 
 mongoose.connect(DB_URL,{

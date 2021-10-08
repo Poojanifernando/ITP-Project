@@ -54,7 +54,9 @@ import CreatePostPasi from './components/CreatePostPasi';
 import EditPostPasi from './components/EditPostPasi';
 import HomePasi from './components/HomePasi';
 import PostDetailsPasi from './components/PostDetailsPasi';
-
+import DriverSchedulePasindu from './components/DriverSchedulePasindu';
+import BusDetailsPasindu from './components/BusDetailsPasindu';
+import RouteDetailsPasindu from './components/RouteDetailsPasindu';
 
 export default class App extends Component{
   render(){
@@ -107,16 +109,21 @@ export default class App extends Component{
          <Route path="/locations/:id" component={LocationDetails}></Route>
 
 
-
+          
          <Route path="/HomePasindu" component={HomePasindu}></Route>
+         <Route path="/addPasindu" component={DriverSchedulePasindu}></Route>
+         <Route path="/addPasindu" component={BusDetailsPasindu}></Route>
+         <Route path="/addPasindu" component={RouteDetailsPasindu}></Route>
+          
+    
            <Route path="/addPasindu" component={CreatePostPasindu}></Route>
            <Route path="/editPasindu/:id" component={EditPostPasindu}></Route>
            <Route path="/postPasindu/:id" component={PostDetailsPasindu}></Route>
-
            <Route path="/HomePasi" exact component={HomePasi}></Route>
            <Route path="/addPasi" component={CreatePostPasi}></Route>
            <Route path="/editPasi/:id" component={EditPostPasi}></Route>
            <Route path="/postPasi/:id" component={PostDetailsPasi}></Route>
+           
         
 
               

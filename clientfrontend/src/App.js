@@ -26,6 +26,7 @@ import EditTicket from './components/EditTicket';
 import TicketDetails from './components/TicketDetails';
 import TicketSlip from './components/TicketSlip';
 import TicketPayment from './components/TicketPayment';
+import TimetableDisni from './components/TimetableDisni';
 //import FooterTicket from './components/FooterTicket';
 
 
@@ -94,6 +95,7 @@ export default class App extends Component{
         <Route path="/postDisni/:id" component={TicketDetails}></Route>
         <Route path="/ticket/:id" component={TicketSlip}></Route>
         <Route path="/ticketpayment/:id" component={TicketPayment}></Route>
+        <Route path="/timetable" component={TimetableDisni}></Route>
 
 
 

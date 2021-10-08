@@ -26,8 +26,11 @@ a:hover {
 
 
 body{
-  /*background-color:#080523;*/
-  background-image: linear-gradient(rgb(42, 42, 44), rgb(59, 59, 59));
+  /*background-color:#080523;
+   background-color:#444040;*/
+ background-image: linear-gradient(rgb(42, 42, 44), rgb(59, 59, 59));
+ 
+  background-color:#272729;
   
 }
 .background1{

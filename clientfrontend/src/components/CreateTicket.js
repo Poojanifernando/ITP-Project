@@ -160,9 +160,9 @@ onSubmit = (e) =>{
                 
                 <h1 className= "h3 mb-3 font-weight-normal" style={{color:'White',textShadow: '1px 2px 5px black',fontSize:'50px', marginLeft:'300px'}} >Book a Ticket</h1>
 
-                        <button className="btn btn-success" style={{marginLeft:'900px', marginRight:'0px',padding:'10px 10px',backgroundColor:'#3895d3'}}><a href="/homeDisni" 
+                        <button className="btn btn-success" style={{marginLeft:'730px', marginRight:'-700px',padding:'17px 90px',backgroundColor:'#3895d3'}}><a href="/homeDisni" 
                          style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
-                         <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
+                         <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button><br></br>
                 
                     <form className="needs-validation" noValidate >
 
@@ -192,6 +192,7 @@ onSubmit = (e) =>{
                                     <option value="Colombo"></option>
                                     <option value="Ganemulla"></option>
                                     <option value="Kurunagala"></option>
+                                    <option value="Panadura"></option>
                                     </datalist>
 
 
@@ -211,6 +212,7 @@ onSubmit = (e) =>{
                                     <option value="Colombo"></option>
                                     <option value="Ganemulla"></option>
                                     <option value="Kurunagala"></option>
+                                    <option value="Panadura"></option>
                                     </datalist>
                         </div>
 
@@ -291,6 +293,8 @@ onSubmit = (e) =>{
                                     <option value="Ganemulla-Kurunagala-765"></option>
                                     <option value="Gampaha-Ganemulla-257"></option>
                                     <option value="Colombo-Kurunagala-956"></option>
+                                    <option value="Panadura-Colombo-906"></option>
+                                    <option value="Colombo-Panadura-986"></option>
 
 
                                     </datalist>
@@ -317,6 +321,10 @@ onSubmit = (e) =>{
                         </button>
 
                     </form>
+
+                    <button className="btn btn-success" style={{marginLeft:'730px', marginRight:'-700px',padding:'17px 90px',backgroundColor:'#3895d3'}}><a href="/homeDisni" 
+                         style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
+                         <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
                     
             </div>
 

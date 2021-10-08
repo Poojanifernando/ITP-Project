@@ -30,8 +30,13 @@ const postSchema = mongoose.Schema({
         type:String,
         required:true
     },
+
+    Date :{
+        type:String,
+        required:true
+    },
     
-    Date_Time:{
+   Time:{
         type:String,
         required:true
     }

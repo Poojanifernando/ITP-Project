@@ -26,7 +26,7 @@ import axios from 'axios';
     }
     render(){
 
-        const {Trip_id,Driver_name,Drivers_phone_no,Plate_number,Route,Route2,Date_Time} = this.state.post;
+        const {Trip_id,Driver_name,Drivers_phone_no,Plate_number,Route,Route2,Date,Time} = this.state.post;
 
 
       return (
@@ -60,8 +60,11 @@ import axios from 'axios';
            <dt className ="control-label col-sm-2">End point</dt>
            <dd className ="col-sm-10">{Route2}</dd>
 
-           <dt className ="control-label col-sm-2">Date and Time</dt>
-           <dd className ="col-sm-10">{Date_Time}</dd>
+           <dt className ="control-label col-sm-2">Date</dt>
+           <dd className ="col-sm-10">{Date}</dd>
+
+           <dt className ="control-label col-sm-2">Time</dt>
+           <dd className ="col-sm-10">{Time}</dd>
 
            </dl>
 

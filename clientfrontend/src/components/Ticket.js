@@ -75,7 +75,7 @@ handleSearchArea=(e)=>{
 });
 
 }
-
+//web page
 
 
   render() {
@@ -87,8 +87,11 @@ handleSearchArea=(e)=>{
         <div className="row" >
         
           <div className="col-lg-9 mt-2 mb-2">
+          <div style={{backgroundColor:"black",marginTop:'650px',marginLeft:'0px',marginRight:'-900px'}}>
+           <b> <h4 style={{fontSize:'60px', color:'White',textShadow: '1px 2px 5px black',marginLeft:'500px'}}> TICKET BOOKINGS</h4></b>
+          </div>
           
-           <b> <h4 style={{fontSize:'60px', marginTop:'700px',marginLeft:'500px',marginRight:'100px', color:'White',textShadow: '1px 2px 5px black'}}> TICKET BOOKINGS</h4></b>
+          
            <br></br> <p style={{color:'White',fontSize:'20px'}}>* refresh the page to see your updates and newly created tickets</p>
                 <br></br>  
                 <button className="btn btn-success" style={{marginLeft:'520px', marginRight:'-1000px',padding:'17px 200px',marginTop:'90px', backgroundColor:'#99aab5'}}><a href="/timetable" style={{textDecoration:'none',color:'white',fontSize:'20px'}}> <i class="fas fa-bus-alt"></i>&nbsp;Time Table</a></button>
@@ -179,7 +182,50 @@ handleSearchArea=(e)=>{
        </div>
 
     </div>
-      
+    <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"1300px",height:"170px"}}>
+
+<div>
+
+    <div class="row" style={{marginLeft:"700px",height:"100px"}}>
+
+    <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+        <a class="fb-ic" style={{paddingLeft:"10px"}}>
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="tw-ic"  style={{paddingLeft:"20px"}}>
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="gplus-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="li-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+    
+        <a class="ins-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="pin-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+        </a>
+        </div>
+    </div>
+
+    </div>
+
+</div>
+
+<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> Travelling Express</a>
+</div>
+
+</footer>
 </div>
 
     

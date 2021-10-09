@@ -32,6 +32,9 @@ const postAdminsignup = require ('./routes/adminsignup');
 const postRoutesPasi = require ('./routes/postsPasi');
 const postRoutesPasindu = require ('./routes/postsPasindu');
 
+//Savinu
+const postRoutesSavinu = require ('./routes/postsSavinu');
+
 
 //app middleware
 app.use(bodyParser.json());
@@ -62,8 +65,8 @@ app.use(postRental);
 app.use(postRoutesPasindu);
 app.use(postRoutesPasi);
 
-
-
+//Savinu
+app.use(postRoutesSavinu);
 
 
 const PORT = 8000;
@@ -74,7 +77,7 @@ mongoose.connect(DB_URL,{
     useUnifiedTopology: true
 })
 .then(()=>{
-    console.log('DB connected');
+    console.log('DB connection successfully!!');
 })
 .catch((err)=> console.log('DB Connection Error',err));
 

@@ -193,6 +193,11 @@ export default class Rentalcost extends Component{
     </div>
   
 </div>
+
+
+
+
+
         )
 
 

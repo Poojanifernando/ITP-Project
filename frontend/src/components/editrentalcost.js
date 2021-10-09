@@ -99,6 +99,8 @@ getUsersData() {
     render()
 {
         return(
+
+          <div>
           <div>
        
 
@@ -216,8 +218,61 @@ getUsersData() {
                     Send Details</a></button>
     </Col>
 </Row>
+<br/><br/>
     </div>
 </div>
+
+
+
+
+<div>
+            <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"-10px",height:"170px"}}>
+
+            <div>
+            
+                <div class="row" style={{marginLeft:"700px",height:"100px"}}>
+            
+                <div class="col-md-12 py-5">
+                    <div class="mb-5 flex-center">
+            
+                    <a class="fb-ic" style={{paddingLeft:"10px"}}>
+                        <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    
+                    <a class="tw-ic"  style={{paddingLeft:"20px"}}>
+                        <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    
+                    <a class="gplus-ic" style={{paddingLeft:"20px"}}>
+                        <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    
+                    <a class="li-ic" style={{paddingLeft:"20px"}}>
+                        <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                
+                    <a class="ins-ic" style={{paddingLeft:"20px"}}>
+                        <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+                    </a>
+                    
+                    <a class="pin-ic" style={{paddingLeft:"20px"}}>
+                        <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+                    </a>
+                    </div>
+                </div>
+            
+                </div>
+            
+            </div>
+            
+            <div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
+                <a href="https://mdbootstrap.com/"> Travelling Express</a>
+            </div>
+            
+            </footer> 
+            </div>
+
+            </div>
         )
 
 

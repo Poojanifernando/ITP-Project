@@ -92,7 +92,7 @@ export default class HomeNisura extends Component {
               <th scope="col">No Of Passengers</th>
               <th scope="col">Date</th>
               <th scope="col">Distance</th>
-              <th scope="col">Trip Cost</th>
+              <th  scope="col">Trip Cost</th>
               <th scope="col">Actions</th>
               
            
@@ -118,7 +118,7 @@ export default class HomeNisura extends Component {
                 <td>{posts.noOfPassengers}</td>
                 <td>{posts.date}</td>
                 <td>{posts.distance}Km</td>
-                <td>Rs.{posts.price}</td>
+                <td style={{color:'red'}}>Rs.{posts.price}</td>
                 <td>
                 <a className= "btn btn-warning" href={`/edit/${posts._id}`}>
                   <i className="fas fa-edit"></i>&nbsp;Edit

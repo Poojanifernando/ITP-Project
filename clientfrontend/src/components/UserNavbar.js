@@ -21,8 +21,8 @@ export default class UserNavbar extends Component {
         <div><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse" id="navcol-1">
             <ul className="navbar-nav">
-                    <li className="nav-item"><a className="nav-link "href="/" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Home</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Profile</a></li>
+                    <li className="nav-item"><a className="nav-link "href="/userhome" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Home</a></li>
+                  
           
                     <li className="nav-item"><a className="nav-link" href="/homeDisni" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Ticket Booking</a></li>
                     <li className="nav-item"><a className="nav-link" href="/niss" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Special Services</a></li>

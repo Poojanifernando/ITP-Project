@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import './azmie.css'
+import ReactHTMLTableToExcel from "react-html-table-to-excel";
 
 export default class Home extends Component{
   constructor(props){
@@ -82,7 +83,7 @@ handleSearchArea = (e) =>{
         
       </div>
             
-        <table className="table table-dark">
+        <table id="azmietable" className="table table-light ">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -116,7 +117,15 @@ handleSearchArea = (e) =>{
             ))}
           </tbody>
        </table>
-       
+       <div>
+              <ReactHTMLTableToExcel
+                className="btn btn-outline-success"
+                table="azmietable"
+                filename="Tracking details Excel"
+                sheet="Sheet"
+                buttonText="Download the bus schedule"
+              />
+            </div>
       </div>
     )
   }

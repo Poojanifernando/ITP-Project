@@ -137,14 +137,16 @@ handleSearchArea = (e) =>{
             <button className="btn btn-secondary btn-lg"><a href="/HomeRamona" style={{textDecoration:'none' ,color:'white'}}> View Driver Details</a></button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button className="btn btn-secondary btn-lg"><a href="/HomePasindu" style={{textDecoration:'none' ,color:'white'}}> View Trip Details</a></button>
-            <ReactHTMLTableToExcel
+           
+                    
+            </div>
+            <button className="btn btn-primary btn-lg" style={{textDecoration:'none' ,color:'white'}}><ReactHTMLTableToExcel
                     id="test-table-xls-button"
                     className="download-table-xls-button"
                     table="table-to-xlsRamona"
                     filename="tablexls"
                     sheet="tablexls"
-                    buttonText="Download as XLS"/>
-            </div>
+                    buttonText="Download as XLS"/></button>
       </div>
       <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginLeft:"-120px", marginTop:"40px",height:"170px",marginRight:"-120px"}}>
 

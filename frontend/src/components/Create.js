@@ -232,7 +232,7 @@ export default class Create extends Component {
             </form>
             
         </div>
-        <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"40px",height:"170px"}}>
+        <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginLeft:"-120px", marginTop:"30px",height:"170px",marginRight:"-120px", marginBottom:"-40px"}}>
 
             <div>
 

@@ -20,12 +20,13 @@ router.post('/postSavinu/save',(req,res)=>{
             success:"Post saved successfully"
         });
     });
+
 });
 
 //get posts
 
 router.get('/postsSavinu',(req,res) =>{
-    Employees.find().exec((err,postsSavinu =>{
+    Employees.find().exec((err,postsSavinu) =>{
         if(err){
             return res.status(400).json({
             error:err    
@@ -33,9 +34,9 @@ router.get('/postsSavinu',(req,res) =>{
         }
         return res.status(200).json({
             success:true,
-            existingEmpoyees:postsSavinu
+            existingEmployees:postsSavinu
         });
-    }));
+    });
 });
 
 
@@ -43,9 +44,9 @@ router.get('/postsSavinu',(req,res) =>{
 
 router.get("/postSavinu/:id",(req,res) =>{
 
-    let employeeId = req.params.id;
+    let postId = req.params.id;
 
-    Employees.findById(employeeId,(err,postSavinu) =>{
+    Employees.findById(postId,(err,postSavinu) =>{
       if(err){
           return res.status(400).json({success:false, err});
         } 
@@ -55,12 +56,16 @@ router.get("/postSavinu/:id",(req,res) =>{
             postSavinu
          });
     });
+
+    
 });
+
+
 
 
 //update posts
 
-router.put('/post/updateSavinu/:id',(req,res) =>{
+router.put('/postSavinu/update/:id',(req,res) =>{
     Employees.findByIdAndUpdate(
         req.params.id,
         {
@@ -81,15 +86,15 @@ router.put('/post/updateSavinu/:id',(req,res) =>{
 
 //delete posts
 
-router.delete('/post/deleteSavinu/:id',(req,res) =>{
-    Employees.findByIdAndRemove(req.params.id).exec((err,deletedEmployee) => {
+router.delete('/postSavinu/delete/:id',(req,res) =>{
+    Employees.findByIdAndRemove(req.params.id).exec((err,deletedPostSavinu) => {
 
         if(err) return res.status(400).json({
             message:"Delete was unsuccesful",err
         });
 
         return res.json({
-            message:"Delete was Succesfull",deletedEmployee
+            message:"Delete was Succesfull",deletedPostSavinu
         });
     });
 });

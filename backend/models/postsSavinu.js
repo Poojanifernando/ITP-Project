@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const postSchema = mongoose.Schema({
+const postSchemaSavinu = mongoose.Schema({
 
     name :{
         type:String,
@@ -44,4 +44,4 @@ const postSchema = mongoose.Schema({
 
     });
 
-module.exports = mongoose.model('Employees', postSchema);
+module.exports = mongoose.model('Employees', postSchemaSavinu);

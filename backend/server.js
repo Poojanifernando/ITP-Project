@@ -27,6 +27,7 @@ const postRoutes = require ('./routes/locations');
 const postAnodyaRoutes = require ('./routes/postAnodya');
 const postRental = require ('./routes/rentalcost');
 const postAdminsignup = require ('./routes/adminsignup');
+const postUsersignup = require ('./routes/usersignup');
 
 //pasindu
 const postRoutesPasi = require ('./routes/postsPasi');
@@ -59,6 +60,8 @@ app.use(postRoutes);
 app.use(postAdminsignup);
 app.use(postAnodyaRoutes);
 app.use(postRental);
+app.use(postUsersignup);
+
 
 //pasindu
 

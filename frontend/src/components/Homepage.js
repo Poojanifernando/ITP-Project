@@ -5,7 +5,7 @@ export default class homepage extends Component {
     render() {
         return (
            <div >
-
+<br/>
             <center> <h1> <b>WELCOME TO TRAVELLING EXPRESS</b> </h1></center>
 
 <br/><br/><br/><br/>
@@ -25,14 +25,14 @@ export default class homepage extends Component {
                 </div>
                 <div className="col-sm-4">
                     <p className="text-center"><strong><h3><i>Trip Sheduling</i></h3></strong></p><br/>
-                    <a href="#demo2" data-toggle="collapse">
+                    <a href="/HomePasindu" data-toggle="collapse">
                         <img src="shedule098.jpg" className="img-circle person" alt="" width="200" height="200"/>
                     </a>
                   <br/><br/>
                 </div>
                 <div className="col-sm-4">
                     <p className="text-center"><strong><h3><i>Bus Details</i></h3></strong></p><br/>
-                    <a href="#demo3" data-toggle="collapse">
+                    <a href="/HomePasi" data-toggle="collapse">
                         <img src="busdetails.jpg" className="img-circle person" alt="" width="200" height="200"/>
                     </a>
                   <br/><br/>
@@ -41,7 +41,7 @@ export default class homepage extends Component {
                 <div className="row">
                 <div className="col-sm-4">
                     <p className="text-center"><strong><h3><i>Rental cost calculation</i></h3></strong></p><br/>
-                    <a href="#demo3" data-toggle="collapse">
+                    <a href="/rentalhome" data-toggle="collapse">
                         <img src="calculation123.jpg" className="img-circle person" alt="Random Name" width="200" height="200"/>
                     </a>
                   <br/><br/><br/>
@@ -49,7 +49,7 @@ export default class homepage extends Component {
 
                 <div className="col-sm-4">
                     <p className="text-center"><strong><h3><i>Employee Management</i></h3></strong></p><br/>
-                    <a href="#demo3" data-toggle="collapse">
+                    <a href="/HomeSavinu" data-toggle="collapse">
                         <img src="emp123.jpg" className="img-circle person" alt="Random Name" width="200" height="200"/>
                     </a>
                   <br/><br/><br/>

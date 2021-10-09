@@ -18,7 +18,7 @@ export default class NavBar extends Component {
                     <li className="nav-item"><a className="nav-link" href="/add" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Special Services</a></li>
 
                     <li className="nav-item"><a className="nav-link" href="/HomePasi" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Company Bus Details </a></li>
-                    <li className="nav-item"><a className="nav-link" href="/cost" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Rental Calculation </a></li>
+                    <li className="nav-item"><a className="nav-link" href="/rentalhome" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Rental Calculation </a></li>
                     <li className="nav-item"><a className="nav-link" href="/managelocation" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Manage Locations</a></li>
                     <li className="nav-item"><a className="nav-link" href="/HomeSavinu" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Employee Management</a></li>
                 </ul>

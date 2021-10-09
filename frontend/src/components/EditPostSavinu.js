@@ -50,7 +50,7 @@ export default class EditPostSavinu extends Component{
 
         // update a specific post 
 
-        axios.put(`/post/updateSavinu/${id}`,data).then((res) =>{
+        axios.put(`/postSavinu/update/${id}`,data).then((res) =>{
             if(res.data.success){
                 alert("Updated Successfully!!")
                 this.setState(
@@ -78,17 +78,17 @@ export default class EditPostSavinu extends Component{
         axios.get(`/postSavinu/${id}`).then((res) =>{
             if(res.data.success){
                 this.setState({
-                    name:res.data.post.name,
-                    employee:res.data.post.employee,
-                    address:res.data.post.address,
-                    contact_number:res.data.post.contact_number,
-                    nic:res.data.post.nic,
-                    driver_license:res.data.post.driver_license,
-                    bank_number:res.data.post.bank_number,
-                    user_name:res.data.post.user_name
+                    name:res.data.postSavinu.name,
+                    employee:res.data.postSavinu.employee,
+                    address:res.data.postSavinu.address,
+                    contact_number:res.data.postSavinu.contact_number,
+                    nic:res.data.postSavinu.nic,
+                    driver_license:res.data.postSavinu.driver_license,
+                    bank_number:res.data.postSavinu.bank_number,
+                    user_name:res.data.postSavinu.user_name
                 });
 
-                console.log(this.state.post);
+                console.log(this.state.postSavinu);
             }
 
         });
@@ -185,12 +185,14 @@ export default class EditPostSavinu extends Component{
                         onChange={this.handleInputChange}/>
                     </div>
 
-                   <center> <button className="btn btn-success" type="submit" style={{marginTop:'15px', marginBottom:'15px'}} onClick={this.onSubmit}>
+                   <center> <button className="btn btn-success" type="submit" style={{marginTop:'20px', marginBottom:'15px'}} onClick={this.onSubmit}>
                         <i className="far fa-check-square"></i>
-                        &nbsp; Update &nbsp;&nbsp;
+                        &nbsp; Update 
                     </button>
 
-                    <button type="button" className="btn btn-secondary" style={{marginTop:'20px', height:'37px', marginBottom:'15px'}} title="View Details">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+
+                    <button type="button" className="btn btn-success" style={{marginTop:'20px', marginBottom:'15px'}} title="Go back">
                         <a href="/HomeSavinu" style={{textDecoration:'none' , color:'white'}}>Go back</a>
                     </button>
                     </center>

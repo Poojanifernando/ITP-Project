@@ -59,6 +59,7 @@ filterData(rentalcost,searchKey){
 }
   render(){
     return (
+      <div>
 
       <div style={{backgroundColor: "#080523"}}>
 <div>
@@ -153,6 +154,13 @@ filterData(rentalcost,searchKey){
     </div>
      </div>    
   </div> 
+
+
+
+
+
+
+</div>
     )
 }
 

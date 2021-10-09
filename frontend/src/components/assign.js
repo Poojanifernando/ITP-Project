@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 export default class assign extends Component {
   constructor(props){
@@ -78,7 +79,7 @@ handleSearchArea = (e) =>{
             </div>
           
         
-       <table className="table">
+       <table id="table-to-xlsRamona" className="table">
          
         <thead>
         <tr style={{color:'black'}}>
@@ -136,7 +137,13 @@ handleSearchArea = (e) =>{
             <button className="btn btn-secondary btn-lg"><a href="/HomeRamona" style={{textDecoration:'none' ,color:'white'}}> View Driver Details</a></button>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button className="btn btn-secondary btn-lg"><a href="/HomePasindu" style={{textDecoration:'none' ,color:'white'}}> View Trip Details</a></button>
-           
+            <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    table="table-to-xlsRamona"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download as XLS"/>
             </div>
       </div>
       <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginLeft:"-120px", marginTop:"40px",height:"170px",marginRight:"-120px"}}>

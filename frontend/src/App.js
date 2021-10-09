@@ -58,6 +58,13 @@ import DriverSchedulePasindu from './components/DriverSchedulePasindu';
 import BusDetailsPasindu from './components/BusDetailsPasindu';
 import RouteDetailsPasindu from './components/RouteDetailsPasindu';
 
+//Savinu
+import HomeSavinu from './components/HomeSavinu';
+//import NavBar from './components/NavBar';
+import PostDetailsSavinu from './components/PostDetailsSavinu';
+import CreatePostSavinu from './components/CreatePostSavinu';
+import EditPostSavinu from './components/EditPostSavinu';
+
 export default class App extends Component{
   render(){
     return (
@@ -124,6 +131,11 @@ export default class App extends Component{
            <Route path="/editPasi/:id" component={EditPostPasi}></Route>
            <Route path="/postPasi/:id" component={PostDetailsPasi}></Route>
            
+
+          <Route path="/HomeSavinu" exact component={HomeSavinu} ></Route>
+          <Route path="/addSavinu" exact component={CreatePostSavinu} ></Route>
+          <Route path="/editSavinu/:id" exact component={EditPostSavinu} ></Route>
+          <Route path="/postSavinu/:id" exact component={PostDetailsSavinu} ></Route>
         
 
               

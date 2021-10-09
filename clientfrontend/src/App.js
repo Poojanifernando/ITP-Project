@@ -5,19 +5,11 @@ import {BrowserRouter,Route} from "react-router-dom"
 import homeanodya from './components/homeanodya';
 import Homepage from './components/Homepage';
 import editanodya from './components/editanodya';
-//import UserLogin from './components/UserLogin';
-//import Usersignup from './Components/Usersignup';
+import userlogin from './components/userlogin';
+import usersignup from './components/usersignup';
 import createpostsanodya from './components/createpostsanodya';
 
-//Ramona
-//import Create from './components/Create';
-//import Edit from './components/Edit';
-//import HomeRamona from './components/HomeRamona';
-//import Details from './components/Details';
-//import assign from './components/assign';
-//import tripDrivers from './components/tripDrivers';
-//import response from './components/response';
-//import assignTrips from './components/assignTrips';
+
 
 //Disni
 import Ticket from './components/Ticket';
@@ -68,6 +60,8 @@ export default class App extends Component{
        
 
           <Route path="" component={UserNavbar}></Route>
+          <Route path = "/"  exact component = {userlogin}></Route>
+          <Route path = "/usersignup" component = {usersignup}></Route>
           <Route path = "/dashboard" component = {Homepage}></Route>
           <Route path = "/homeanodya"  component = {homeanodya}></Route>
           <Route path = "/createpostsanodya" component = {createpostsanodya}></Route>
@@ -91,7 +85,7 @@ export default class App extends Component{
         <Route path ="/editCard/:id" component={EditCard}></Route>
         <Route path ="/card/:id" component={CardDetails}></Route>
         <Route path ="/charge" component={ReCharge}></Route>
-        <Route path = "/" exact component = {UserHome}></Route>
+        <Route path = "/userhome"  component = {UserHome}></Route>
         <Route path = "/chargelist" component={ChargeHome}></Route>
         <Route path = "/editCharge/:id" component = {EditCharge}></Route>
 

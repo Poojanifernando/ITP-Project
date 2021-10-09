@@ -1,5 +1,6 @@
 import React, { Component } from  'react';
 import axios from 'axios';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 
 export default class rentalhome extends Component{
@@ -88,7 +89,7 @@ filterData(rentalcost,searchKey){
    
   <div>   <h3><p  style={{color: " #EBEBEB" }}>Calculated Rental-cost details</p></h3></div>
 
-     <table border = "4" className = "table" style={{backgroundColor: "#EBE6DC"}}>
+     <table   id ="table-to-axls-anodya" border = "4" className = "table" style={{backgroundColor: "#EBE6DC"}}>
        <thead>
          <tr>
            <th scope = "col">#</th>
@@ -141,6 +142,17 @@ filterData(rentalcost,searchKey){
 <center>
      <button className="btn btn-success" ><a href = "/cost" style = {{textDecoration:'none',color:'white',marginTop:'15px'}} >New Calculation</a></button>
     </center>
+    <br/>
+    <center>
+    <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    className="btn btn-success"
+                    table="table-to-axls-anodya"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download as XLS file"/>
+                    </center>
     <br/><br/>  <br/><br/>  <br/><br/>
     
 

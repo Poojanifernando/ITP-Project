@@ -35,7 +35,7 @@ export default class UserNavbar extends Component {
                         <button style={{marginLeft:"10px", width:"20px", height:"20px", backgroundColor:"white"}} type="submit"><i class="fa fa-search"></i></button>         
                     </li>
                     
-                    <li></li>
+                    <li>         <a className="btn btn-light action-button" role="button" href="/" style={{fontsize:'15px', background: 'rgb(69,27,158)' ,color: 'rgb(255,255,255)',height:"35px",width:"100px", marginTop:"8px", marginLeft:"300px"}}>Sign Out</a></li>
                    
                   
                 </ul>

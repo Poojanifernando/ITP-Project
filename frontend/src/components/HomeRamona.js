@@ -151,7 +151,7 @@ handleSearchArea = (e) =>{
             
 
       </div>
-      <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"40px",height:"170px"}}>
+      <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"0px",height:"170px"}}>
 
             <div>
 

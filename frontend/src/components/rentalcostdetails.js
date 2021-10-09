@@ -35,17 +35,17 @@ export default class rentalcostdetails extends Component{
   const {Busid,OwnerName, NationalID, Amountperkm, Numberofkms, Totalcost} = this.state.rentalcost;
     return (
 
-      <div style={{backgroundColor: "#080523"}}>
-          <div>
-          <table>
-            <tr>
-              <th>
-              <img src="/rent1.jpg" class="mx-auto" alt="" width="760px" height="700px"/>
-                </th>
-              <th>
+  
+      <div style={{ 
+        backgroundImage: 'url("/admin.jpg")' ,height:"800px", paddingTop:"10px"}}>
+    <div>
+         
+       
                 <hr/>
-                 <h4 className = "t2"  style={{color: " #EBEBEB",  fontweight : "500px"}}><center>{Busid}</center></h4>
-
+                <br/>
+                 <h4 className = "t2"  style={{color: " #EBEBEB",  fontweight : "700px"}}><center>{Busid}</center></h4>
+<br/><br/>
+<center>
                  <table border = "4" width = "560px" height = "400px" style={{backgroundColor: "#EBE6DC",  margin: "10px"}}>
            <tr>
              
@@ -76,21 +76,20 @@ export default class rentalcostdetails extends Component{
                      
                 
                         </table>
+                        </center>
                         <br/>
-                        <hr/>
-                 
-             </th>
+         
            
           
-</tr>
 
-        </table>
                
            
+            </div>
+            </div>
             
-        </div>
+  
 
-           </div>
+        
                 
                 
    

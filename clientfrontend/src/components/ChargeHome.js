@@ -63,8 +63,8 @@ handleSearchArea = (e) =>{
 
         <div className="row" style={{height:'120px', width:'102%',backgroundColor:"#080523"}}>
           <div className="col-lg-9 mt-2 mb-2">
-            <h3 style={{color:"white",marginLeft:"60px", marginTop:"10px"}}>Season Card Users</h3>
-            <h4 className="mt-2" style={{color:"#49A8F1", marginLeft:"380px"}}>Search here to find you, use your name or address....</h4>
+            <h3 style={{color:"white",marginLeft:"60px", marginTop:"10px"}}>Season Card Recharge</h3>
+            <h4 className="mt-2" style={{color:"#49A8F1", marginLeft:"450px"}}>Search here to find you, use your name....</h4>
           </div>
           <div className="col-lg-2 mt-5 mb-2" style={{marginTop:"80px"}}>
             <input
@@ -78,24 +78,11 @@ handleSearchArea = (e) =>{
           </div>
         </div>
 
-        <div class="sidenav" style={{backgroundColor:'white',marginLeft:"1020px",marginTop:"70px",height:'300px',width:'320px',overflowX:"hidden",paddingtop: '20px'}}> 
-          <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front"> 
-                <img src="/images/secard.png" style={{height:'138px', width:'255px', marginTop:"75px", marginLeft:"30px"}}/>    
-              </div>
-              <div class="flip-card-back">
-              <img src="/images/secard.png" style={{height:'138px', width:'255px', marginTop:"75px", marginLeft:"30px"}}/> 
-              </div>
-            </div>    
-          </div>
         
-        </div>
-        
-        <table className="table table-hover, container" style={{marginTop:'-300px',marginLeft:"220px", width:"650px",alignContent:"center"}}>
+        <table className="table table-hover, container" style={{marginTop:'50px',marginLeft:"380px", width:"650px",alignContent:"center"}}>
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">No</th>
               <th scope="col">Card holder name</th>
               <th scope="col">Amount</th>
               <th scope="col" style={{paddingLeft:"0px"}}>Actions</th>

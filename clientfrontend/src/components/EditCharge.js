@@ -44,7 +44,7 @@ export default class EditCharge extends Component {
 
         axios.put(`/post/updateCharge/${id}`, data).then((res)=>{
             if(res.data.success){
-                alert("Card updated successfully")
+                alert("Card recharge successfully")
                 this.setState(
                     {
                         cardno:"",
@@ -162,7 +162,7 @@ export default class EditCharge extends Component {
 
                         <div className="form-group" style={{marginBottom:'10px'}}>
                             <label style={{marginBottom:'5px',color:"white"}}>Expiry Date</label>
-                            <input type="text"
+                            <input type="date"
                             className="form-control"
                             name="expire"
                             placeholder="dd/mm/yyyy"
@@ -181,7 +181,7 @@ export default class EditCharge extends Component {
                         </div>
                         </form>
 
-                        <form className="container" style={{marginLeft:"500px", width:"150px", marginTop:"-95px"}}>
+                        <form className="container" style={{marginLeft:"500px", width:"150px", marginTop:"-75px"}}>
                         <div className="form-group" style={{marginBottom:'10px'}}>
                             <label style={{marginBottom:'5px',color:"white"}}>Existing Amount Rs.</label>
                             <input type="text"
@@ -198,13 +198,13 @@ export default class EditCharge extends Component {
                             &nbsp;Re-Charge
                         </button>
                     </form><br/>
-                    <button type="button" class="btn btn-primary" style={{marginLeft:'700px', width:"100px"}} title="Request For Season Card"><a href="/chargelist" style={{textDecoration:'none', color:'white'}}>List</a></button>
+                    <button type="button" class="btn btn-primary" style={{marginLeft:'700px', width:"100px"}} title="Request For Season Card"><a href="/chargelist" style={{textDecoration:'none', color:'white'}}>View</a></button>
                     <br/><br/>
                 </div>
             </div>
             <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"00px",height:"170px"}}>
 
-          <div>
+            <div>
 
               <div class="row" style={{marginLeft:"525px",height:"100px"}}>
 

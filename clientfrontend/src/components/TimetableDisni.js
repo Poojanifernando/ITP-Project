@@ -52,9 +52,18 @@ export default class HomePasindu1 extends Component{
 
     const result = posts.filter((post) =>
    
+    
+    
+    post.Plate_number.toLowerCase().includes(searchKey)||
+    post.Plate_number.includes(searchKey)||
     post.Route.toLowerCase().includes(searchKey)||
+    post.Route.includes(searchKey)||
     post.Route2.toLowerCase().includes(searchKey)||
-    post.Date_Time.toLowerCase().includes(searchKey)
+    post.Route2.includes(searchKey)||
+    post.Date.toLowerCase().includes(searchKey)||
+    post.Date.includes(searchKey)||
+    post.Time.toLowerCase().includes(searchKey)||
+    post.Time.includes(searchKey)
     )
 
     this.setState({posts:result})
@@ -110,6 +119,8 @@ handleSearchArea=(e) =>{
        <table className ="table" style={{fontSize:'20px'}}>
       <thead>
         <tr>
+              
+
               <th scope ="col">No.</th>
               <th scope ="col">Trip id </th>
               <th scope ="col">Drivers name </th>
@@ -117,7 +128,9 @@ handleSearchArea=(e) =>{
               <th scope ="col">Bus plate number </th>
               <th scope ="col">Starting Point </th>
               <th scope ="col">End Point </th>
-              <th scope ="col">Date-Time </th>
+              <th scope ="col">Date</th>
+              <th scope ="col">Time </th>
+              
               
 
         </tr>
@@ -134,7 +147,8 @@ handleSearchArea=(e) =>{
             <td>{posts.Plate_number}</td>
             <td>{posts.Route}</td>
             <td>{posts.Route2}</td>
-            <td>{posts.Date_Time}</td>
+            <td>{posts.Date}</td>
+            <td>{posts.Time}</td>
             <td>
               
              

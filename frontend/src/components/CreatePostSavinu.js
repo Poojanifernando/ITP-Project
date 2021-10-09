@@ -205,7 +205,7 @@ export default class CreatePostSavinu extends Component{
                         &nbsp;
                         &nbsp;
                         
-                    <button type="button" className="btn btn-secondary" style={{marginTop:'20px', height:'37px', marginBottom:'15px'}} title="View Details">
+                    <button type="button" className="btn btn-success" style={{marginTop:'20px', marginBottom:'15px'}} title="View Details">
                         <a href="/HomeSavinu" style={{textDecoration:'none' , color:'white'}}>View saved Details</a>
                     </button>
 

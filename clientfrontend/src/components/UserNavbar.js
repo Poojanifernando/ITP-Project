@@ -21,8 +21,8 @@ export default class UserNavbar extends Component {
         <div><button data-bs-toggle="collapse" className="navbar-toggler" data-bs-target="#navcol-1"><span className="visually-hidden">Toggle navigation</span><span className="navbar-toggler-icon"></span></button>
             <div className="collapse navbar-collapse" id="navcol-1">
             <ul className="navbar-nav">
-                    <li className="nav-item"><a className="nav-link "href="/" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Home</a></li>
-                    <li className="nav-item"><a className="nav-link" href="#" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Profile</a></li>
+                    <li className="nav-item"><a className="nav-link "href="/userhome" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Home</a></li>
+                  
           
                     <li className="nav-item"><a className="nav-link" href="/homeDisni" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Ticket Booking</a></li>
                     <li className="nav-item"><a className="nav-link" href="/niss" style={{fontsize:'15px',color:'rgb(255,255,255)'}}>Special Services</a></li>
@@ -35,7 +35,7 @@ export default class UserNavbar extends Component {
                         <button style={{marginLeft:"10px", width:"20px", height:"20px", backgroundColor:"white"}} type="submit"><i class="fa fa-search"></i></button>         
                     </li>
                     
-                    <li></li>
+                    <li>         <a className="btn btn-light action-button" role="button" href="/" style={{fontsize:'15px', background: 'rgb(69,27,158)' ,color: 'rgb(255,255,255)',height:"35px",width:"100px", marginTop:"8px", marginLeft:"300px"}}>Sign Out</a></li>
                    
                   
                 </ul>

@@ -1,5 +1,6 @@
 import React, { Component } from  'react';
 import axios from 'axios';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 
 export default class rentalhome extends Component{
@@ -59,13 +60,10 @@ filterData(rentalcost,searchKey){
 }
   render(){
     return (
+      <div>
 
       <div style={{backgroundColor: "#080523"}}>
 <div>
-   
-
-      
-
    
 
       <div className="container">
@@ -91,7 +89,7 @@ filterData(rentalcost,searchKey){
    
   <div>   <h3><p  style={{color: " #EBEBEB" }}>Calculated Rental-cost details</p></h3></div>
 
-     <table border = "4" className = "table" style={{backgroundColor: "#EBE6DC"}}>
+     <table   id ="table-to-axls-anodya" border = "4" className = "table" style={{backgroundColor: "#EBE6DC"}}>
        <thead>
          <tr>
            <th scope = "col">#</th>
@@ -141,15 +139,83 @@ filterData(rentalcost,searchKey){
         </tbody>
 
      </table>
-
-     <button className="btn btn-success" ><a href = "/cost" style = {{textDecoration:'none',color:'white',marginTop:'15px'}} >Back to Calculation</a></button>
-    
+<center>
+     <button className="btn btn-success" ><a href = "/cost" style = {{textDecoration:'none',color:'white',marginTop:'15px'}} >New Calculation</a></button>
+    </center>
+    <br/>
+    <center>
+    <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    className="btn btn-success"
+                    table="table-to-axls-anodya"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download as XLS file"/>
+                    </center>
+    <br/><br/>  <br/><br/>  <br/><br/>
     
 
 
     </div>
      </div>    
   </div> 
+
+
+
+
+
+<div>
+
+<footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"-10px",height:"170px"}}>
+
+<div>
+
+    <div class="row" style={{marginLeft:"700px",height:"100px"}}>
+
+    <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+        <a class="fb-ic" style={{paddingLeft:"10px"}}>
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="tw-ic"  style={{paddingLeft:"20px"}}>
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="gplus-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="li-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+    
+        <a class="ins-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="pin-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+        </a>
+        </div>
+    </div>
+
+    </div>
+
+</div>
+
+<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> Travelling Express</a>
+</div>
+
+</footer>
+
+</div>
+</div>
+
+
     )
 }
 

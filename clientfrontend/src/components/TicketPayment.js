@@ -61,7 +61,60 @@ export default class TicketDetails extends Component {
  
   }
   
+  handleInputChange= (e)=>{
+    const {name,value} = e.target;
+    let nam = e.target.name;
+    let val = e.target.type;
 
+   
+  //validations 
+   
+
+    if (nam=== "name") {
+        
+        if (Number(val)) {
+          alert("Name cannot be a number!");
+        }
+      }
+
+      if (nam=== "cardnum") {
+        
+        if (!Number(val)) {
+          alert("Card number must be in numbers!");
+        }
+      }
+
+      if (nam=== "cardnum") {
+        
+        if (val.length > 17  ) {
+          alert("Invalide length! input Card number again.");
+        }
+      }
+
+
+
+
+    if (nam=== "CVV") {
+        
+        if (!Number(val)) {
+          alert("CVV must be in numbers!");
+        }
+      }
+
+
+      if (nam=== "CVV") {
+        
+        if (val.length > 4  ) {
+          alert("Invalide length! input CVV number again.");
+        }
+      }
+
+     
+    this.setState({
+        ...this.state,
+        [name]:value
+    })
+}
   
 
 
@@ -94,11 +147,11 @@ export default class TicketDetails extends Component {
                 <label class="radio"> <input type="radio" name="card" value="payment"/> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"/> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"/> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png" /></span> </label>
-                <div><label class="credit-card-label">Name on card</label><input type="text" class="form-control credit-inputs" placeholder="Name"/></div>
-                <div><label class="credit-card-label">Card number</label><input type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000"/></div>
+                <div><label class="credit-card-label">Name on card</label><input name="name"  type="text" class="form-control credit-inputs" placeholder="Name"/></div>
+                <div><label class="credit-card-label">Card number</label><input name= "cardnum"  type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000"/></div>
                 <div class="row">
-                    <div class="col-md-6"><label class="credit-card-label">Date</label><input type="text" class="form-control credit-inputs" placeholder="12/24"/></div>
-                    <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text" class="form-control credit-inputs" placeholder="342"/></div>
+                    <div class="col-md-6"><label class="credit-card-label">Date</label><input name ="date"  type="text" class="form-control credit-inputs" placeholder="12/24"/></div>
+                    <div class="col-md-6"><label class="credit-card-label">CVV</label><input name="CVV"  type="text" class="form-control credit-inputs" placeholder="342"/></div>
                 </div>
                 <hr class="line"/>
                 <br></br><br></br>

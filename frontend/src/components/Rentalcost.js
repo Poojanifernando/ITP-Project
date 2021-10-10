@@ -26,6 +26,7 @@ export default class Rentalcost extends Component{
           value
       })
   }
+  
 
   onSubmit = (e) =>{
     e.preventDefault();
@@ -94,8 +95,8 @@ export default class Rentalcost extends Component{
 
   <Row>
     <Col>
-    <Form.Label>Add Bus ID : </Form.Label>
-      <Form.Control placeholder="Bus id" 
+    <Form.Label>Add Bus plate ID : </Form.Label>
+      <Form.Control placeholder="Bus plate id" 
      onChange={ (eve) => { this.setState({ Busid: eve.target.value }) } }/>
     </Col>
     <Col>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 
 
@@ -62,6 +63,14 @@ export default class HomeNisura extends Component {
   render() {
     return (
       <div>
+         <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    table="tablenisura"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download as XLS"/>
+
         <div style={{height:'100%', width:'100%', backgroundColor:"#adadad"}}>
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
@@ -79,7 +88,7 @@ export default class HomeNisura extends Component {
           </div>
         </div>
         <h4 style={{color:"red"}}> <p>Click on your name to check your Booking Details and Payment Details</p></h4>
-        <table className="table table-hover" style={{marginTop:'40px'}}>
+        <table className="table table-hover" id="tablenisura"  style={{marginTop:'40px'}}>
           <thead>
             <tr>
               <th scope="col">#</th>

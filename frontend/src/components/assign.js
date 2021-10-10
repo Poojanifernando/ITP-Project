@@ -35,7 +35,8 @@ filterData(posts,searchKey){
   post.driverNIC.toLowerCase().includes(searchKey)||
   post.type.toLowerCase().includes(searchKey)||
   post.tripID.toLowerCase().includes(searchKey)||
-  post.availability.toLowerCase().includes(searchKey)
+  post.availability.toLowerCase().includes(searchKey)||
+  post.workingHours.toLowerCase().includes(searchKey)
   )
 
   this.setState({posts:result})

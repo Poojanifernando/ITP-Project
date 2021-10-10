@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 import axios from 'axios';
 
 export default class CardDetails extends Component {
@@ -30,12 +31,13 @@ export default class CardDetails extends Component {
 
         return (
             <div style={{backgroundColor:"white", height:"800px", marginTop:"-50px"}}><br/><br/><br/>
+            
             <div className="card" style={{marginLeft:"435px", marginTop:"30px"}}>
                 <img src="/images/bus12.jpg" style={{width:"100%", height:"200px"}}/>
                 <div style={{marginTop:'', backgroundColor:"#080523"}}><br/>
                     <h4 style={{textAlign:"center", backgroundColor:"#080523"}}>{fname}</h4><br/>
                     <hr/><br/><br/>
-                    <table style={{border:'0'}}>
+                    <table id="table-to-xls-dineth" style={{border:'0'}}>
                         <tr>
                         <th style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-5">Address</th>
                         <td style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-15">{address}</td>
@@ -72,9 +74,21 @@ export default class CardDetails extends Component {
                         </tr>
                     
                     </table>
+
+                    
+
                     <br/><br/>
                 </div>
+
+                
             </div>
+            <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="btn btn-primary"
+                    table="table-to-xls-dineth"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download details"/>
             <br/><br/>
 
             <footer className="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"00px",height:"170px"}}>

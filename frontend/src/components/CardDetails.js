@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 import axios from 'axios';
 
 export default class CardDetails extends Component {
@@ -30,12 +31,20 @@ export default class CardDetails extends Component {
 
         return (
             <div style={{backgroundColor:"white", height:"680px", marginTop:"-50px"}}><br/><br/><br/>
+            <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    table="table-to-xls-dineth"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download as XLS"/>
+
             <div className="card" style={{marginLeft:"435px", marginTop:"30px"}}>
                 <img src="/images/bus12.jpg" style={{width:"100%", height:"200px"}}/>
                 <div style={{marginTop:'20px'}}>
                     <h4 style={{textAlign:"center"}}>{fname}</h4>
                     <hr/>
-                    <table style={{border:'0'}}>
+                    <table id="table-to-xls-dineth" style={{border:'0'}}>
                         <tr>
                         <th style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-5">Address</th>
                         <td style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-15">{address}</td>

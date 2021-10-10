@@ -31,41 +31,47 @@ import axios from 'axios';
 
       return (
         
-        <div className='container'>
-             
 
-        <form class="form-horizontal" >
-<div class="form-group row">
-         <div  style ={{marginTop:'20px'}}>
-           <h4><center>Details Of ({Bus_plate_number}) Bus</center></h4>
-           <hr/><br></br>
+      
+    <div className='container'><div style={{backgroundColor:"#E3E3E3"}}>
+    <div>
 
-          <dl className="row">
-           <dt className ="control-label col-sm-2">Bus_plate_number</dt>
-           <dd className ="col-sm-10">{Bus_plate_number}</dd>
+    <div  style ={{marginTop:'40px'}}><br></br>
+       <h3><center>Details Of ({Bus_plate_number}) Bus</center></h3>
+       <br></br></div>
 
-           <dt className ="control-label col-sm-2">owner of the bus</dt>
-           <dd className ="col-sm-10">{Bus_owners_name}</dd>
-
-           <dt className ="control-label col-sm-2">BusOwnersPhoneno</dt>
-           <dd className ="col-sm-10">{Bus_owners_phoneno}</dd>
-
-           <dt className ="control-label col-sm-2">NumberOfSeats</dt>
-           <dd className ="col-sm-10">{Number_of_seats}</dd>
-
-           <dt className ="control-label col-sm-2">Condition</dt>
-           <dd className ="col-sm-10">{Condition}</dd>
-
-           <dt className ="control-label col-sm-2">Date</dt>
-           <dd className ="col-sm-10">{Date}</dd>
-
-           </dl>
-        
-          </div></div>
-          <br></br><br></br>
-          </form>
- </div>
+    </div></div>
+    <br></br> 
     
+    <div className="row">
+  <div className="col-lg-9 mt-2 mb-2"><br></br>
+  <center>
+  <div className="col-lg-9 mt-2 mb-2">
+   <table className ="table table-dark">
+        <tr>
+        <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Bus plate number</td> <td>{Bus_plate_number}</td>
+        </tr>
+        <tr>
+          <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Bus owners name</td> <td>{Bus_owners_name}</td>
+        </tr>
+        <tr>
+        <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Bus owners phoneno</td> <td>{Bus_owners_phoneno}</td>
+        </tr>
+        <tr>
+        <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Number of seats</td> <td>{Number_of_seats}</td>
+        </tr>
+        <tr>
+        <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Condition</td> <td>{Condition}</td>
+        </tr>
+        <tr>
+        <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Date</td> <td>{Date}</td>
+        </tr>
+
+  
+
+      </table>
+
+     </div></center></div></div></div>
       )
     }
   }

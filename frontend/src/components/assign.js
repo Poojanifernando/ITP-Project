@@ -141,13 +141,13 @@ handleSearchArea = (e) =>{
            
                     
             </div>
-            <button className="btn btn-primary btn-lg" style={{textDecoration:'none' ,color:'white'}}><ReactHTMLTableToExcel
+            <button className="btn btn-primary btn-lg" style={{textDecoration:'none' ,color:'white'}}><i class="fas fa-download"></i><ReactHTMLTableToExcel
                     id="test-table-xls-button"
                     className="download-table-xls-button"
                     table="table-to-xlsRamona"
                     filename="tablexls"
                     sheet="tablexls"
-                    buttonText="Download the Daily Report"/></button>
+                    buttonText="  Download the Daily Report"/></button>
       </div>
       <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginLeft:"-120px", marginTop:"40px",height:"170px",marginRight:"-120px"}}>
 

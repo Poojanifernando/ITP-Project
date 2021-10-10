@@ -53,23 +53,34 @@ class livelocation extends React.Component{
 
     render(){
         return(
+
+          <div className=''><div style={{backgroundColor:"#BDD3E5"}}>
         <div className="livelocation">
-            <h2>
+            <br/><center><h2>
                 Here You Are
-            </h2>
-            <button onClick={this.getLocation}>Get My Location</button>
-            <h4>Here's Your Location</h4>
-            <p>Lattitude: {this.state.latitude}</p>
-            <p>Longitude: {this.state.longitude}</p>
-            <h4>You are here</h4>
-            <p>Address: {this.state.userAddress}</p>
+            </h2><br/>
+            <button  className="btn btn-dark" onClick={this.getLocation}>Get My Location</button><br/><br/>
+            <h3>Here's Your Location</h3><br/>
+            <h4><p>Lattitude: {this.state.latitude}</p><br/>
+            <p>Longitude: {this.state.longitude}</p><br/>
+            You are here<br/>
+            <p>Address: {this.state.userAddress}</p></h4></center>
+
+          
+
+
+
+
+
+          
+
             {
                 this.state.latitude && this.state.longitude ?
                 <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=400x300&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=AIzaSyC-Z_Y13L-7-jdfQiV3ucBRyQuGm2guC6k`} alt=''/>
                 :
                 null
             }
-        </div>
+        </div></div></div>
       )
     }
 }

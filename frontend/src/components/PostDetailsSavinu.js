@@ -29,7 +29,7 @@ export default class PostDetailsSavinu extends Component {
     
     render(){
 
-        const {name,employee,address,contact_number,nic,driver_license,bank_number,user_name} = this.state.postSavinu
+        const {name,employee,address,contact_number,nic,salary,bank_number,user_name} = this.state.postSavinu
 
         return(
             
@@ -65,8 +65,8 @@ export default class PostDetailsSavinu extends Component {
                     </tr>
 
                     <tr>
-                    <th style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-2"><b>Driver License</b></th>
-                    <td style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-9">{driver_license}</td>
+                    <th style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-2"><b>Salary</b></th>
+                    <td style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-9">{salary}</td>
                     </tr>
 
                     <tr>

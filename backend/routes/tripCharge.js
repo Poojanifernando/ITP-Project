@@ -1,15 +1,15 @@
 const express = require('express');
-const Posts = require('../models/tripCharge');
+const tripCharge = require('../models/tripCharge');
 
 const router = express.Router();
 
 
 //save posts
-router.post('/trip/save',(req,res)=>{
+router.post('/tripNisura/save',(req,res)=>{
 
-    let newPost = new Posts(req.body);
+    let newPostNisura1 = new tripCharge(req.body);
 
-    newPost.save((err)=>{
+    newPostNisura1.save((err)=>{
         if(err){
             return res.status(400).json({
                 error:err
@@ -23,8 +23,8 @@ router.post('/trip/save',(req,res)=>{
 
 
 //getpost
-router.get('/posts',(req,res)=>{
-    Posts.find().exec((err,posts)=>{
+router.get('/postsNisura1',(req,res)=>{
+    tripCharge.find().exec((err,postsNisura1)=>{
         if(err){
             return res.status(400).json({
                 error:err    
@@ -32,22 +32,22 @@ router.get('/posts',(req,res)=>{
         }
         return res.status(200).json({
             success:true,
-            existingPosts:posts
+            existingPostsNisura1:postsNisura1
         });
     });
 });
 
 //get a specific post
 
-router.get("/post/:id",(req,res)=>{
+router.get("/postNisura1/:id",(req,res)=>{
     let postId = req.params.id;
-    Posts.findById(postId,(err,post)=>{
+    tripCharge.findById(postId,(err,postNisura1)=>{
         if(err){
             return res.status(400).json({success:false,err});
         }
         return res.status(200).json({
             success:true,
-            post
+            postNisura1
         });
     });
 });

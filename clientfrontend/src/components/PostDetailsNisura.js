@@ -83,7 +83,7 @@ export default class PostDetailsNisura extends Component {
 
                         <tr>
                         <th style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-3">Trip ID</th>
-                        <td style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-15">SP{nic}</td>
+                        <td style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-15">sp{nic}</td>
                         </tr>
                     
                     </table>

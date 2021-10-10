@@ -82,7 +82,7 @@ export default class TripPaymentNisura extends Component {
                             <input type="text"
                             className="form-control"
                             name="creditcard"
-                            placeholder="Credit/debit card"
+                            placeholder="xxxx-xxxx-xxxx-xxxx"
                             value={this.state.creditcard}
                             onChange={this.handleInputChange}/>
                         </div>

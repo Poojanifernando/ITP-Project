@@ -9,6 +9,7 @@ const app =express();
 //import routes
 //nisura
 const postRoutesNisura = require('./routes/postsNisura');
+const nisuratripCharge = require('./routes/tripCharge');
 
 //Ramona Vanhoff
 const driverRoutes = require ('./routes/postsRamona'); //postRoutes->driverRoutes
@@ -44,6 +45,7 @@ app.use(cors());
 //route middleware
 //nisura
 app.use(postRoutesNisura);
+app.use(nisuratripCharge);
 
 app.use(driverRoutes);
 //Disni

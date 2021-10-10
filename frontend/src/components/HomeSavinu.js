@@ -1,7 +1,7 @@
 import React,{Component} from'react';
 import axios from 'axios';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 //import postsSavinu from '../../../backend/models/postsSavinu';
-
 
 
 
@@ -12,24 +12,24 @@ export default class HomeSavinu extends Component{
 
     this.state = {
 
-      posts:[]
+      postsSavinu:[]
     };
 
   }
 
   //after rendering all the component and sub components
   componentDidMount(){
-    this.retrievePosts();
+    this.retrievePostsSavinu();
   }
   
-  retrievePosts(){
+  retrievePostsSavinu(){
     axios.get("/postsSavinu").then(res =>{
     if(res.data.success){
       this.setState({
-        postsSavinu:res.data.existingPosts
+        postsSavinu:res.data.existingEmployees
       });
 
-      console.log(this.state.posts)
+      console.log(this.state.postsSavinu)
 
     }
 
@@ -39,27 +39,23 @@ export default class HomeSavinu extends Component{
   // deleting a specific post from view table
 onDelete = (id) =>{
 
-  axios.delete(`/post/deleteSavinu/${id}`).then((res) =>{
+  axios.delete(`/postSavinu/delete/${id}`).then((res) =>{
     alert("Employee Profile Deleted was Successful");
-    this.retrievePosts();
+    this.retrievePostsSavinu();
   })
 }
 
 // method existingPosts and searchKey
-filterData(posts,searchKey){
+filterData(postsSavinu,searchKey){
 
-  const result = posts.filter((post) =>
-    post.name.toLowerCase().includes(searchKey) ||               // used lower case method to search data
-    post.employee.toLowerCase().includes(searchKey) ||
-    post.address.toLowerCase().includes(searchKey) ||
-    post.contact_number.toLowerCase().includes(searchKey) ||
-    post.nic.toLowerCase().includes(searchKey) ||
-    post.driver_license.toLowerCase().includes(searchKey) ||
-    post.bank_number.toLowerCase().includes(searchKey) ||
-    post.user_name.toLowerCase().includes(searchKey)
+  const result = postsSavinu.filter((postSavinu) =>
+    postSavinu.name.toLowerCase().includes(searchKey) ||               // used lower case method to search data
+    postSavinu.employee.toLowerCase().includes(searchKey) ||
+    
+    postSavinu.user_name.toLowerCase().includes(searchKey)
   )
 
-  this.setState({posts:result})
+  this.setState({postsSavinu:result})
 
 }
 
@@ -72,7 +68,7 @@ handleSearchArea = (e) =>{
   axios.get("/postsSavinu").then(res =>{
     if(res.data.success){
     
-      this.filterData(res.data.existingPosts,searchKey)
+      this.filterData(res.data.existingEmployees,searchKey)
       }
     });
   
@@ -100,17 +96,17 @@ handleSearchArea = (e) =>{
           </div>
 
         </div>
-        <table className="table table-hover" style={{ marginTop: '20px', height:'100%', width:'100%',backgroundColor:"Silver" , marginBottom:'25px'}}>
+        <table className="table table-hover" id="tableSavinu" style={{ marginTop: '20px', height:'100%', width:'100%',backgroundColor:"Silver" , marginBottom:'25px'}}>
           <thead>
 
             <tr>
               <th scope="col"><center> No. </center> </th>
               <th scope="col"><center> Name </center> </th>
-              <th scope="col"><center> Employee Title </center> </th>
+              <th scope="col"><center> Employee Type </center> </th>
               <th scope="col"><center> Address</center> </th>
               <th scope="col"><center> Contact Number </center> </th>
               <th scope="col"><center> NIC </center> </th>
-              <th scope="col"><center> Driver License </center> </th>
+              <th scope="col"><center> Salary </center> </th>
               <th scope="col"><center> Bank Number </center> </th>
               <th scope="col"><center> User Name </center> </th>
               <th scope="col"><center> Action</center> </th>
@@ -118,28 +114,28 @@ handleSearchArea = (e) =>{
           </thead>
 
           <tbody>
-            {this.state.posts.map((posts, index) => (
+            {this.state.postsSavinu.map((postsSavinu, index) => (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
                 <td>
-                  <a href={`/postSavinu/${posts._id}`} style={{ textDecoration: 'none', padding:'5px',marginBottom:'15px' }}>
-                    {posts.name}
+                  <a href={`/postSavinu/${postsSavinu._id}`} style={{ textDecoration: 'none', padding:'5px',marginBottom:'15px' }}>
+                    {postsSavinu.name}
                   </a>
                 </td>
-                <td><center> {posts.employee}</center></td>
-                <td><center> {posts.address} </center></td>
-                <td><center> {posts.contact_number} </center></td>
-                <td><center> {posts.nic} </center></td>
-                <td><center> {posts.driver_license} </center></td>
-                <td><center> {posts.bank_number} </center></td>
-                <td><center> {posts.user_name} </center></td>
+                <td><center> {postsSavinu.employee}</center></td>
+                <td><center> {postsSavinu.address} </center></td>
+                <td><center> {postsSavinu.contact_number} </center></td>
+                <td><center> {postsSavinu.nic} </center></td>
+                <td><center> {postsSavinu.salary} </center></td>
+                <td><center> {postsSavinu.bank_number} </center></td>
+                <td><center> {postsSavinu.user_name} </center></td>
 
                 <td>
-                  <a className="btn btn-warning" href={`/editSavinu/${posts._id}`} >
+                  <a className="btn btn-warning" href={`/editSavinu/${postsSavinu._id}`} >
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </a>
                   &nbsp;
-                  <a className="btn btn-danger" href="#" onClick={() => this.onDelete(posts._id)}>
+                  <a className="btn btn-danger" href="#" onClick={() => this.onDelete(postsSavinu._id)}>
                     <i className="far fa-trash-alt"></i>&nbsp; &nbsp;Delete
                   </a>&nbsp;&nbsp;
                 </td>
@@ -152,10 +148,34 @@ handleSearchArea = (e) =>{
 
         </table>
         <button className="btn btn-success"><a href="/addSavinu" style={{ textDecoration: 'none', color: 'white' , marginBottom:'25px'}}>Create New Payment Profile</a> </button>
+        &nbsp;&nbsp;
         &nbsp;
+        &nbsp;
+        &nbsp;        
+
+        <br/>
+        <br/>
+        <br/>
+      <div><ReactHTMLTableToExcel
+
+id="test-table-xls-button"
+
+className="download-table-xls-button"
+className="btn btn-success"
+
+table="tableSavinu"
+
+filename="tablexls"
+
+sheet="tablexls"
+
+buttonText="Download as XLS"/>
+
+</div>
 
 
       </div></>
+      
     )
   }
 }

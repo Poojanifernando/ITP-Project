@@ -6,7 +6,7 @@ export default class PostDetailsSavinu extends Component {
         super(props);
 
         this.state ={
-            post:{}
+            postSavinu:{}
         };
     }
 
@@ -17,10 +17,10 @@ export default class PostDetailsSavinu extends Component {
         axios.get(`/postSavinu/${id}`).then((res) =>{
             if(res.data.success){
                 this.setState({
-                    post:res.data.post
+                    postSavinu:res.data.postSavinu
                 });
 
-                console.log(this.state.post);
+                console.log(this.state.postSavinu);
             }
 
         });
@@ -29,11 +29,11 @@ export default class PostDetailsSavinu extends Component {
     
     render(){
 
-        const {name,employee,address,contact_number,nic,driver_license,bank_number,user_name} = this.state.post
+        const {name,employee,address,contact_number,nic,salary,bank_number,user_name} = this.state.postSavinu
 
         return(
             
-            <div style ={{marginTop:'20px', backgroundColor:"Ivory", padding:"5px"}}>
+            <div style ={{ backgroundColor:"Ivory",}}>
                 <h2><center> {name} </center></h2>
                 
                 <hr/>
@@ -65,8 +65,8 @@ export default class PostDetailsSavinu extends Component {
                     </tr>
 
                     <tr>
-                    <th style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-2"><b>Driver License</b></th>
-                    <td style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-9">{driver_license}</td>
+                    <th style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-2"><b>Salary</b></th>
+                    <td style={{paddingLeft:"80px", paddingBottom:"10px"}} className="col-sm-9">{salary}</td>
                     </tr>
 
                     <tr>

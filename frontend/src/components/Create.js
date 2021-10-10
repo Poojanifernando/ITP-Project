@@ -36,6 +36,12 @@ export default class Create extends Component {
             } 
         }
 
+        if (nam === "driverNIC") {
+            if (e.target.value.length > 12) {
+                    alert ("Invalid length for NIC number..!");
+            } 
+        }
+
         this.setState({
             ...this.state,
             [name]:value

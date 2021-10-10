@@ -86,7 +86,7 @@ export default class TicketDetails extends Component {
 
       if (nam=== "cardnum") {
         
-        if (val.length > 17  ) {
+        if (val.length > 16  ) {
           alert("Invalide length! input Card number again.");
         }
       }
@@ -104,7 +104,7 @@ export default class TicketDetails extends Component {
 
       if (nam=== "CVV") {
         
-        if (val.length > 4  ) {
+        if (val.length > 3  ) {
           alert("Invalide length! input CVV number again.");
         }
       }
@@ -147,6 +147,8 @@ export default class TicketDetails extends Component {
                 <label class="radio"> <input type="radio" name="card" value="payment"/> <span><img width="30" src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"/> <span><img width="30" src="https://img.icons8.com/ultraviolet/48/000000/amex.png" /></span> </label>
                 <label class="radio"> <input type="radio" name="card" value="payment"/> <span><img width="30" src="https://img.icons8.com/officel/48/000000/paypal.png" /></span> </label>
+                
+                
                 <div><label class="credit-card-label">Name on card</label><input name="name"  type="text" class="form-control credit-inputs" placeholder="Name"/></div>
                 <div><label class="credit-card-label">Card number</label><input name= "cardnum"  type="text" class="form-control credit-inputs" placeholder="0000 0000 0000 0000"/></div>
                 <div class="row">

@@ -1,5 +1,6 @@
 import React,{Component} from'react';
 import axios from 'axios';
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 //import postsSavinu from '../../../backend/models/postsSavinu';
 
 
@@ -95,17 +96,17 @@ handleSearchArea = (e) =>{
           </div>
 
         </div>
-        <table className="table table-hover" style={{ marginTop: '20px', height:'100%', width:'100%',backgroundColor:"Silver" , marginBottom:'25px'}}>
+        <table className="table table-hover" id="tableSavinu" style={{ marginTop: '20px', height:'100%', width:'100%',backgroundColor:"Silver" , marginBottom:'25px'}}>
           <thead>
 
             <tr>
               <th scope="col"><center> No. </center> </th>
               <th scope="col"><center> Name </center> </th>
-              <th scope="col"><center> Employee Title </center> </th>
+              <th scope="col"><center> Employee Type </center> </th>
               <th scope="col"><center> Address</center> </th>
               <th scope="col"><center> Contact Number </center> </th>
               <th scope="col"><center> NIC </center> </th>
-              <th scope="col"><center> Driver License </center> </th>
+              <th scope="col"><center> Salary </center> </th>
               <th scope="col"><center> Bank Number </center> </th>
               <th scope="col"><center> User Name </center> </th>
               <th scope="col"><center> Action</center> </th>
@@ -125,7 +126,7 @@ handleSearchArea = (e) =>{
                 <td><center> {postsSavinu.address} </center></td>
                 <td><center> {postsSavinu.contact_number} </center></td>
                 <td><center> {postsSavinu.nic} </center></td>
-                <td><center> {postsSavinu.driver_license} </center></td>
+                <td><center> {postsSavinu.salary} </center></td>
                 <td><center> {postsSavinu.bank_number} </center></td>
                 <td><center> {postsSavinu.user_name} </center></td>
 
@@ -147,10 +148,34 @@ handleSearchArea = (e) =>{
 
         </table>
         <button className="btn btn-success"><a href="/addSavinu" style={{ textDecoration: 'none', color: 'white' , marginBottom:'25px'}}>Create New Payment Profile</a> </button>
+        &nbsp;&nbsp;
         &nbsp;
+        &nbsp;
+        &nbsp;        
+
+        <br/>
+        <br/>
+        <br/>
+      <div><ReactHTMLTableToExcel
+
+id="test-table-xls-button"
+
+className="download-table-xls-button"
+className="btn btn-success"
+
+table="tableSavinu"
+
+filename="tablexls"
+
+sheet="tablexls"
+
+buttonText="Download as XLS"/>
+
+</div>
 
 
       </div></>
+      
     )
   }
 }

@@ -18,8 +18,36 @@ import axios from 'axios';
       }
   }
 
-  handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
+  //handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
 
+  handleChange=(e)=>{
+
+    const {name,value}=e.target;
+
+    let nam = e.target.name;
+    let val = e.target.value;
+
+
+
+    if(nam==="Drivers_phone_no"){
+
+        if(!Number(val)){
+            alert("Cannot contain letters");
+        }
+    }
+
+    if(nam==="Drivers_phone_no"){
+        if(val.length > 10){
+            alert("Invalid length!!");
+        }
+    }
+
+
+    this.setState({
+        ...this.state,
+        [name]:value
+    })
+}
 
   
 
@@ -99,7 +127,7 @@ import axios from 'axios';
     <h2><center>Edit Schedule Trip Details</center></h2> <br></br> 
   
       </div></div><center></center>
-      <br></br> <br></br>
+      <br></br> 
 
             <div className='container'> 
             <div className='container'> 
@@ -138,14 +166,42 @@ import axios from 'axios';
          <div class="form-group row">
      <label class="control-label col-sm-2" for="Route">Starting Point:</label>
         <div class="col-sm-10">
-        <input type="text" class="form-control"  placeholder="Moratuwa"  name="Route" value={this.state.Route} onChange={this.handleChange} required/>
+        <input type="text" class="form-control"  list="r1" placeholder="Moratuwa"  name="Route" value={this.state.Route} onChange={this.handleChange} required/>
+        <datalist id="r1">
+                        <option value="Colombo"></option>
+                        <option value="Gampaha"></option>
+                        <option value="Kaluthara"></option>
+                        <option value="Kandy"></option>
+                        <option value="Galle"></option>
+                        <option value="Matale"></option>
+                        <option value="Nuwara-Eliya"></option>
+                        <option value="Jaffna"></option>
+                        <option value="Hambanthota"></option>
+                        <option value="Trincomalee"></option>
+                        <option value="Polonnaruwa"></option>
+                        <option value="Kurunagale"></option>
+                        </datalist>
          </div>
          </div>
          <br></br>
          <div class="form-group row">
      <label class="control-label col-sm-2" for="Route2">End point:</label>
         <div class="col-sm-10">
-        <input type="text" class="form-control"  placeholder=" Pettah"  name="Route2" value={this.state.Route2} onChange={this.handleChange} required/>
+        <input type="text" class="form-control" list="r2" placeholder=" Pettah"  name="Route2" value={this.state.Route2} onChange={this.handleChange} required/>
+        <datalist id="r2">
+                        <option value="Colombo"></option>
+                        <option value="Gampaha"></option>
+                        <option value="Kaluthara"></option>
+                        <option value="Kandy"></option>
+                        <option value="Galle"></option>
+                        <option value="Matale"></option>
+                        <option value="Nuwara-Eliya"></option>
+                        <option value="Jaffna"></option>
+                        <option value="Hambanthota"></option>
+                        <option value="Trincomalee"></option>
+                        <option value="Polonnaruwa"></option>
+                        <option value="Kurunagale"></option>
+                        </datalist>
          </div>
          </div>
          <br></br>
@@ -165,7 +221,7 @@ import axios from 'axios';
          <br></br>
 
          <div>
-         <br></br><hr/> 
+         <br/><hr/> <br/>
                 <button className="btn btn-warning" onClick={this.onSubmit}>Edit Schedule Details <i className ="fas fa-edit"></i></button>
                 
             </div>

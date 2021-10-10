@@ -16,7 +16,37 @@ export default class CreatePostPasi extends Component {
         }
     }
 
-    handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
+    //handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
+    
+    
+    handleChange=(e)=>{
+
+        const {name,value}=e.target;
+
+        let nam = e.target.name;
+        let val = e.target.value;
+
+
+
+        if(nam==="Bus_owners_phoneno"){
+
+            if(!Number(val)){
+                alert("Cannot contain letters");
+            }
+        }
+
+        if(nam==="Bus_owners_phoneno"){
+            if(val.length > 10){
+                alert("Invalid length!!");
+            }
+        }
+
+    
+        this.setState({
+            ...this.state,
+            [name]:value
+        })
+    }
 
 
     
@@ -79,9 +109,14 @@ export default class CreatePostPasi extends Component {
           <br></br>
 
           <div class="form-group row">
-      <label class="control-label col-sm-2" for="Bus owners name">owner of the bus :</label>
+      <label class="control-label col-sm-2" for="Bus owners name">Owner of the bus :</label>
          <div class="col-sm-10">
-         <input type="text" class="form-control"  placeholder="Kamal Perera" name="Bus_owners_name" value={this.state.Bus_owners_name} onChange={this.handleChange} required/>
+         <input type="text" class="form-control"  placeholder="Kamal Perera" name="Bus_owners_name" list="owner" value={this.state.Bus_owners_name} onChange={this.handleChange} required/>
+         <datalist id="owner">
+                        <option value="Company"></option>
+                        <option value="Person"></option>
+                        
+        </datalist>
           </div>
           </div>
           <br></br>
@@ -94,7 +129,7 @@ export default class CreatePostPasi extends Component {
           <br></br>
 
           <div class="form-group row">
-      <label class="control-label col-sm-2" for="Number_of_seats">Number_of_seats :</label>
+      <label class="control-label col-sm-2" for="Number_of_seats">Number of seats :</label>
          <div class="col-sm-10">
          <input type="number" class="form-control"  placeholder="52" name="Number_of_seats" value={this.state.Number_of_seats} onChange={this.handleChange} required/>
           </div>
@@ -103,7 +138,13 @@ export default class CreatePostPasi extends Component {
           <div class="form-group row">
       <label class="control-label col-sm-2" for="Condition">Condition :</label>
          <div class="col-sm-10">
-         <input type="text" class="form-control"  placeholder="Brand new"  name="Condition" value={this.state.Condition} onChange={this.handleChange} required/>
+         <input type="text" class="form-control"  placeholder="Brand new" list="busbrand"  name="Condition" value={this.state.Condition} onChange={this.handleChange} required/>
+         <datalist id="busbrand">
+                        <option value="Brand New"></option>
+                        <option value="Old"></option>
+                        
+        </datalist>
+          
           </div>
           </div>
 
@@ -111,13 +152,13 @@ export default class CreatePostPasi extends Component {
           <div class="form-group row">
       <label class="control-label col-sm-2" for="Date">Date :</label>
          <div class="col-sm-10">
-         <input type="text" class="form-control"  placeholder="02-02-2021" name="Date" value={this.state.Date} onChange={this.handleChange} required/>
+         <input type="date" class="form-control"  placeholder="02-02-2021" name="Date" value={this.state.Date} onChange={this.handleChange} required/>
           </div>
           </div>
           <br></br>
 
           <div>
-          <br></br><hr/> 
+          <br/><hr/><br/> 
                  <button className="btn btn-success" onClick={this.onSubmit}>Add New Bus &nbsp;<i className ="fas fa-book"></i></button>
              </div>
              <br></br><br></br>
@@ -164,7 +205,7 @@ export default class CreatePostPasi extends Component {
 
 </div>
 
-<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
+<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
     <a href="https://mdbootstrap.com/"> Travelling Express</a>
 </div>
 

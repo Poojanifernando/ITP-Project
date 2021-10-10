@@ -1,6 +1,7 @@
 import React,{Component} from'react';
 import axios from 'axios';
 import '../AppPasindu.css'
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 
 
@@ -80,15 +81,17 @@ handleSearchArea=(e) =>{
 
   render(){
     return(
+
+
      
-      <div className=''><div style={{backgroundColor:"#ECECEC"}}>
+      <div className=''><div style={{backgroundColor:"#E3E3E3"}}>
       <div>
       <img src="../images/buss03.jpg" alt=""/><br/><br/><br/>
     <h2><center><b>Schedule Trip Details</b> </center></h2> <br></br> 
   
-      </div></div><center></center>
-      <br></br> <br></br>
-        
+      </div><center></center>
+      <br></br> 
+     
     <div className ="container"> 
     
       <div className="row">
@@ -101,7 +104,7 @@ handleSearchArea=(e) =>{
          </input></div></div> 
          <br></br>
 
-       <table className ="table">
+       <table className ="table table-dark" id="schedulepasi">
       <thead>
         <tr>
               <th scope ="col">No.</th>
@@ -153,9 +156,22 @@ handleSearchArea=(e) =>{
 
        </table></div>
        <br></br>
-        <button className="btn btn-success"><a href="/addPasindu" style={{textDecoration:'none',color:'white'}}>Create New Record &nbsp;</a><i className ="fas fa-plus"></i></button>
-        <br></br> <br></br> <br></br> <br></br> <br></br>
-        
+      
+
+        <button className="btn btn-success" style={{marginLeft:'30px', marginRight:'0px',padding:'7px 3px' }}><a href="/addPasindu" style={{textDecoration:'none',color:'white'}}>Create New Record&nbsp;</a><i className ="fas fa-plus"></i></button>
+       
+       <button className="btn btn-info"  style={{marginLeft:'30px', marginRight:'0px',padding:'4px 0.5px' }}><i class="fas fa-download"></i>
+        <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    table="schedulepasi"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download Schedule Details"
+                    className="btn btn-info" style={{marginLeft:'0px', marginRight:'0px',padding:'1px 1px'}}/>
+                    
+             </button>
+             
     </div>
 
     <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"40px",height:"170px"}}>
@@ -197,13 +213,14 @@ handleSearchArea=(e) =>{
 
             </div>
             
-            <div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
+            <div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
                 <a href="https://mdbootstrap.com/"> Travelling Express</a>
             </div>
 
             </footer>
     </div>
-    
+  </div>
+  
      
     )
   }

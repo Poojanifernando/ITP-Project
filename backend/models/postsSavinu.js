@@ -27,11 +27,11 @@ const postSchemaSavinu = mongoose.Schema({
         required:true
      },
 
-     driver_license :{
+     salary :{
         type:Number,
         required:true
      },
-
+     
      bank_number :{
         type:Number,
         required:true

@@ -1,7 +1,7 @@
 import React,{Component} from'react';
 import axios from 'axios';
 
-export default class EditPostSavinu extends Component{
+export default class EditPost extends Component{
 
     constructor(props){
         super(props);
@@ -11,7 +11,7 @@ export default class EditPostSavinu extends Component{
             address:"",
             contact_number:"",
             nic:"",
-            driver_license:"",
+            salary:"",
             bank_number:"",
             user_name:""
         }
@@ -32,7 +32,7 @@ export default class EditPostSavinu extends Component{
         e.preventDefault();
 
         const id = this.props.match.params.id;
-        const {name,employee,address,contact_number,nic,driver_license,bank_number,user_name} = this.state;
+        const {name,employee,address,contact_number,nic,salary,bank_number,user_name} = this.state;
 
         const data = {
             name:name,
@@ -40,7 +40,7 @@ export default class EditPostSavinu extends Component{
             address:address,
             contact_number:contact_number,
             nic:nic,
-            driver_license:driver_license,
+            salary:employee*27500,
             bank_number:bank_number,
             user_name:user_name
         }
@@ -60,7 +60,7 @@ export default class EditPostSavinu extends Component{
                         address:"",
                         contact_number:"",
                         nic:"",
-                        driver_license:"",
+                        salary:"",
                         bank_number:"",
                         user_name:""
                     }
@@ -83,7 +83,7 @@ export default class EditPostSavinu extends Component{
                     address:res.data.postSavinu.address,
                     contact_number:res.data.postSavinu.contact_number,
                     nic:res.data.postSavinu.nic,
-                    driver_license:res.data.postSavinu.driver_license,
+                    salary:res.data.postSavinu.salary,
                     bank_number:res.data.postSavinu.bank_number,
                     user_name:res.data.postSavinu.user_name
                 });
@@ -116,14 +116,21 @@ export default class EditPostSavinu extends Component{
                     </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}} >            
-                       <label style={{marginBottom:'5px'}}><b> Employee Position </b></label>
+                       <label style={{marginBottom:'5px'}}><b> Employee Type (Drivers = 1, Admin = 2, Manager = 3) </b></label>
                        <input type="text"
+                       list="eType"
                        className="form-control"
                        name="employee"
-                       placeholder="Admin Position/ Driver"
+                       placeholder="Employee Type"
                        value={this.state.employee}
                        onChange={this.handleInputChange}/>
+                       <datalist id="eType">
+                           <option value="1"></option>
+                           <option value="2"></option>
+                           <option value="3"></option>
+                       </datalist>
                    </div>
+                
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
                         <label style={{marginBottom:'5px'}}> <b> Address </b> </label>
@@ -155,15 +162,7 @@ export default class EditPostSavinu extends Component{
                         onChange={this.handleInputChange}/>
                     </div>
 
-                    <div className="form-group" style={{marginBottom:'15px'}}>
-                        <label style={{marginBottom:'5px'}}> <b> Driver License </b> </label>
-                        <input type="text"
-                        className="form-control"
-                        name="driver_license"
-                        placeholder="Enter Driver License Number"
-                        value={this.state.driver_license}
-                        onChange={this.handleInputChange}/>
-                    </div>
+                 
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
                         <label style={{marginBottom:'5px'}}> <b> Bank Number </b> </label>
@@ -193,7 +192,7 @@ export default class EditPostSavinu extends Component{
                     &nbsp;&nbsp;&nbsp;&nbsp;
 
                     <button type="button" className="btn btn-success" style={{marginTop:'20px', marginBottom:'15px'}} title="Go back">
-                        <a href="/HomeSavinu" style={{textDecoration:'none' , color:'white'}}>Go back</a>
+                        <a href="/" style={{textDecoration:'none' , color:'white'}}>Go back</a>
                     </button>
                     </center>
 

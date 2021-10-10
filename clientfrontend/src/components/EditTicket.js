@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 
@@ -126,7 +127,7 @@ onSubmit = (e) =>{
 
     axios.put(`/post/updateDisni/${id}`,data).then((res)=>{
         if(res.data.success){
-            alert("Post Updated successfuly")
+            alert("Ticket Updated successfuly")
 
             this.setState(
                 {

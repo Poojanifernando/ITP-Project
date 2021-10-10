@@ -1,12 +1,9 @@
-/* eslint-disable no-useless-concat */
-/* eslint-disable no-dupe-keys */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
+/* eslint-disable react/jsx-no-duplicate-props */
+
 import React, { Component } from 'react'
 import axios from 'axios';
-
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 import './Ticket.css';
 
 
@@ -68,6 +65,7 @@ export default class TicketDetails extends Component {
    
     render() {
 
+       // eslint-disable-next-line no-unused-vars
        const {Cus_name,Cus_NIC,ticket_no,Ticket_date,Ticket_time,Ticket_price,Ticket_from,Ticket_rout,Ticket_miles,Ticket_destination,Ticket_seat_no}=this.state.postDisni;
 
         return (
@@ -88,44 +86,83 @@ export default class TicketDetails extends Component {
 
                 <hr />
 
-                <dl className="row" style={{textShadow: '1px 2px 18px black',fontSize:'22px',color:'white'}}>
-                    <dt className="col-sm-3">Name:</dt>
-                    <dd className="col-sm-9">{Cus_name}</dd>
+                             
+        <center>
+            <table id="table-to-xls-Disni" style={{textShadow: '1px 2px 18px white',fontSize:'22px',color:'black' ,width:'60%', background :"rgba(248, 248, 248, 0.55)"}}>
+                
+                <tr>
+                    <th>Name:</th>
+                    <td>{Cus_name}</td>
+                </tr>
 
-                    <dt className="col-sm-3">NIC no:</dt>
-                    <dd className="col-sm-9">{Cus_NIC}</dd>
+                <tr>
+                    <th>NIC no:</th>
+                    <td>{Cus_NIC}</td>
+                </tr>
 
-                    <dt className="col-sm-3">Booking Date:</dt>
-                    <dd className="col-sm-9">{Ticket_date}</dd>
+                <tr>
+                    <th>Booking Date:</th>
+                    <td>{Ticket_date}</td>
+                </tr>
+                
+                <tr>
+                    <th>Scheduled time:</th>
+                    <td>{Ticket_time}</td>
+                </tr>
+                
+                <tr>
+                    <th>Starting point:</th>
+                    <td>{Ticket_from}</td>
+                </tr>
+                
+                <tr>
+                    <th>Destination:</th>
+                    <td>{Ticket_destination}</td>
+                </tr>
+                
+                <tr>
+                    <th>Bus rout:</th>
+                    <td>{Ticket_rout}</td>
+                </tr>
+                
+                <tr>
+                    <th>Miles:</th>
+                    <td>{Ticket_miles}Km</td>
+                </tr>
+                
+                <tr>
+                    <th>Price per mile:</th>
+                    <td>10</td>
+                </tr>
+                
+                <tr>
+                    <th>Ticket Price:</th>
+                    <td>{Ticket_price}.00 (miles*price per mile)</td>
+                </tr>
+                
+                <tr>
+                    <th>Seat no:</th>
+                    <td>{Ticket_seat_no}</td>
+                </tr>
 
-                    <dt className="col-sm-3">Scheduled time:</dt>
-                    <dd className="col-sm-9">{Ticket_time}</dd>
-
-                    <dt className="col-sm-3">Starting point:</dt>
-                    <dd className="col-sm-9">{Ticket_from}</dd>
-
-                    <dt className="col-sm-3">Destination:</dt>
-                    <dd className="col-sm-9">{Ticket_destination}</dd>
-
-                    <dt className="col-sm-3">Bus rout:</dt>
-                    <dd className="col-sm-9">{Ticket_rout}</dd>
-
-                    <dt className="col-sm-3">Miles:</dt>
-                    <dd className="col-sm-9">{Ticket_miles}Km</dd>
-
-                    <dt className="col-sm-3">Price per mile:</dt>
-                    <dd className="col-sm-9">10</dd>
-
-                    <dt className="col-sm-3">Ticket Price: </dt>
-                    <dd className="col-sm-9">{Ticket_price}.00 (miles*price per mile)</dd>
-
-                    <dt className="col-sm-3">Seat no:</dt>
-                    <dd className="col-sm-9">{Ticket_seat_no}</dd>
-
-
-
-
-                     </dl>
+        </table>
+                  <br></br>
+                  <button className="btn btn-success"  style={{marginLeft:'30px', marginRight:'0px',padding:'5px 1px' }}><i class="fas fa-download"></i>
+        
+        <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    table="table-to-xls-Disni"
+                    filename="Your_Bus_Ticket"
+                    sheet="tablexls"
+                    
+                    buttonText="Download Your Ticket"
+                    className="btn btn-success" style={{marginLeft:'0px', marginRight:'0px',padding:'1px 1px'}}/>
+                    
+                </button>
+                <br></br><br></br><br></br>
+                <p style={{color:'white',textShadow: '1px 2px 5px black',fontSize:'20px'}}>*Give yes when you open the Excel sheet</p>
+        </center>
 
                 
                   

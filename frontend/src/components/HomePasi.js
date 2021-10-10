@@ -1,6 +1,7 @@
 import React,{Component} from'react';
 import axios from 'axios';
 import '../AppPasi.css'
+import ReactHTMLTableToExcel from 'react-html-table-to-excel';
 
 export default class HomePasi extends Component{
   
@@ -76,14 +77,17 @@ handleSearchArea=(e) =>{
 
   render(){
     return(
-      <div className=''><div style={{backgroundColor:"#ECECEC"}}>
+
+   
+
+      <div className=''><div style={{backgroundColor:"#E3E3E3"}}>
       <div>
       <img src="../images/buss07.jpg" alt=""/><br/><br/><br/>
     <h2><center>Company Bus Details </center></h2> <br></br> 
   
       </div></div><center></center>
-      <br></br> <br></br>
-        
+      <br></br>
+
     <div className ="container" >
       <div className="row">
       <div className='container'> 
@@ -92,7 +96,7 @@ handleSearchArea=(e) =>{
       <input className="form-control" type="search" placeholder="Search" name="searchQue"
         onChange={this.handleSearchArea}>
          </input></div></div><br></br>
-       <table className ="table">
+       <table className ="table table-dark" id="table-pasi">
       <thead>
         <tr>
               <th scope ="col">No. </th>
@@ -139,12 +143,33 @@ handleSearchArea=(e) =>{
       </tbody>
 
        </table>  <br/><hr/> <br/>
-       <button className="btn btn-success"><a href="/addPasi" style={{textDecoration:'none',color:'white'}}>Add New Bus&nbsp;</a><i className ="fas fa-plus"></i></button>
+       <button className="btn btn-success" style={{marginLeft:'30px', marginRight:'0px',padding:'7px 3px' }}><a href="/addPasi" style={{textDecoration:'none',color:'white'}}>Add New Bus&nbsp;</a><i className ="fas fa-plus"></i></button>
        
-       <br></br> <br></br>
+       <button className="btn btn-info"  style={{marginLeft:'30px', marginRight:'0px',padding:'4px 0.5px' }}><i class="fas fa-download"></i>
+        <ReactHTMLTableToExcel
+                    id="test-table-xls-button"
+                    className="download-table-xls-button"
+                    table="table-pasi"
+                    filename="tablexls"
+                    sheet="tablexls"
+                    buttonText="Download Bus Details"
+                    className="btn btn-info" style={{marginLeft:'0px', marginRight:'0px',padding:'1px 1px'}}/>
+                    
+             </button>
+    
+
+       
        </div> <br></br> <br></br> <br></br>
+       <div>
+
+    
+
 
        <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"40px",height:"170px"}}>
+
+
+
+  
 
 <div>
 
@@ -176,6 +201,7 @@ handleSearchArea=(e) =>{
         <a class="pin-ic" style={{paddingLeft:"20px"}}>
             <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
         </a>
+        
         </div>
     </div>
 
@@ -183,13 +209,15 @@ handleSearchArea=(e) =>{
 
 </div>
 
-<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
+<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
     <a href="https://mdbootstrap.com/"> Travelling Express</a>
 </div>
 
 </footer>
 
     </div>
+    </div>
+    
     )
   }
 }

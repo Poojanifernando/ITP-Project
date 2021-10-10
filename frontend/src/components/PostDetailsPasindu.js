@@ -31,46 +31,56 @@ import axios from 'axios';
 
       return (
         
-        <div className='container'>
-             
+        <div className='container'><div style={{backgroundColor:"#E3E3E3"}}>
+        <div>
+    
+        <div  style ={{marginTop:'40px'}}><br></br>
+           <h3><center>Details Of Trip ({Trip_id})</center></h3>
+           <br></br></div>
+    
+        </div></div>
+        <br></br> 
+        
+        <div className="row">
+      <div className="col-lg-9 mt-2 mb-2"><br></br>
+      <center>
+      <div className="col-lg-9 mt-2 mb-2">
+       <table className ="table table-dark">
+            <tr>
+            <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Trip id</td> <td>{Trip_id}</td>
+            </tr>
+            <tr>
+              <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Drivers name</td> <td>{Driver_name}</td>
+            </tr>
+            <tr>
+            <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Drivers phone number</td> <td>{Drivers_phone_no}</td>
+            </tr>
+            <tr>
+            <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Plate number</td> <td>{Plate_number}</td>
+            </tr>
+            <tr>
+            <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Starting Point</td> <td>{Route}</td>
+            </tr>
+            <tr>
+            <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">End point</td> <td>{Route2}</td>
+            </tr>
 
-        <form class="form-horizontal" >
+            <tr>
+            <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Date</td> <td>{Date}</td>
+            </tr>
+            <tr>
+            <td style={{paddingLeft:"100px", paddingBottom:"10px"}} className="col-sm-15">Time</td> <td>{Time}</td>
+            </tr>
 
-        </form><br></br>
-         <div style ={{marginTop:'20px'}}>
-           <h4><center>Trip Details of Trip id-{Trip_id}</center></h4>
-           <hr/><br></br>
 
-          <dl className="row">
-           <dt className ="control-label col-sm-2">Trip id</dt>
-           <dd className ="col-sm-10">{Trip_id}</dd>
+          </table>
 
-           <dt className ="control-label col-sm-2">Drivers name</dt>
-           <dd className ="col-sm-10">{Driver_name}</dd>
-
-           <dt className ="control-label col-sm-2">Drivers phone number</dt>
-           <dd className ="col-sm-10">{Drivers_phone_no}</dd>
-
-           <dt className ="control-label col-sm-2">Plate number</dt>
-           <dd className ="col-sm-10">{Plate_number}</dd>
-
-           <dt className ="control-label col-sm-2">Starting Point</dt>
-           <dd className ="col-sm-10">{Route}</dd>
-
-           <dt className ="control-label col-sm-2">End point</dt>
-           <dd className ="col-sm-10">{Route2}</dd>
-
-           <dt className ="control-label col-sm-2">Date</dt>
-           <dd className ="col-sm-10">{Date}</dd>
-
-           <dt className ="control-label col-sm-2">Time</dt>
-           <dd className ="col-sm-10">{Time}</dd>
-
-           </dl>
-
-          </div></div>
+         </div></center></div></div></div>
         
  
+
+
+        
        
       )
     }

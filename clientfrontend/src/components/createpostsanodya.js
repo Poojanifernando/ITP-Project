@@ -45,6 +45,14 @@ export default class createpostsanodya extends Component {
             } 
 
         }
+
+        if (nam=== "NationalID") {
+        
+            if (e.target.value.length > 12  ) {
+              alert("Invalide length.. please try again");
+            }
+          }
+    
         this.setState({
             ...this.state,
             [name]:value

@@ -18,9 +18,36 @@ export default class CreatePostPasindu extends Component {
         }
     }
 
-    handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
+   // handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
+
+    handleChange=(e)=>{
+
+        const {name,value}=e.target;
+
+        let nam = e.target.name;
+        let val = e.target.value;
 
 
+
+        if(nam==="Drivers_phone_no"){
+
+            if(!Number(val)){
+                alert("Cannot contain letters");
+            }
+        }
+
+        if(nam==="Drivers_phone_no"){
+            if(val.length > 10){
+                alert("Invalid length!!");
+            }
+        }
+
+    
+        this.setState({
+            ...this.state,
+            [name]:value
+        })
+    }
     
 
     onSubmit=(e)=>{
@@ -113,14 +140,42 @@ export default class CreatePostPasindu extends Component {
                  <div class="form-group row">
              <label class="control-label col-sm-2" for="Route">Starting point :</label>
                 <div class="col-sm-10">
-                <input type="text" class="form-control"  placeholder="Moratuwa"  name="Route" value={this.state.Route} onChange={this.handleChange} required/>
+                <input type="text" class="form-control"  placeholder="Moratuwa" list="r1" name="Route" value={this.state.Route} onChange={this.handleChange} required/>
+                <datalist id="r1">
+                        <option value="Colombo"></option>
+                        <option value="Gampaha"></option>
+                        <option value="Kaluthara"></option>
+                        <option value="Kandy"></option>
+                        <option value="Galle"></option>
+                        <option value="Matale"></option>
+                        <option value="Nuwara-Eliya"></option>
+                        <option value="Jaffna"></option>
+                        <option value="Hambanthota"></option>
+                        <option value="Trincomalee"></option>
+                        <option value="Polonnaruwa"></option>
+                        <option value="Kurunagale"></option>
+                        </datalist>
                  </div>
                  </div>
                  <br></br>
                  <div class="form-group row">
              <label class="control-label col-sm-2" for="Route2">End point :</label>
                 <div class="col-sm-10">
-                <input type="text" class="form-control"  placeholder="Pettah"  name="Route2" value={this.state.Route2} onChange={this.handleChange} required/>
+                <input type="text" class="form-control" list="r2" placeholder="Pettah"  name="Route2" value={this.state.Route2} onChange={this.handleChange} required/>
+                <datalist id="r2">
+                        <option value="Colombo"></option>
+                        <option value="Gampaha"></option>
+                        <option value="Kaluthara"></option>
+                        <option value="Kandy"></option>
+                        <option value="Galle"></option>
+                        <option value="Matale"></option>
+                        <option value="Nuwara-Eliya"></option>
+                        <option value="Jaffna"></option>
+                        <option value="Hambanthota"></option>
+                        <option value="Trincomalee"></option>
+                        <option value="Polonnaruwa"></option>
+                        <option value="Kurunagale"></option>
+                        </datalist>
                  </div>
                  </div>
 
@@ -189,7 +244,7 @@ export default class CreatePostPasindu extends Component {
 
 </div>
 
-<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
+<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
     <a href="https://mdbootstrap.com/"> Travelling Express</a>
 </div>
 

@@ -91,7 +91,8 @@ import axios from 'axios';
       <h2><center>Edit Bus Details </center></h2> <br></br> 
     
         </div></div><center></center>
-        <br></br> <br></br>
+        <br></br> 
+    
     <div className='container'>
        
 
@@ -107,7 +108,12 @@ import axios from 'axios';
    <div class="form-group row">
 <label class="control-label col-sm-2" for="Bus_owners_name">Owner of the bus :</label>
   <div class="col-sm-10">
-  <input type="text" class="form-control"  placeholder="Kamal Perera" name="Bus_owners_name" value={this.state.Bus_owners_name} onChange={this.handleChange} required/>
+  <input type="text" class="form-control"  placeholder="Kamal Perera" name="Bus_owners_name" list="owner" value={this.state.Bus_owners_name} onChange={this.handleChange} required/>
+         <datalist id="owner">
+                        <option value="Company"></option>
+                        <option value="Person"></option>
+                        
+        </datalist>
    </div>
    </div>
    <br></br>
@@ -129,7 +135,12 @@ import axios from 'axios';
    <div class="form-group row">
 <label class="control-label col-sm-2" for="Condition">Condition :</label>
   <div class="col-sm-10">
-  <input type="text" class="form-control"  placeholder="Brand New"  name="Condition" value={this.state.Condition} onChange={this.handleChange} required/>
+  <input type="text" class="form-control"  placeholder="Brand new" list="busbrand"  name="Condition" value={this.state.Condition} onChange={this.handleChange} required/>
+         <datalist id="busbrand">
+                        <option value="Brand New"></option>
+                        <option value="Old"></option>
+                        
+        </datalist>
    </div>
    </div>
 
@@ -137,14 +148,14 @@ import axios from 'axios';
    <div class="form-group row">
 <label class="control-label col-sm-2" for="Date">Date :</label>
   <div class="col-sm-10">
-  <input type="text" class="form-control"  placeholder="02-02-2021" name="Date" value={this.state.Date} onChange={this.handleChange} required/>
+  <input type="date" class="form-control"  placeholder="02-02-2021" name="Date" value={this.state.Date} onChange={this.handleChange} required/>
    </div>
    </div>
    <br></br>
 
    <div>
-   <br></br><hr/> 
-          <button className="btn btn-warning" onClick={this.onSubmit}>Edit Bus Details <i className ="fas fa-edit"></i></button>
+   <br/><hr/><br/> 
+          <button className="btn btn-warning" onClick={this.onSubmit}> Edit Bus Details <i className ="fas fa-edit"></i></button>
           
       </div>
       <br></br><br></br>
@@ -190,7 +201,7 @@ import axios from 'axios';
 
 </div>
 
-<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2020 Copyright:
+<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
     <a href="https://mdbootstrap.com/"> Travelling Express</a>
 </div>
 

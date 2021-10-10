@@ -39,7 +39,7 @@ export default class TripPaymentNisura extends Component {
         }
         console.log(data)
  
-        axios.post("/trip/save", data).then((res)=>{
+        axios.post("/tripNisura/save", data).then((res)=>{
             if(res.data.success){
                 this.setState(
                     {
@@ -82,7 +82,7 @@ export default class TripPaymentNisura extends Component {
                             <input type="text"
                             className="form-control"
                             name="creditcard"
-                            placeholder="Credit/debit card"
+                            placeholder="xxxxxxxxxxxxxxxx"
                             value={this.state.creditcard}
                             onChange={this.handleInputChange}/>
                         </div>

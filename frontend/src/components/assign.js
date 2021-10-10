@@ -35,7 +35,8 @@ filterData(posts,searchKey){
   post.driverNIC.toLowerCase().includes(searchKey)||
   post.type.toLowerCase().includes(searchKey)||
   post.tripID.toLowerCase().includes(searchKey)||
-  post.availability.toLowerCase().includes(searchKey)
+  post.availability.toLowerCase().includes(searchKey)||
+  post.workingHours.toLowerCase().includes(searchKey)
   )
 
   this.setState({posts:result})
@@ -140,13 +141,13 @@ handleSearchArea = (e) =>{
            
                     
             </div>
-            <button className="btn btn-primary btn-lg" style={{textDecoration:'none' ,color:'white'}}><ReactHTMLTableToExcel
+            <button className="btn btn-primary btn-lg" style={{textDecoration:'none' ,color:'white'}}><i class="fas fa-download"></i><ReactHTMLTableToExcel
                     id="test-table-xls-button"
                     className="download-table-xls-button"
                     table="table-to-xlsRamona"
                     filename="tablexls"
                     sheet="tablexls"
-                    buttonText="Download as XLS"/></button>
+                    buttonText="  Download the Daily Report"/></button>
       </div>
       <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginLeft:"-120px", marginTop:"40px",height:"170px",marginRight:"-120px"}}>
 

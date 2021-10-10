@@ -118,8 +118,8 @@ getUsersData() {
    <form>
   <Row>
     <Col>
-    <Form.Label>Add Bus ID : </Form.Label>
-      <Form.Control placeholder="Bus id" 
+    <Form.Label>Add Bus plate id : </Form.Label>
+      <Form.Control placeholder="Bus plate id" 
       value={this.state.Busid}
      onChange={ (eve) => { this.setState({ Busid: eve.target.value }) } }/>
     </Col>

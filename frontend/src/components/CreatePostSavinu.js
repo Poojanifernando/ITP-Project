@@ -25,6 +25,13 @@ export default class CreatePostSavinu extends Component{
         let nam = e.target.name;
         let val = e.target.value;
 
+        if (nam=== "name") {
+        
+            if (Number(val)) {
+              alert("Dont input letters");
+            }
+          }
+
         if(nam==="contact_number"){
 
             if(!Number(val)){

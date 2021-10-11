@@ -81,7 +81,7 @@ handleSearchArea = (e) =>{
               </input>
             </div>
           </div>
-        <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/> <br/><br/><br/><br/><br/><br/><br/>
        <table className="table">
          
         <thead style={{color:'silver'}}>

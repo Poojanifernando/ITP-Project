@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react/jsx-no-duplicate-props */
-
 import React, { Component } from 'react'
 import axios from 'axios';
 import ReactHTMLTableToExcel from 'react-html-table-to-excel';
@@ -60,7 +57,7 @@ export default class TicketDetails extends Component {
    
 
    
-
+//web page
 
    
     render() {
@@ -78,7 +75,7 @@ export default class TicketDetails extends Component {
             <div className="background2">
 
                 
-                <h4 style={{fontSize:'40px',color:'white',textShadow: '1px 2px 5px black'}}><center>Your Ticket Details</center></h4>
+                <h4 style={{fontSize:'40px',color:'white',textShadow: '1px 2px 5px black'}}><center> <i class="fas fa-receipt"></i>  Your Ticket Details</center></h4>
 
                 <button className="btn btn-success" style={{marginLeft:'800px', marginRight:'0px',padding:'10px 10px',backgroundColor:'#3895d3'}}><a href="/homeDisni" 
                 style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
@@ -149,7 +146,9 @@ export default class TicketDetails extends Component {
                   <br></br>
                   <button className="btn btn-success"  style={{marginLeft:'30px', marginRight:'0px',padding:'5px 1px' }}><i class="fas fa-download"></i>
         
-        <ReactHTMLTableToExcel
+                
+                
+                 <ReactHTMLTableToExcel
                     id="test-table-xls-button"
                     className="download-table-xls-button"
                     table="table-to-xls-Disni"

@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import axios from 'axios'
 import './Ticket.css';
@@ -93,7 +91,7 @@ handleInputChange= (e)=>{
 
 
 
-//when customer click sbmit button, data will be stored 
+//when customer click submit button, data will be stored 
 onSubmit = (e) =>{
 
     e.preventDefault();
@@ -113,6 +111,7 @@ onSubmit = (e) =>{
         Ticket_destination:Ticket_destination,
         Ticket_seat_no:Ticket_seat_no
     }
+    
 //check the data is saved and success msg will display
     console.log(data)
 
@@ -152,13 +151,12 @@ onSubmit = (e) =>{
         return (
             <div>
                 
-                <div> <image src="/image/bus11.jpg" style={{height:'3000px', width:'1100px'}}> </image> </div>
-            
                 
-
+            
                 <div className="col-md-8 mt-4 mx-auto">
                 
-                <h1 className= "h3 mb-3 font-weight-normal" style={{color:'White',textShadow: '1px 2px 5px black',fontSize:'50px', marginLeft:'300px'}} >Book a Ticket</h1>
+                <h1 className= "h3 mb-3 font-weight-normal" style={{color:'White',textShadow: '1px 2px 5px black',fontSize:'50px', marginLeft:'300px'}} >
+                <i class="fas fa-ticket-alt"></i>  Book a Ticket</h1>
 
                         <button className="btn btn-success" style={{marginLeft:'730px', marginRight:'-700px',padding:'17px 90px',backgroundColor:'#3895d3'}}><a href="/homeDisni" 
                          style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
@@ -168,64 +166,7 @@ onSubmit = (e) =>{
 
                    
 
-                    <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Miles(km): (calculate your miles from <a href='https://distancecalculator.globefeed.com/Sri_Lanka_Distance_Calculator.asp'>here</a>, copy and paste for a one decimal point )</label>
-                            <input type="text"
-                            className="form-control"
-                            name="Ticket_miles"
-                            placeholder="Enter the miles"
-                            value={this.state.Ticket_miles}
-                            onChange={this.handleInputChange} required/>
-                        </div>
-                        
-                    <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Starting Point:</label>
-                            <input type="text"
-                            list="from"
-                            className="form-control"
-                            name="Ticket_from"
-                            placeholder="from"
-                            value={this.state.Ticket_from}
-                            onChange={this.handleInputChange} required/>
-                                <datalist id="from">
-                                    <option value="Gampaha"></option>
-                                    <option value="Colombo"></option>
-                                    <option value="Ganemulla"></option>
-                                    <option value="Kurunagala"></option>
-                                    <option value="Panadura"></option>
-                                    </datalist>
-
-
-                        </div>
-
-                    <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Destination:</label>
-                            <input type="text"
-                            list="To"
-                            className="form-control"
-                            name="Ticket_destination"
-                            placeholder="To"
-                            value={this.state.Ticket_destination}
-                            onChange={this.handleInputChange} required/>
-                             <datalist id="To">
-                                    <option value="Gampaha"></option>
-                                    <option value="Colombo"></option>
-                                    <option value="Ganemulla"></option>
-                                    <option value="Kurunagala"></option>
-                                    <option value="Panadura"></option>
-                                    </datalist>
-                        </div>
-
-                     <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Price(Rs.):</label>
-                            <input type="text"
-                            className="form-control"
-                            name="Ticket_price"
-                            placeholder={this.state.Ticket_miles*10}
-                           value={this.state.Ticket_price}
-                           // onChange={this.handleInputChange}
-                           />
-                        </div>
+                   
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
                             <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Customer name:</label>
@@ -272,7 +213,43 @@ onSubmit = (e) =>{
                            
                         </div>
 
-                        
+                        <div className="form-group" style={{marginBottom:'15px'}}>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Starting Point:</label>
+                            <input type="text"
+                            list="from"
+                            className="form-control"
+                            name="Ticket_from"
+                            placeholder="from"
+                            value={this.state.Ticket_from}
+                            onChange={this.handleInputChange} required/>
+                                <datalist id="from">
+                                    <option value="Gampaha"></option>
+                                    <option value="Colombo"></option>
+                                    <option value="Ganemulla"></option>
+                                    <option value="Kurunagala"></option>
+                                    <option value="Panadura"></option>
+                                    </datalist>
+
+
+                        </div>
+
+                    <div className="form-group" style={{marginBottom:'15px'}}>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Destination:</label>
+                            <input type="text"
+                            list="To"
+                            className="form-control"
+                            name="Ticket_destination"
+                            placeholder="To"
+                            value={this.state.Ticket_destination}
+                            onChange={this.handleInputChange} required/>
+                             <datalist id="To">
+                                    <option value="Gampaha"></option>
+                                    <option value="Colombo"></option>
+                                    <option value="Ganemulla"></option>
+                                    <option value="Kurunagala"></option>
+                                    <option value="Panadura"></option>
+                                    </datalist>
+                        </div>
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
                             <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Rout:</label>
@@ -300,7 +277,28 @@ onSubmit = (e) =>{
                                     </datalist>
                         </div>
 
+                        <div className="form-group" style={{marginBottom:'15px'}}>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Miles(km): (calculate your miles from <a href='https://distancecalculator.globefeed.com/Sri_Lanka_Distance_Calculator.asp' target="_blank" rel="noopener noreferrer" >here</a>, copy and paste for a one decimal point )</label>
+                            <input type="text"
+                            className="form-control"
+                            name="Ticket_miles"
+                            placeholder="Enter the miles"
+                            value={this.state.Ticket_miles}
+                            onChange={this.handleInputChange} required/>
+                        </div>
                         
+                   
+
+                     <div className="form-group" style={{marginBottom:'15px'}}>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Price(Rs.):</label>
+                            <input type="text"
+                            className="form-control"
+                            name="Ticket_price"
+                            placeholder={this.state.Ticket_miles*10}
+                           value={this.state.Ticket_price}
+                           // onChange={this.handleInputChange}
+                           />
+                        </div>
                        
                       
 

@@ -1,9 +1,3 @@
-/* eslint-disable no-useless-concat */
-/* eslint-disable no-dupe-keys */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable no-undef */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-unused-vars */
 import React, { Component } from 'react'
 import axios from 'axios';
 
@@ -119,7 +113,7 @@ export default class TicketDetails extends Component {
 
 
 
-
+//web page
 
    
     render() {
@@ -130,6 +124,9 @@ export default class TicketDetails extends Component {
 
             <div>
              <div class="container mt-5 p-3 rounded ">
+
+             <h4 style={{fontSize:'40px',color:'white',textShadow: '1px 2px 5px black'}}><center> <i class="far fa-credit-card"></i>  Your Payment Details</center></h4>
+
 
              <button className="btn btn-success" style={{marginLeft:'900px', marginRight:'0px',padding:'10px 10px',backgroundColor:'#3895d3'}}><a href="/homeDisni" 
                 style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 

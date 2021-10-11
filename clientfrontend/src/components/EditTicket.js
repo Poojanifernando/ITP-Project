@@ -1,8 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-
-
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -180,7 +175,7 @@ onSubmit = (e) =>{
     }
 
     
-
+//wepage
 
     render() {
         return (
@@ -311,7 +306,7 @@ onSubmit = (e) =>{
 
 
                         <div className="form-group" style={{marginBottom:'15px'}}>
-                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Miles(Km):  (calculate your miles from <a href='https://distancecalculator.globefeed.com/Sri_Lanka_Distance_Calculator.asp'>here</a> copy and paste for a one decimal point )</label>
+                            <label style={{marginBottom:'5px',color:'white',fontSize:'20px'}}>Miles(Km):  (calculate your miles from <a href='https://distancecalculator.globefeed.com/Sri_Lanka_Distance_Calculator.asp' target="_blank" rel="noopener noreferrer">here</a> copy and paste for a one decimal point )</label>
                             <input type="text"
                             className="form-control"
                             name="Ticket_miles"

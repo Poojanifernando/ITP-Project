@@ -152,7 +152,7 @@ export default class CreatePostNisura extends Component {
                 
 
                     <div className="form-group" style={{marginBottom:'15px'}}>
-                        <label style={{marginBottom:'5px'}}>No Of Passengers</label>
+                        <label style={{marginBottom:'5px'}}>No Of Passengers (1-42)</label>
                         <input type="text"
                         className="form-control"
                         name="noOfPassengers"

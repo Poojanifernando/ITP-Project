@@ -21,6 +21,35 @@ export default class EditPost extends Component{
     handleInputChange =(e) =>{
         const {name, value} = e.target;
 
+        let nam = e.target.name;
+        let val = e.target.value;
+
+        if (nam=== "name") {
+        
+            if (Number(val)) {
+              alert("Dont input letters");
+            }
+          }
+
+        if(nam==="contact_number"){
+
+            if(!Number(val)){
+                alert("Cannot input letters");
+            }
+        }
+
+        if(nam==="contact_number"){
+            if(val.length > 10){
+                alert("Invalid Contact number!!");
+            }
+        }
+
+        if(nam==="nic"){
+            if(val.length > 12){
+                alert("Invalid NIC!!");
+            }
+        }
+
         this.setState({
             ...this.state,
             [name]:value // set
@@ -192,7 +221,7 @@ export default class EditPost extends Component{
                     &nbsp;&nbsp;&nbsp;&nbsp;
 
                     <button type="button" className="btn btn-success" style={{marginTop:'20px', marginBottom:'15px'}} title="Go back">
-                        <a href="/" style={{textDecoration:'none' , color:'white'}}>Go back</a>
+                        <a href="/HomeSavinu" style={{textDecoration:'none' , color:'white'}}>Go back</a>
                     </button>
                     </center>
 

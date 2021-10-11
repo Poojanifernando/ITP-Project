@@ -63,8 +63,7 @@ class livelocation extends React.Component{
             <h3>Here's Your Location</h3><br/>
             <h4><p>Lattitude: {this.state.latitude}</p><br/>
             <p>Longitude: {this.state.longitude}</p><br/>
-            You are here<br/>
-            <p>Address: {this.state.userAddress}</p></h4></center>
+            You are here<br/></h4></center>
 
           
 
@@ -76,7 +75,7 @@ class livelocation extends React.Component{
 
             {
                 this.state.latitude && this.state.longitude ?
-                <img src={`https://maps.googleapis.com/maps/api/staticmap?center=${this.state.latitude},${this.state.longitude}&zoom=14&size=400x300&sensor=false&markers=color:red%7C${this.state.latitude},${this.state.longitude}&key=AIzaSyC-Z_Y13L-7-jdfQiV3ucBRyQuGm2guC6k`} alt=''/>
+                <img src={`https://maps.googleapis.com/maps/api/staticmap?center="+latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyCxWHqmcr4F4HOw6o9sbqU_vnDq5peVM50`} alt=''/>
                 :
                 null
             }

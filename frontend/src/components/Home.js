@@ -68,7 +68,7 @@ handleSearchArea = (e) =>{
 
       <div className=''><div style={{backgroundColor:"#E3E3E3"}}>
       <div>
-      <img src="../images/track3.png" alt=""/><br/><br/><br/>
+      <img src="../images/track1png.jpg" alt=""/><br/><br/>
     <h2><center><b>All Bus No and Locations</b> </center></h2> <br></br> 
 
       </div><center></center>
@@ -90,7 +90,7 @@ handleSearchArea = (e) =>{
           </div>
       </div>
             
-        <table className="table table-dark">
+        <table className="table table-striped table-dark">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -108,9 +108,9 @@ handleSearchArea = (e) =>{
               <tr Key={index}>
                 <th scope="row">{index+1}</th>
                 <td>
-                    <a href={`/locations/${locations._id}`} style={{textDecoration:'none'}}>
+                   
                     {locations.BusNo}
-                    </a>
+                   
                 </td>
                 <td>{locations.StartingLocation}</td>
                 <td>{locations.FirstDestination}</td>
@@ -135,7 +135,59 @@ handleSearchArea = (e) =>{
        
         <button className="btn btn-success btn-xs"><a href="/addazmie" style={{textDecoration:'none',color:'white'}}>Add New Location</a></button>
 
-      </div>  </div></div>
+      </div> 
+      
+      <footer class="page-footer font-small cyan darken-3" style={{backgroundColor:"black", marginTop:"40px",height:"170px"}}>
+
+
+
+  
+
+<div>
+
+    <div class="row" style={{marginLeft:"700px",height:"100px"}}>
+
+    <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+        <a class="fb-ic" style={{paddingLeft:"10px"}}>
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="tw-ic"  style={{paddingLeft:"20px"}}>
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="gplus-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="li-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+    
+        <a class="ins-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        </a>
+        
+        <a class="pin-ic" style={{paddingLeft:"20px"}}>
+            <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
+        </a>
+        
+        </div>
+    </div>
+
+    </div>
+
+</div>
+
+<div class="footer-copyright text-center py-3" style={{color:"white"}}>© 2021 Copyright:
+    <a href="https://mdbootstrap.com/"> Travelling Express</a>
+</div>
+
+</footer>
+      
+       </div></div>
     )
   }
 }

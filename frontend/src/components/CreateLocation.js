@@ -19,14 +19,35 @@ export default class CreateLocation extends Component {
         }
     }
 
-    handleInputChange = (e) =>{
-        const {name,value} = e.target;
+    handleInputChange=(e)=>{
 
+        const {name,value}=e.target;
+
+        let nam = e.target.name;
+        let val = e.target.value;
+
+
+
+        if(nam==="BusNo"){
+
+            if(!Number(val)){
+                alert("Cannot contain letters");
+            }
+        }
+
+        if(nam==="BusNo"){
+            if(val.length > 3){
+                alert("Invalid length!!");
+            }
+        }
+
+    
         this.setState({
             ...this.state,
             [name]:value
         })
     }
+
 
     onSubmit = (e) =>{
 

@@ -69,13 +69,13 @@ handleSearchArea = (e) =>{
         <br/> <br/> <br/> <br/>
         <div className="row">
           <div className="col-lg-4 mt-2 mb-2">
-            <h2>Enter your Destination :</h2>
+            <h2>Where to go :</h2>
           </div>
           <div className="col-lg-3 mt-2 mb-2">
             <input
             className="form-control"
             type="search"
-            placeholder="From"
+            placeholder="Destination"
             name="SearchQuery"
             onChange={this.handleSearchArea}>
 
@@ -84,7 +84,7 @@ handleSearchArea = (e) =>{
         
       </div>
             
-        <table id="azmietable" className="table table-light ">
+        <table id="azmietable" className="table table-striped table-dark ">
           <thead>
             <tr>
               <th scope="col">#</th>

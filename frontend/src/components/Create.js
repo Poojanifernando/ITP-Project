@@ -41,6 +41,12 @@ export default class Create extends Component {
                     alert ("Invalid length for NIC number..!");
             } 
         }
+        if (nam=== "driverName") {
+        
+            if (Number(val)) {
+              alert("Name must be in letters");
+            }
+          }
 
         this.setState({
             ...this.state,

@@ -118,7 +118,7 @@ export default class App extends Component{
 
           
          <Route path="/HomePasindu" component={HomePasindu}></Route>
-         <Route path="/editPasindu" component={DriverSchedulePasindu}></Route>
+         <Route path="/addPasindu" component={DriverSchedulePasindu}></Route>
          <Route path="/addPasindu" component={BusDetailsPasindu}></Route>
          <Route path="/addPasindu" component={RouteDetailsPasindu}></Route>
           

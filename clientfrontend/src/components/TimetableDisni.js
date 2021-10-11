@@ -95,7 +95,9 @@ handleSearchArea=(e) =>{
                 style={{textDecoration:'none',backgroundColor:'#3895d3',color:'white',fontSize:'20px'}}> 
                 <i class="far fa-arrow-alt-circle-left"></i>&nbsp;Go Back</a></button>
       <br></br> <br></br>
-      <br></br> <p style={{color:'White',fontSize:'22px',backgroundColor:'#1261A0',marginLeft:'100px',marginRight:'100px'}}>* refresh the page to see the new scheduled buses</p>
+      <br></br> <p style={{color:'White',fontSize:'22px',backgroundColor:'#1261A0',marginLeft:'190px',marginRight:'190px'}}>* refresh the page to see the new scheduled buses</p>
+    
+    
     <div className ="container" style={{backgroundColor:"#ECECEC"}}> 
     
       <div className="row">

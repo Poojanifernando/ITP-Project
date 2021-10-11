@@ -42,6 +42,12 @@ import axios from 'axios';
         }
     }
 
+    if (nam=== "Driver_name") {
+        
+        if (Number(val)) {
+          alert("Name must be in letters");
+        }
+      }
 
     this.setState({
         ...this.state,

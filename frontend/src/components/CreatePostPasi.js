@@ -40,7 +40,13 @@ export default class CreatePostPasi extends Component {
                 alert("Invalid length!!");
             }
         }
-
+        if (nam=== "Bus_owners_name") {
+        
+            if (Number(val)) {
+              alert("Name must be in letters");
+            }
+          }
+    
     
         this.setState({
             ...this.state,

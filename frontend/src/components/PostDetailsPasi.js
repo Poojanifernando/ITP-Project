@@ -71,7 +71,8 @@ import axios from 'axios';
 
       </table>
 
-     </div></center></div></div></div>
+     </div></center></div>
+     </div></div>
       )
     }
   }

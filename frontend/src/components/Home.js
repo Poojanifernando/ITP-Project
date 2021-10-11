@@ -65,10 +65,18 @@ handleSearchArea = (e) =>{
 
   render(){
     return (
+
+      <div className=''><div style={{backgroundColor:"#E3E3E3"}}>
+      <div>
+      <img src="../images/track3.png" alt=""/><br/><br/><br/>
+    <h2><center><b>All Bus No and Locations</b> </center></h2> <br></br> 
+
+      </div><center></center>
+      <br></br> 
       <div className="container">
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
-            <h2>All Bus No and Locations</h2>
+        
           </div>
           <div className="col-lg-3 mt-2 mb-2">
             <input
@@ -127,7 +135,7 @@ handleSearchArea = (e) =>{
        
         <button className="btn btn-success btn-xs"><a href="/addazmie" style={{textDecoration:'none',color:'white'}}>Add New Location</a></button>
 
-      </div>
+      </div>  </div></div>
     )
   }
 }

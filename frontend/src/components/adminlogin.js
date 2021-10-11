@@ -2,11 +2,10 @@ import React, { Component } from "react";
 //import './adminlogin.css';
 
 
-
-
-
 export default class adminlogin extends Component {
   
+
+ 
    
     render() {
         return (
@@ -31,8 +30,8 @@ export default class adminlogin extends Component {
                 </div>
                 <div className="col-md-7 mb-3">
                     <label for="exampleInputPassword1" className="form-label">Password :</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1"
-                    placeholder = "Enter your password"/>
+                    <input type="password" className="form-control" id="exampleInputPassword1"   
+                    placeholder = "Enter your password"  />
                 </div>
                 <div className="col-md-7 mb-3 form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1"/>

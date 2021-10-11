@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React,{Component} from'react';
 import axios from 'axios';
 import './StylePasindu.css'
@@ -19,7 +17,7 @@ export default class HomePasindu1 extends Component{
 
   }
 
- 
+ //the data will be render from pasindu's database to the timetable page
 
   componentDidMount(){
     this.retrievePosts();
@@ -40,13 +38,7 @@ export default class HomePasindu1 extends Component{
     })
   }
 
-  onDelete =(id) =>{
-    axios.delete(`/post/deletePasindu/${id}`).then((res) =>{
-      alert("Deleted Successfully!");
-      this.retrievePosts();
-
-    })
-  }
+  //search the details
 
   filterData(posts,searchKey){
 
@@ -85,6 +77,7 @@ handleSearchArea=(e) =>{
 
 }
 
+//web page
 
   render(){
     return(
@@ -93,7 +86,8 @@ handleSearchArea=(e) =>{
       <div>
       <br></br> 
     
-      <center><b> <h4 style={{fontSize:'70px', marginTop:'10px',marginLeft:'100px',marginRight:'100px', color:'White',textShadow: '1px 2px 10px black',backgroundColor:"#666666"}}> TIME TABLE</h4></b>
+      <center><b> <h4 style={{fontSize:'70px', marginTop:'10px',marginLeft:'100px',marginRight:'100px', color:'White',textShadow: '1px 2px 10px black',backgroundColor:"#666666"}}> 
+      <i class="fas fa-table"></i>  TIME TABLE</h4></b>
       </center></div></div>
 
 

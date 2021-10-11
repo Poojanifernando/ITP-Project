@@ -16,10 +16,44 @@ import axios from 'axios';
       }
   }
 
-  handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
+  //handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
 
 
-  
+  handleChange=(e)=>{
+
+    const {name,value}=e.target;
+
+    let nam = e.target.name;
+    let val = e.target.value;
+
+
+
+    if(nam==="Bus_owners_phoneno"){
+
+        if(!Number(val)){
+            alert("Cannot contain letters");
+        }
+    }
+
+    if(nam==="Bus_owners_phoneno"){
+        if(val.length > 10){
+            alert("Invalid length!!");
+        }
+    }
+    if (nam=== "Bus_owners_name") {
+    
+        if (Number(val)) {
+          alert("Name must be in letters");
+        }
+      }
+
+
+    this.setState({
+        ...this.state,
+        [name]:value
+    })
+}
+
 
   onSubmit=(e)=>{
       e.preventDefault();

@@ -18,36 +18,9 @@ export default class CreatePostPasindu extends Component {
         }
     }
 
-   // handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
-
-    handleChange=(e)=>{
-
-        const {name,value}=e.target;
-
-        let nam = e.target.name;
-        let val = e.target.value;
+   handleChange = ({ target: { value, name }}) => this.setState({ [name]: value })
 
 
-
-        if(nam==="Drivers_phone_no"){
-
-            if(!Number(val)){
-                alert("Cannot contain letters");
-            }
-        }
-
-        if(nam==="Drivers_phone_no"){
-            if(val.length > 10){
-                alert("Invalid length!!");
-            }
-        }
-
-    
-        this.setState({
-            ...this.state,
-            [name]:value
-        })
-    }
     
 
     onSubmit=(e)=>{

@@ -143,8 +143,8 @@ export default class CreatePostPasindu extends Component {
                 <input type="text" class="form-control"  placeholder="Moratuwa" list="r1" name="Route" value={this.state.Route} onChange={this.handleChange} required/>
                 <datalist id="r1">
                         <option value="Colombo"></option>
-                        <option value="Gampaha"></option>
-                        <option value="Kaluthara"></option>
+                        <option value="Moratuwa"></option>
+                        <option value="Wellawatta"></option>
                         <option value="Kandy"></option>
                         <option value="Galle"></option>
                         <option value="Matale"></option>
@@ -164,8 +164,8 @@ export default class CreatePostPasindu extends Component {
                 <input type="text" class="form-control" list="r2" placeholder="Pettah"  name="Route2" value={this.state.Route2} onChange={this.handleChange} required/>
                 <datalist id="r2">
                         <option value="Colombo"></option>
-                        <option value="Gampaha"></option>
-                        <option value="Kaluthara"></option>
+                        <option value="Moratuwa"></option>
+                        <option value="Wellawatta"></option>
                         <option value="Kandy"></option>
                         <option value="Galle"></option>
                         <option value="Matale"></option>

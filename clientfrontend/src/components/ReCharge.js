@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -97,25 +99,25 @@ export default class ReCharge extends Component {
                         <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <input class="form-check-input" type="radio" style={{marginTop:"220px", marginLeft:"100px"}} name="flexRadioDefault" id="flexRadioDefault1" checked/>
                                 <label class="form-check-label" for="flexRadioDefault1" style={{marginTop:"100px"}}>
-                                    <img src="/images/airline.png" style={{height:'160px', width:'240px', marginTop:'-70px', marginLeft:'-110px'}}/>
+                                    <img src="/images/airline.png" style={{height:'160px', width:'240px', marginTop:'-70px', marginLeft:'-10px'}}/>
                                 </label>
                         </>
                         <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="radio" style={{marginTop:"220px", marginLeft:"120px"}} name="flexRadioDefault" id="flexRadioDefault1"/>
+                            <input class="form-check-input" type="radio" style={{marginTop:"220px", marginLeft:"140px"}} name="flexRadioDefault" id="flexRadioDefault1"/>
                                 <label class="form-check-label" for="flexRadioDefault1">
-                                    <img src="/images/HSBC.jpg" style={{height:'160px', width:'240px', marginTop:'-70px', marginLeft:'-130px'}}/>
+                                    <img src="/images/HSBC.jpg" style={{height:'160px', width:'240px', marginTop:'-70px', marginLeft:'30px'}}/>
                                 </label>
                         </>
                         <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="radio" style={{marginTop:"220px", marginLeft:"110px"}} name="flexRadioDefault" id="flexRadioDefault1"/>
+                            <input class="form-check-input" type="radio" style={{marginTop:"220px", marginLeft:"180px"}} name="flexRadioDefault" id="flexRadioDefault1"/>
                                 <label class="form-check-label" for="flexRadioDefault1">
-                                    <img src="/images/boc.png" style={{height:'165px', width:'240px', marginTop:'-70px', marginLeft:'-120px'}}/>
+                                    <img src="/images/boc.png" style={{height:'165px', width:'240px', marginTop:'-70px', marginLeft:'70px'}}/>
                                 </label>
                         </>
                         <>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <input class="form-check-input" type="radio" style={{marginTop:"220px", marginLeft:"180px"}} name="flexRadioDefault" id="flexRadioDefault1"/>
+                            <input class="form-check-input" type="radio" style={{marginTop:"220px", marginLeft:"230px"}} name="flexRadioDefault" id="flexRadioDefault1"/>
                                 <label class="form-check-label" for="flexRadioDefault1">
-                                    <img src="/images/gold.png" style={{height:'160px', width:'260px', marginTop:'-70px', marginLeft:'-145px'}}/>
+                                    <img src="/images/gold.png" style={{height:'160px', width:'260px', marginTop:'-70px', marginLeft:'110px'}}/>
                                 </label>
                         </>
                     </div>

@@ -30,7 +30,7 @@ export default class LocationDetails extends Component {
         const {BusNo,StartingLocation,FirstDestination,SecondDestination,ThirdDestination,EndDestination} = this.state.location;
 
         return (
-            <div style={{marginTop:'20px'}}>
+            <div style={{marginTop:'20px', backgroundColor:"white", height:"600px"}}>
             <h4>{BusNo}</h4>
             <hr/>
 

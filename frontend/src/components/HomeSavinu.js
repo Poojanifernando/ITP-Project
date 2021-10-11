@@ -78,7 +78,7 @@ handleSearchArea = (e) =>{
   render(){
     return(
 
-      <><img src="/images/BusManage11.png" style={{ height: '400px', width: '100%' }}></img><div className="container">
+      <><img src="/images/BusManage11.png" style={{ height: '400px', width: '100%' }}></img><div className="#">
         <div className="row">
           <div className="col-lg-9 mt-2 mb-2">
             <h2>All Employee Payment Profiles</h2>
@@ -96,7 +96,8 @@ handleSearchArea = (e) =>{
           </div>
 
         </div>
-        <table className="table table-hover" id="tableSavinu" style={{ marginTop: '20px', height:'100%', width:'100%',backgroundColor:"Silver" , marginBottom:'25px'}}>
+        
+        <table className="table table-hover" id="tableSavinu" style={{ marginTop: '20px', height:'100%', width:'3000px',backgroundColor:"Silver" , marginBottom:'25px'}}>
           <thead>
 
             <tr>
@@ -156,22 +157,22 @@ handleSearchArea = (e) =>{
         <br/>
         <br/>
         <br/>
-      <div><ReactHTMLTableToExcel
+                    <div><ReactHTMLTableToExcel
 
-id="test-table-xls-button"
+              id="test-table-xls-button"
 
-className="download-table-xls-button"
-className="btn btn-success"
+              className="download-table-xls-button"
+              className="btn btn-success"
 
-table="tableSavinu"
+              table="tableSavinu"
 
-filename="tablexls"
+              filename="tablexls"
 
-sheet="tablexls"
+              sheet="tablexls"
 
-buttonText="Download as XLS"/>
+              buttonText="Download as XLS"/>
 
-</div>
+              </div>
 
 
       </div></>
